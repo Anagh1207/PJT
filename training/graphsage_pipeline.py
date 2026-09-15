@@ -57,12 +57,13 @@ def train_single_graphsage(
     # Calculate class weights for imbalanced cross entropy
     n_pos = (y_tensor[train_mask] == 1).sum().item()
     n_neg = (y_tensor[train_mask] == 0).sum().item()
-    pos_weight = torch.tensor([n_neg / max(n_pos, 1)], dtype=torch.float)
-    criterion = nn.CrossEntropyLoss(weight=torch.tensor([1.0, float(pos_weight.item())]))
+    pos_weight = torch.tensor([n_neg / max(n_pos, 1)], dtype=torch.float, device=X_tensor.device)
+    criterion = nn.CrossEntropyLoss(weight=torch.tensor([1.0, float(pos_weight.item())], device=X_tensor.device))
     
     best_val_f1 = 0.0
     best_model_state = None
     patience_counter = 0
+    history = {'train_loss': [], 'val_loss': [], 'val_f1': []}
     
     for epoch in range(1, epochs + 1):
         model.train()
@@ -78,9 +79,14 @@ def train_single_graphsage(
         model.eval()
         with torch.no_grad():
             val_logits = model(X_tensor, edge_index, edge_weight)[val_mask]
-            val_probs = torch.softmax(val_logits, dim=1)[:, 1].numpy()
+            val_loss = criterion(val_logits, y_tensor[val_mask]).item()
+            val_probs = torch.softmax(val_logits, dim=1)[:, 1].cpu().numpy()
             val_preds = (val_probs >= 0.5).astype(int)
-            val_f1 = f1_score(y_tensor[val_mask].numpy(), val_preds, zero_division=0)
+            val_f1 = f1_score(y_tensor[val_mask].cpu().numpy(), val_preds, zero_division=0)
+            
+            history['train_loss'].append(float(loss.item()))
+            history['val_loss'].append(float(val_loss))
+            history['val_f1'].append(float(val_f1))
             
             if val_f1 > best_val_f1:
                 best_val_f1 = val_f1
@@ -99,9 +105,9 @@ def train_single_graphsage(
     model.eval()
     with torch.no_grad():
         test_logits = model(X_tensor, edge_index, edge_weight)[test_mask]
-        test_probs = torch.softmax(test_logits, dim=1)[:, 1].numpy()
+        test_probs = torch.softmax(test_logits, dim=1)[:, 1].cpu().numpy()
         test_preds = (test_probs >= 0.5).astype(int)
-        y_test_np = y_tensor[test_mask].numpy()
+        y_test_np = y_tensor[test_mask].cpu().numpy()
         
         test_metrics = {
             'accuracy': float(accuracy_score(y_test_np, test_preds)),
@@ -109,7 +115,9 @@ def train_single_graphsage(
             'recall': float(recall_score(y_test_np, test_preds, zero_division=0)),
             'f1_score': float(f1_score(y_test_np, test_preds, zero_division=0)),
             'roc_auc': float(roc_auc_score(y_test_np, test_probs)) if len(np.unique(y_test_np)) > 1 else 0.5,
-            'best_val_f1': float(best_val_f1)
+            'best_val_f1': float(best_val_f1),
+            'epochs_trained': epoch,
+            'history': history
         }
         
     return model, test_metrics
