@@ -1,18 +1,3 @@
-"""
-=============================================================================
-Phase 3 — Graph Construction Orchestrator
-=============================================================================
-Builds all 4 graph types, computes statistics, and generates visualizations.
-
-Outputs:
-  data/graphs/          — serialized graph .pt files
-  figures/              — graph visualizations (300 DPI)
-  results/              — graph_statistics.csv
-
-Author: AI Research Assistant
-Date: June 2026
-=============================================================================
-"""
 
 import os
 import sys
