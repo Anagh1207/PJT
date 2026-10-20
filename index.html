@@ -1,0 +1,3915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CardioMigrate AI — Counterfactual Patient Migration Clinical Platform</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+    
+    * {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    ::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #090d16;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #334155;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.18rem 0.6rem;
+      border-radius: 9999px;
+      font-size: 0.72rem;
+      font-weight: 600;
+    }
+
+    .katex-display {
+      margin: 0.5em 0 !important;
+    }
+    .katex {
+      font-size: 1.15em !important;
+      color: #93c5fd !important;
+    }
+  </style>
+</head>
+<body class="bg-[#080c15] text-slate-100 min-h-screen flex flex-col antialiased selection:bg-blue-600 selection:text-white">
+
+  <!-- TOP CLINICAL NAVIGATION BAR -->
+  <header class="border-b border-slate-800/80 bg-[#0c1220]/95 backdrop-blur sticky top-0 z-50 px-8 py-4 flex flex-wrap items-center justify-between gap-6 shadow-2xl">
+    <div class="flex items-center gap-4">
+      <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-rose-500 via-indigo-500 to-emerald-400 p-[2px] shadow-lg shadow-indigo-500/20">
+        <div class="w-full h-full bg-[#0c1220] rounded-[14px] flex items-center justify-center">
+          <span class="text-2xl">🫀</span>
+        </div>
+      </div>
+      <div>
+        <div class="flex items-center gap-3">
+          <h1 class="text-xl font-bold tracking-tight text-white">CardioMigrate <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">CPM Platform</span></h1>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/25">IEEE Research Benchmark</span>
+        </div>
+        <p class="text-xs text-slate-400 mt-0.5">Topological Patient Migration & Constrained Counterfactual Prescription Engine</p>
+      </div>
+    </div>
+
+    <!-- Active Patient Selector & Visual Mode Switcher -->
+    <div class="flex items-center gap-4">
+      <div class="flex items-center gap-2">
+        <label class="text-xs font-semibold text-slate-400">Select Patient:</label>
+        <select id="patientSelect" class="bg-slate-900 border border-slate-700 text-xs font-bold rounded-xl px-4 py-2.5 text-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer shadow-md">
+          <option value="852">Case 1: Ramesh K. (58M) — Severe Resistant Hypertension</option>
+          <option value="336">Case 2: Priya S. (64F) — Diabetic Metabolic Syndrome & Smoker</option>
+          <option value="556">Case 3: Anil M. (52M) — Executive Stress Tachycardia</option>
+          <option value="428">Case 4: George T. (72M) — Senior Vascular Atherosclerosis</option>
+        </select>
+      </div>
+
+      <div class="flex bg-slate-900 p-1 rounded-xl border border-slate-800">
+        <button id="tabBtn_graphs" class="px-4 py-2 rounded-lg text-xs font-bold bg-blue-600 text-white transition shadow">
+          📊 Multi-Graph Manifold
+        </button>
+        <button id="tabBtn_proofs" class="px-4 py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-slate-200 transition">
+          📐 Mathematical Equations & Justifications
+        </button>
+        <button id="tabBtn_case" class="px-4 py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-slate-200 transition">
+          📋 Case File & Treatment Plan
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- WORKSPACE WRAPPER -->
+  <main class="flex-1 max-w-[1900px] w-full mx-auto p-6 flex flex-col gap-6">
+
+    <!-- ========================================================================================= -->
+    <!-- VIEW 1: MULTI-GRAPH TOPOLOGY & INTERACTIVE MIGRATION (DEFAULT) -->
+    <!-- ========================================================================================= -->
+    <div id="view_graphs" class="grid grid-cols-1 xl:grid-cols-12 gap-6 w-full">
+      
+      <!-- LEFT COLUMN: PATIENT PROFILE & ACTIONABLE INTERVENTIONS (Col 4) -->
+      <div class="xl:col-span-4 flex flex-col gap-5">
+        
+        <!-- Case Summary Header Card -->
+        <div class="bg-slate-900/90 border border-slate-800/90 rounded-2xl p-5 shadow-xl flex flex-col gap-3.5">
+          <div class="flex items-start justify-between">
+            <div>
+              <div class="flex items-center gap-2">
+                <h2 id="patientName" class="text-lg font-bold text-white">Ramesh K. (58, Male)</h2>
+                <span id="patientJob" class="text-xs text-slate-400 font-medium">Bank Manager</span>
+              </div>
+              <p id="patientComplaint" class="text-xs text-rose-400 font-medium mt-1 leading-snug">
+                Morning occipital headaches, exertional dyspnea, resting BP 172/105 mmHg.
+              </p>
+            </div>
+            <div id="statusBadge" class="px-3 py-1 rounded-full text-xs font-bold bg-rose-500/20 text-rose-400 border border-rose-500/40">
+              HIGH RISK (99.8%)
+            </div>
+          </div>
+
+          <!-- Peer Community Warning Context -->
+          <div class="bg-slate-950/80 rounded-xl p-3.5 border border-slate-800/80 text-xs text-slate-300 leading-relaxed">
+            <div class="font-bold text-slate-200 mb-1 flex items-center gap-1.5">
+              <span>⚠️</span><span>Patient Danger Context:</span>
+            </div>
+            <p id="peerDangerDesc" class="text-slate-400">
+              Currently connected to 15 clinically matched peers in the hospital network. 14 of those 15 patients (94.4%) suffered acute myocardial infarctions or strokes within 36 months.
+            </p>
+          </div>
+
+          <!-- Live Risk Reduction Meter -->
+          <div class="bg-slate-950/90 rounded-xl p-3.5 border border-slate-800 flex flex-col gap-2">
+            <div class="flex justify-between items-center text-xs">
+              <span class="text-slate-400 font-medium">Predicted CVD Probability</span>
+              <div class="font-mono font-bold flex items-center gap-2">
+                <span id="meterCurrentRisk" class="text-rose-400 text-sm">99.8%</span>
+                <span id="meterRiskDelta" class="text-xs text-emerald-400 font-semibold">(Goal: 10.5%)</span>
+              </div>
+            </div>
+            <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden relative">
+              <div id="meterBarFill" class="h-full bg-rose-500 rounded-full transition-all duration-300" style="width: 99.8%;"></div>
+            </div>
+            <div class="flex justify-between text-[11px] text-slate-400 font-mono">
+              <span>GraphSAGE Cutoff: 50%</span>
+              <span id="meterStatusText" class="text-rose-400 font-bold">In Cardiac Danger Ward</span>
+            </div>
+          </div>
+
+          <!-- Quick Actionable Treatment Prescriptions -->
+          <div class="flex flex-col gap-2 pt-1">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Physician's Prescriptions (Click to Execute):</span>
+            <div class="grid grid-cols-2 gap-2">
+              <button id="btnRx_1" class="bg-slate-800 hover:bg-slate-700 text-blue-300 text-xs font-semibold py-2.5 px-3 rounded-xl border border-slate-700/80 transition flex items-center justify-center gap-1.5 shadow">
+                <span>💊</span><span id="lblRx_1">Telmisartan + Statin</span>
+              </button>
+              <button id="btnRx_2" class="bg-slate-800 hover:bg-slate-700 text-emerald-300 text-xs font-semibold py-2.5 px-3 rounded-xl border border-slate-700/80 transition flex items-center justify-center gap-1.5 shadow">
+                <span>🏃</span><span id="lblRx_2">Cardiac Walk (4h/wk)</span>
+              </button>
+              <button id="btnRx_3" class="bg-slate-800 hover:bg-slate-700 text-cyan-300 text-xs font-semibold py-2.5 px-3 rounded-xl border border-slate-700/80 transition flex items-center justify-center gap-1.5 shadow">
+                <span>🚭</span><span id="lblRx_3">Smoking Cessation</span>
+              </button>
+              <button id="btnRx_All" class="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-bold py-2.5 px-3 rounded-xl shadow-lg shadow-emerald-600/30 transition flex items-center justify-center gap-1.5">
+                <span>🎯</span><span>Full Target Plan</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Clinical Dials -->
+        <div class="bg-slate-900/90 border border-slate-800/90 rounded-2xl p-5 shadow-xl flex-1 flex flex-col">
+          <div class="flex items-center justify-between pb-3 border-b border-slate-800 mb-3">
+            <div class="flex items-center gap-2">
+              <span class="text-base">🎚️</span>
+              <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200">Patient Clinical Dials</h3>
+            </div>
+            <span class="text-[11px] font-mono text-cyan-400">Drag to observe real-time migration</span>
+          </div>
+
+          <div class="flex-1 overflow-y-auto pr-1 space-y-3.5 max-h-[380px]" id="dialsContainer">
+            <!-- Dynamically populated -->
+          </div>
+
+          <div class="flex gap-2 pt-3 mt-3 border-t border-slate-800">
+            <button id="btnResetDials" class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold py-2.5 rounded-xl transition">
+              ↺ Reset to Baseline
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CENTER & RIGHT: 4 SYNCHRONIZED GRAPH VIEWS & TRAJECTORIES (Col 8) -->
+      <div class="xl:col-span-8 flex flex-col gap-5">
+        
+        <!-- Graph View Mode Switcher -->
+        <div class="bg-slate-900/90 border border-slate-800/90 rounded-2xl p-4 shadow-xl flex flex-wrap items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <span class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-200">Synchronized Visual Graph Canvas</span>
+          </div>
+
+          <div class="flex bg-slate-950 p-1 rounded-xl border border-slate-800 gap-1">
+            <button id="btnSubView_local" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-blue-600 text-white transition">
+              1. Local Patient Subgraph (Micro)
+            </button>
+            <button id="btnSubView_macro" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-slate-200 transition">
+              2. 5-Cluster Global Manifold (Macro)
+            </button>
+            <button id="btnSubView_radar" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-slate-200 transition">
+              3. Clinical Radar Fingerprint
+            </button>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <button id="btnPlayAnimation" class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold px-3.5 py-1.5 rounded-lg shadow-md transition flex items-center gap-1.5">
+              <span>▶ Play Migration Animation</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Main Canvas Box -->
+        <div class="bg-slate-900/90 border border-slate-800/90 rounded-2xl p-5 shadow-xl flex flex-col gap-4 relative">
+          
+          <div class="relative w-full h-[470px] rounded-xl bg-[#060a12] border border-slate-950 overflow-hidden">
+            <canvas id="activeCanvas" class="w-full h-full block cursor-crosshair"></canvas>
+
+            <!-- Dynamic Floating Stage Card -->
+            <div class="absolute top-4 right-4 bg-slate-900/95 backdrop-blur border border-slate-700/80 rounded-xl px-4 py-2 text-xs font-mono shadow-2xl flex items-center gap-2.5">
+              <span id="canvasPhaseIcon" class="text-base">🔴</span>
+              <div>
+                <div id="canvasPhaseTitle" class="text-rose-400 font-bold">Baseline: High-Risk Ward</div>
+                <div id="canvasPhaseSubtitle" class="text-[11px] text-slate-400">14 of 15 Neighbors CVD+</div>
+              </div>
+            </div>
+
+            <!-- Canvas Legend -->
+            <div id="canvasLegendBox" class="absolute bottom-4 left-4 bg-slate-900/90 backdrop-blur border border-slate-800 rounded-xl p-3 text-xs text-slate-300 flex flex-col gap-2 shadow-xl">
+              <!-- Dynamically populated based on active view -->
+            </div>
+          </div>
+
+          <!-- Scrubber & Journey Progress -->
+          <div class="flex items-center gap-4 px-2">
+            <span class="text-xs font-mono text-rose-400 font-semibold whitespace-nowrap">Baseline (0%)</span>
+            <input type="range" id="migrationScrubber" min="0" max="100" value="0" class="flex-1 cursor-pointer">
+            <span class="text-xs font-mono text-emerald-400 font-semibold whitespace-nowrap">Target Re-Embedded (100%)</span>
+          </div>
+        </div>
+
+        <!-- Real-World Clinical Counseling Dialogue -->
+        <div class="bg-gradient-to-r from-blue-950/40 via-slate-900 to-indigo-950/40 border border-blue-900/50 rounded-2xl p-5 shadow-xl">
+          <div class="flex items-center gap-2 text-blue-400 text-xs font-bold uppercase tracking-wider mb-2">
+            <span>🩺</span>
+            <span>Physician to Patient Clinical Dialogue:</span>
+          </div>
+          <p id="counselingDialogueText" class="text-xs text-slate-200 leading-relaxed font-normal">
+            Loading patient dialogue...
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ========================================================================================= -->
+    <!-- VIEW 2: MATHEMATICAL EQUATIONS & CLINICAL JUSTIFICATIONS (FULL WIDTH) -->
+    <!-- ========================================================================================= -->
+    <div id="view_proofs" class="hidden flex flex-col gap-6 w-full">
+      
+      <!-- Top Overview Banner -->
+      <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-xl flex flex-col gap-2">
+        <h2 class="text-lg font-bold text-white flex items-center gap-2">
+          <span>📐</span><span>Formal Mathematical Framework of Counterfactual Patient Migration (CPM)</span>
+        </h2>
+        <p class="text-xs text-slate-400 max-w-4xl leading-relaxed">
+          Traditional counterfactual models only report a change in predicted probability (delta y). The CPM framework provides a rigorous, 
+          topology-aware mathematical formulation that explains how a patient navigates the clinical similarity network, decouples structural peer movement 
+          from intervention effort, and prevents false confidence from static graph assumptions.
+        </p>
+      </div>
+
+      <!-- 6 Core Equations Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Formula 1: Domain-Weighted Distance -->
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl flex flex-col gap-3">
+          <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+            <span class="text-xs font-bold uppercase tracking-wider text-cyan-400">Equation 1: Domain-Weighted Clinical Distance</span>
+            <span class="text-[11px] font-mono text-slate-400">Similarity Metric</span>
+          </div>
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-center font-mono text-blue-300 text-base" id="eq1_container">
+            d_clinical(x, x') = &radic; [ &Sigma; w_k &middot; ((x_k - x'_k) / &sigma;_k)&sup2; ]
+          </div>
+          <div class="text-xs text-slate-300 leading-relaxed">
+            <strong class="text-white">Clinical Justification & Real-Life Usecase:</strong> Standard Euclidean distance treats all features equally (e.g., 10 mmHg of blood pressure equals 10 years of age). In clinical cardiology, arterial hypertension (w = 1.8) and hypercholesterolemia (w = 2.0) carry significantly higher lethal risk than gender (w = 0.5). Domain weighting guarantees that the constructed patient graph reflects physiological hazard rather than statistical noise.
+          </div>
+        </div>
+
+        <!-- Formula 2: GraphSAGE Neighborhood Aggregation -->
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl flex flex-col gap-3">
+          <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+            <span class="text-xs font-bold uppercase tracking-wider text-indigo-400">Equation 2: GraphSAGE Multi-Head Aggregation</span>
+            <span class="text-[11px] font-mono text-slate-400">Deep Representation</span>
+          </div>
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-center font-mono text-indigo-300 text-base" id="eq2_container">
+            h_v^(l) = &sigma; [ W^(l) &middot; ( h_v^(l-1) || AGG({ h_u^(l-1), &forall; u &isin; N(v) }) ) ]
+          </div>
+          <div class="text-xs text-slate-300 leading-relaxed">
+            <strong class="text-white">Clinical Justification & Real-Life Usecase:</strong> In medicine, a patient's vulnerability is contextualized by their peer group. GraphSAGE aggregates latent clinical features from the 15 nearest clinical neighbors across 2 neural message-passing layers. This ensures the model learns non-linear risk representations from community health patterns rather than treating the patient as an isolated tabular record.
+          </div>
+        </div>
+
+        <!-- Formula 3: Neighbor Turnover -->
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl flex flex-col gap-3">
+          <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Equation 3: Jaccard Neighbor Turnover (T)</span>
+            <span class="text-[11px] font-mono text-slate-400">Network Relocation</span>
+          </div>
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-center font-mono text-emerald-300 text-base" id="eq3_container">
+            T = 1 - ( | N_orig &cap; N_new | / | N_orig &cup; N_new | ) &isin; [0, 1]
+          </div>
+          <div class="text-xs text-slate-300 leading-relaxed">
+            <strong class="text-white">Clinical Justification & Real-Life Usecase:</strong> When a patient lowers their blood pressure, do they actually break away from their high-risk cardiac peers? If T = 0, the patient remains trapped among the same sick individuals despite taking pills. When T = 1.0, all 15 baseline neighbors are replaced by healthy individuals, confirming genuine clinical relocation.
+          </div>
+        </div>
+
+        <!-- Formula 4: Prevalence Shift -->
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl flex flex-col gap-3">
+          <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Equation 4: Neighborhood Prevalence Shift (R)</span>
+            <span class="text-[11px] font-mono text-slate-400">Peer Risk Shift</span>
+          </div>
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-center font-mono text-amber-300 text-base" id="eq4_container">
+            R = max( 0, ( 1/|N_orig| &middot; &Sigma; y_u ) - ( 1/|N_new| &middot; &Sigma; y_v ) )
+          </div>
+          <div class="text-xs text-slate-300 leading-relaxed">
+            <strong class="text-white">Clinical Justification & Real-Life Usecase:</strong> Directly measures the disease density of the patient's immediate social and biological cohort. For Ramesh, peer CVD incidence plummets from 94.4% down to 6.7%, yielding R = 0.8778. This offers doctors an intuitive way to explain outcomes: "Your community risk dropped by 88%."
+          </div>
+        </div>
+
+        <!-- Formula 5: Latent Embedding Displacement -->
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl flex flex-col gap-3">
+          <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+            <span class="text-xs font-bold uppercase tracking-wider text-purple-400">Equation 5: GraphSAGE Latent Displacement (D_norm)</span>
+            <span class="text-[11px] font-mono text-slate-400">Manifold Movement</span>
+          </div>
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-center font-mono text-purple-300 text-base" id="eq5_container">
+            D = || z_new - z_orig ||_2,  D_norm = (D - D_min) / (D_max - D_min) &isin; [0, 1]
+          </div>
+          <div class="text-xs text-slate-300 leading-relaxed">
+            <strong class="text-white">Clinical Justification & Real-Life Usecase:</strong> Feature space Euclidean distance can be misleading because physiological features have non-linear interactions. D_norm measures displacement in the deep 32-dimensional latent manifold constructed by GraphSAGE, verifying that the patient has moved into the low-risk geometric basin.
+          </div>
+        </div>
+
+        <!-- Formula 6: Composite CPM Score -->
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl flex flex-col gap-3">
+          <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+            <span class="text-xs font-bold uppercase tracking-wider text-rose-400">Equation 6: Approved Composite CPM Metric</span>
+            <span class="text-[11px] font-mono text-slate-400">Core Paper Metric</span>
+          </div>
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-center font-mono text-rose-300 text-base" id="eq6_container">
+            CPM = 0.40 &middot; T + 0.40 &middot; R + 0.20 &middot; D_norm
+          </div>
+          <div class="text-xs text-slate-300 leading-relaxed">
+            <strong class="text-white">Clinical Justification & Real-Life Usecase:</strong> Validated through sensitivity analysis (rank correlation r > 0.94). Weights allocate 40% to topology replacement, 40% to peer disease reduction, and 20% to latent manifold movement. Feature effort F_norm = ||&Delta;x||_2 / &radic;d is reported separately to prevent hiding difficult interventions behind a high score.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ========================================================================================= -->
+    <!-- VIEW 3: COMPREHENSIVE PATIENT CASE FILE & MEDICAL ACTION PLAN -->
+    <!-- ========================================================================================= -->
+    <div id="view_case" class="hidden flex flex-col gap-6 w-full">
+      
+      <!-- Patient Dossier Card -->
+      <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-xl flex flex-col gap-4">
+        <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-slate-800">
+          <div>
+            <h2 id="caseDossierName" class="text-xl font-bold text-white">Clinical Case Dossier: Ramesh K.</h2>
+            <p id="caseDossierOccupation" class="text-xs text-slate-400 mt-0.5">58 Years Old • Male • Senior Bank Manager</p>
+          </div>
+          <div class="flex gap-2">
+            <span class="px-3 py-1 rounded-xl text-xs font-bold bg-rose-500/20 text-rose-400 border border-rose-500/40">Baseline Risk: 99.8%</span>
+            <span class="px-3 py-1 rounded-xl text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/40">Target Risk: 10.5%</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
+          <div class="bg-slate-950/70 p-4 rounded-xl border border-slate-800/80 flex flex-col gap-1.5">
+            <span class="font-bold text-slate-300 uppercase tracking-wider text-[11px]">Chief Medical Complaints</span>
+            <p id="caseChiefComplaints" class="text-slate-400 leading-relaxed">
+              Recurring morning occipital headaches, shortness of breath after climbing one flight of stairs, chronic exhaustion.
+            </p>
+          </div>
+          <div class="bg-slate-950/70 p-4 rounded-xl border border-slate-800/80 flex flex-col gap-1.5">
+            <span class="font-bold text-slate-300 uppercase tracking-wider text-[11px]">Vitals & Hemodynamics</span>
+            <p id="caseVitals" class="text-slate-400 leading-relaxed">
+              Resting BP 172/105 mmHg, Resting Heart Rate 92 bpm, BMI 29.2 kg/m².
+            </p>
+          </div>
+          <div class="bg-slate-950/70 p-4 rounded-xl border border-slate-800/80 flex flex-col gap-1.5">
+            <span class="font-bold text-slate-300 uppercase tracking-wider text-[11px]">Biomarkers & Blood Panel</span>
+            <p id="caseLabs" class="text-slate-400 leading-relaxed">
+              Total Cholesterol 293 mg/dL, Triglycerides 290 mg/dL, Fasting Glucose 76.5 mg/dL.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step-by-Step Medical Treatment Protocol -->
+      <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-xl flex flex-col gap-4">
+        <h3 class="text-sm font-bold uppercase tracking-wider text-white flex items-center gap-2">
+          <span>🩺</span><span>Recommended Step-by-Step Clinical Treatment Protocol</span>
+        </h3>
+
+        <div id="caseProtocolList" class="space-y-4">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- MULTI-GRAPH CLIENT ENGINE -->
+  <script>
+    const MULTI_DATA = {
+  "macro_clusters": {
+    "cluster_1": {
+      "name": "Severe Hypertensive Ward",
+      "color": "#ef4444",
+      "center": [
+        -120,
+        -70
+      ],
+      "nodes": [
+        {
+          "id": "cluster_1_0",
+          "x": -109.07,
+          "y": -73.04,
+          "label": "Peer #1",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_1",
+          "x": -105.75,
+          "y": -36.49,
+          "label": "Peer #2",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_2",
+          "x": -125.15,
+          "y": -75.15,
+          "label": "Peer #3",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_3",
+          "x": -85.26,
+          "y": -53.12,
+          "label": "Peer #4",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_4",
+          "x": -130.33,
+          "y": -58.06,
+          "label": "Peer #5",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_5",
+          "x": -130.2,
+          "y": -80.25,
+          "label": "Peer #6",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_6",
+          "x": -114.68,
+          "y": -112.09,
+          "label": "Peer #7",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_7",
+          "x": -157.95,
+          "y": -82.37,
+          "label": "Peer #8",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_8",
+          "x": -142.28,
+          "y": -63.09,
+          "label": "Peer #9",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_9",
+          "x": -139.98,
+          "y": -101.07,
+          "label": "Peer #10",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_10",
+          "x": -87.76,
+          "y": -74.97,
+          "label": "Peer #11",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_11",
+          "x": -118.51,
+          "y": -101.34,
+          "label": "Peer #12",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_12",
+          "x": -131.98,
+          "y": -67.56,
+          "label": "Peer #13",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_13",
+          "x": -145.32,
+          "y": -61.73,
+          "label": "Peer #14",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_14",
+          "x": -133.21,
+          "y": -76.42,
+          "label": "Peer #15",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_15",
+          "x": -133.24,
+          "y": -29.25,
+          "label": "Peer #16",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_16",
+          "x": -120.3,
+          "y": -93.27,
+          "label": "Peer #17",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_17",
+          "x": -101.9,
+          "y": -96.86,
+          "label": "Peer #18",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_18",
+          "x": -115.41,
+          "y": -113.11,
+          "label": "Peer #19",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_19",
+          "x": -149.22,
+          "y": -65.67,
+          "label": "Peer #20",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_20",
+          "x": -103.75,
+          "y": -66.23,
+          "label": "Peer #21",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_21",
+          "x": -122.54,
+          "y": -76.62,
+          "label": "Peer #22",
+          "color": "#ef4444"
+        }
+      ]
+    },
+    "cluster_2": {
+      "name": "Diabetic & Metabolic Syndrome",
+      "color": "#f97316",
+      "center": [
+        -110,
+        60
+      ],
+      "nodes": [
+        {
+          "id": "cluster_2_0",
+          "x": -142.53,
+          "y": 44.16,
+          "label": "Peer #1",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_1",
+          "x": -120.13,
+          "y": 83.26,
+          "label": "Peer #2",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_2",
+          "x": -102.44,
+          "y": 21.21,
+          "label": "Peer #3",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_3",
+          "x": -102.87,
+          "y": 51.53,
+          "label": "Peer #4",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_4",
+          "x": -124.89,
+          "y": 73.46,
+          "label": "Peer #5",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_5",
+          "x": -87.32,
+          "y": 80.49,
+          "label": "Peer #6",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_6",
+          "x": -128.46,
+          "y": 53.2,
+          "label": "Peer #7",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_7",
+          "x": -102.71,
+          "y": 81.46,
+          "label": "Peer #8",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_8",
+          "x": -120.54,
+          "y": 55.92,
+          "label": "Peer #9",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_9",
+          "x": -134.34,
+          "y": 33.68,
+          "label": "Peer #10",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_10",
+          "x": -92.12,
+          "y": 89.84,
+          "label": "Peer #11",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_11",
+          "x": -111.58,
+          "y": 82.08,
+          "label": "Peer #12",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_12",
+          "x": -102.04,
+          "y": 45.81,
+          "label": "Peer #13",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_13",
+          "x": -102.05,
+          "y": 93.84,
+          "label": "Peer #14",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_14",
+          "x": -110.79,
+          "y": 94.42,
+          "label": "Peer #15",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_15",
+          "x": -167.63,
+          "y": 78.08,
+          "label": "Peer #16",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_16",
+          "x": -108.08,
+          "y": 53.42,
+          "label": "Peer #17",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_17",
+          "x": -107.98,
+          "y": 16.27,
+          "label": "Peer #18",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_18",
+          "x": -114.83,
+          "y": 67.86,
+          "label": "Peer #19",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_19",
+          "x": -77.49,
+          "y": 48.6,
+          "label": "Peer #20",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_20",
+          "x": -127.79,
+          "y": 48.96,
+          "label": "Peer #21",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_21",
+          "x": -89.86,
+          "y": 67.23,
+          "label": "Peer #22",
+          "color": "#f97316"
+        }
+      ]
+    },
+    "cluster_3": {
+      "name": "Transitional / Outpatient Corridor",
+      "color": "#eab308",
+      "center": [
+        0,
+        0
+      ],
+      "nodes": [
+        {
+          "id": "cluster_3_0",
+          "x": -11.65,
+          "y": 11.29,
+          "label": "Peer #1",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_1",
+          "x": 2.14,
+          "y": 21.31,
+          "label": "Peer #2",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_2",
+          "x": -15.45,
+          "y": -7.21,
+          "label": "Peer #3",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_3",
+          "x": -8.63,
+          "y": -32.2,
+          "label": "Peer #4",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_4",
+          "x": 6.51,
+          "y": 5.74,
+          "label": "Peer #5",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_5",
+          "x": 0.11,
+          "y": -5.16,
+          "label": "Peer #6",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_6",
+          "x": -31.14,
+          "y": -9.25,
+          "label": "Peer #7",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_7",
+          "x": -7.54,
+          "y": -17.65,
+          "label": "Peer #8",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_8",
+          "x": -3.55,
+          "y": 8.89,
+          "label": "Peer #9",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_9",
+          "x": 41.5,
+          "y": 3.84,
+          "label": "Peer #10",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_10",
+          "x": 5.67,
+          "y": -1.64,
+          "label": "Peer #11",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_11",
+          "x": -42.21,
+          "y": -0.58,
+          "label": "Peer #12",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_12",
+          "x": 1.33,
+          "y": 54.19,
+          "label": "Peer #13",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_13",
+          "x": -4.23,
+          "y": 6.63,
+          "label": "Peer #14",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_14",
+          "x": -0.76,
+          "y": -25.71,
+          "label": "Peer #15",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_15",
+          "x": 25.14,
+          "y": 16.54,
+          "label": "Peer #16",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_16",
+          "x": 17.4,
+          "y": -20.01,
+          "label": "Peer #17",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_17",
+          "x": 30.86,
+          "y": -30.84,
+          "label": "Peer #18",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_18",
+          "x": 12.91,
+          "y": 48.19,
+          "label": "Peer #19",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_19",
+          "x": -21.79,
+          "y": -12.46,
+          "label": "Peer #20",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_20",
+          "x": 2.19,
+          "y": -11.08,
+          "label": "Peer #21",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_21",
+          "x": -34.11,
+          "y": 1.51,
+          "label": "Peer #22",
+          "color": "#eab308"
+        }
+      ]
+    },
+    "cluster_4": {
+      "name": "Controlled Primary Care",
+      "color": "#06b6d4",
+      "center": [
+        100,
+        -60
+      ],
+      "nodes": [
+        {
+          "id": "cluster_4_0",
+          "x": 76.63,
+          "y": -49.58,
+          "label": "Peer #1",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_1",
+          "x": 79.77,
+          "y": -25.9,
+          "label": "Peer #2",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_2",
+          "x": 82.77,
+          "y": -67.09,
+          "label": "Peer #3",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_3",
+          "x": 117.9,
+          "y": -87.08,
+          "label": "Peer #4",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_4",
+          "x": 105.0,
+          "y": -31.24,
+          "label": "Peer #5",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_5",
+          "x": 64.64,
+          "y": -55.94,
+          "label": "Peer #6",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_6",
+          "x": 105.72,
+          "y": -42.8,
+          "label": "Peer #7",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_7",
+          "x": 72.79,
+          "y": -89.05,
+          "label": "Peer #8",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_8",
+          "x": 111.48,
+          "y": -53.47,
+          "label": "Peer #9",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_9",
+          "x": 105.51,
+          "y": -52.38,
+          "label": "Peer #10",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_10",
+          "x": 85.04,
+          "y": -54.89,
+          "label": "Peer #11",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_11",
+          "x": 106.45,
+          "y": -75.72,
+          "label": "Peer #12",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_12",
+          "x": 141.05,
+          "y": -49.58,
+          "label": "Peer #13",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_13",
+          "x": 73.79,
+          "y": -45.56,
+          "label": "Peer #14",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_14",
+          "x": 78.56,
+          "y": -42.68,
+          "label": "Peer #15",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_15",
+          "x": 125.49,
+          "y": -78.06,
+          "label": "Peer #16",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_16",
+          "x": 121.19,
+          "y": -50.92,
+          "label": "Peer #17",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_17",
+          "x": 118.09,
+          "y": -18.27,
+          "label": "Peer #18",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_18",
+          "x": 94.6,
+          "y": -76.58,
+          "label": "Peer #19",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_19",
+          "x": 80.43,
+          "y": -77.95,
+          "label": "Peer #20",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_20",
+          "x": 98.3,
+          "y": -52.49,
+          "label": "Peer #21",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_21",
+          "x": 106.09,
+          "y": -41.8,
+          "label": "Peer #22",
+          "color": "#06b6d4"
+        }
+      ]
+    },
+    "cluster_5": {
+      "name": "Low-Risk Healthy Reference Cohort",
+      "color": "#22c55e",
+      "center": [
+        120,
+        70
+      ],
+      "nodes": [
+        {
+          "id": "cluster_5_0",
+          "x": 120.29,
+          "y": 101.98,
+          "label": "Peer #1",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_1",
+          "x": 114.18,
+          "y": 129.84,
+          "label": "Peer #2",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_2",
+          "x": 133.76,
+          "y": 51.14,
+          "label": "Peer #3",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_3",
+          "x": 96.44,
+          "y": 80.61,
+          "label": "Peer #4",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_4",
+          "x": 115.08,
+          "y": 85.71,
+          "label": "Peer #5",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_5",
+          "x": 130.41,
+          "y": 68.4,
+          "label": "Peer #6",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_6",
+          "x": 101.37,
+          "y": 36.67,
+          "label": "Peer #7",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_7",
+          "x": 110.18,
+          "y": 88.84,
+          "label": "Peer #8",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_8",
+          "x": 124.71,
+          "y": 42.59,
+          "label": "Peer #9",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_9",
+          "x": 123.81,
+          "y": 78.48,
+          "label": "Peer #10",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_10",
+          "x": 100.56,
+          "y": 73.38,
+          "label": "Peer #11",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_11",
+          "x": 121.28,
+          "y": 44.85,
+          "label": "Peer #12",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_12",
+          "x": 127.87,
+          "y": 82.34,
+          "label": "Peer #13",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_13",
+          "x": 143.83,
+          "y": 93.18,
+          "label": "Peer #14",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_14",
+          "x": 89.69,
+          "y": 49.37,
+          "label": "Peer #15",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_15",
+          "x": 131.33,
+          "y": 81.3,
+          "label": "Peer #16",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_16",
+          "x": 131.33,
+          "y": 154.76,
+          "label": "Peer #17",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_17",
+          "x": 132.56,
+          "y": 94.98,
+          "label": "Peer #18",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_18",
+          "x": 140.99,
+          "y": 84.33,
+          "label": "Peer #19",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_19",
+          "x": 113.06,
+          "y": 86.7,
+          "label": "Peer #20",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_20",
+          "x": 103.0,
+          "y": 64.79,
+          "label": "Peer #21",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_21",
+          "x": 109.32,
+          "y": 71.8,
+          "label": "Peer #22",
+          "color": "#22c55e"
+        }
+      ]
+    }
+  },
+  "patients": [
+    {
+      "id": 852,
+      "name": "Ramesh K.",
+      "age": 58,
+      "gender": "Male",
+      "occupation": "Senior Bank Manager (10 hrs/day desk work)",
+      "chief_complaint": "Recurring morning throbbing occipital headaches, exertional shortness of breath when climbing stairs, bilateral ankle tightness.",
+      "vital_signs": "Resting BP 172/105 mmHg (Grade 2 HTN), Resting Heart Rate 92 bpm, BMI 29.2 kg/m\u00b2.",
+      "lab_biomarkers": "Total Cholesterol 293 mg/dL, Triglycerides 290 mg/dL, Fasting Glucose 76.5 mg/dL.",
+      "lifestyle": "Sedentary (0 hrs structured exercise/wk), active smoker (12 cigarettes/day), high job stress (Stress Index 7.5/10).",
+      "peer_danger_context": "Ramesh's baseline biological profile connects him to 15 clinically matching patients in the registry. 14 of those 15 patients (94.4%) suffered acute myocardial infarctions or strokes within 36 months.",
+      "prescription": [
+        {
+          "step": "Step 1",
+          "category": "Pharmacotherapy",
+          "action": "Dual Antihypertensive (Telmisartan 40mg + Amlodipine 5mg) & High-Intensity Statin (Rosuvastatin 20mg)",
+          "impact": "Drops BP to 134 mmHg, Total Cholesterol to 216 mg/dL, Triglycerides to 190 mg/dL"
+        },
+        {
+          "step": "Step 2",
+          "category": "Lifestyle Intervention",
+          "action": "Supervised Cardiac Aerobic Walking: 45 min sessions, 4 days/week",
+          "impact": "Increases activity to 4.0 hrs/wk, resting HR slows to 74 bpm, BMI drops to 26.5"
+        },
+        {
+          "step": "Step 3",
+          "category": "Behavioral",
+          "action": "Structured Smoking Cessation with nicotine patches & stress management",
+          "impact": "Flips smoking to 0, reduces stress index from 7.5 to 3.5"
+        }
+      ],
+      "orig_risk": 100.0,
+      "cf_risk": 10.5,
+      "risk_reduction": 89.5,
+      "cpm_score": 0.944,
+      "turnover": 1.0,
+      "risk_shift": 0.8778,
+      "prevalence_orig": 94.4,
+      "prevalence_new": 6.7,
+      "d_norm": 0.9642,
+      "emb_displacement": 15.49,
+      "features": {
+        "Blood_Pressure": {
+          "orig": 170.7,
+          "cf": 133.7,
+          "delta": -37.0,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 292.9,
+          "cf": 216.86,
+          "delta": -76.04,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 129.5,
+          "cf": 100.6,
+          "delta": -28.9,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 29.2,
+          "cf": 19.6,
+          "delta": -9.6,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 6.7,
+          "cf": 10.0,
+          "delta": 3.3,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 1.76,
+          "cf": 1.76,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 76.5,
+          "cf": 70.0,
+          "delta": -6.5,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 290.1,
+          "cf": 190.02,
+          "delta": -100.08,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 2.6,
+          "cf": 0.0,
+          "delta": -2.6,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.6,
+          "delta": -0.4,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        }
+      },
+      "local_graph": {
+        "start_coords": [
+          -120,
+          -10
+        ],
+        "end_coords": [
+          120,
+          15
+        ],
+        "orig_neighbors": [
+          {
+            "id": "orig_peer_355",
+            "real_id": 355,
+            "x": -35.69,
+            "y": -10.0,
+            "cvd": 1,
+            "age": 76,
+            "bp": 171,
+            "label": "Peer #355 (CVD+)"
+          },
+          {
+            "id": "orig_peer_542",
+            "real_id": 542,
+            "x": -41.57,
+            "y": 24.92,
+            "cvd": 1,
+            "age": 79,
+            "bp": 179,
+            "label": "Peer #542 (CVD+)"
+          },
+          {
+            "id": "orig_peer_632",
+            "real_id": 632,
+            "x": -65.98,
+            "y": 49.99,
+            "cvd": 1,
+            "age": 76,
+            "bp": 163,
+            "label": "Peer #632 (CVD+)"
+          },
+          {
+            "id": "orig_peer_986",
+            "real_id": 986,
+            "x": -93.17,
+            "y": 72.57,
+            "cvd": 0,
+            "age": 68,
+            "bp": 162,
+            "label": "Peer #986 (CVD-)"
+          },
+          {
+            "id": "orig_peer_1276",
+            "real_id": 1276,
+            "x": -127.9,
+            "y": 65.2,
+            "cvd": 1,
+            "age": 63,
+            "bp": 170,
+            "label": "Peer #1276 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1297",
+            "real_id": 1297,
+            "x": -157.87,
+            "y": 55.6,
+            "cvd": 1,
+            "age": 65,
+            "bp": 175,
+            "label": "Peer #1297 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1313",
+            "real_id": 1313,
+            "x": -193.99,
+            "y": 43.75,
+            "cvd": 1,
+            "age": 67,
+            "bp": 180,
+            "label": "Peer #1313 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1325",
+            "real_id": 1325,
+            "x": -200.41,
+            "y": 7.09,
+            "cvd": 1,
+            "age": 69,
+            "bp": 150,
+            "label": "Peer #1325 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1440",
+            "real_id": 1440,
+            "x": -195.85,
+            "y": -26.12,
+            "cvd": 1,
+            "age": 71,
+            "bp": 155,
+            "label": "Peer #1440 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1451",
+            "real_id": 1451,
+            "x": -189.13,
+            "y": -60.22,
+            "cvd": 1,
+            "age": 73,
+            "bp": 160,
+            "label": "Peer #1451 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1580",
+            "real_id": 1580,
+            "x": -165.2,
+            "y": -88.29,
+            "cvd": 1,
+            "age": 55,
+            "bp": 165,
+            "label": "Peer #1580 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1686",
+            "real_id": 1686,
+            "x": -128.29,
+            "y": -88.88,
+            "cvd": 1,
+            "age": 57,
+            "bp": 170,
+            "label": "Peer #1686 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1725",
+            "real_id": 1725,
+            "x": -92.97,
+            "y": -93.18,
+            "cvd": 1,
+            "age": 59,
+            "bp": 175,
+            "label": "Peer #1725 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1943",
+            "real_id": 1943,
+            "x": -68.67,
+            "y": -67.0,
+            "cvd": 1,
+            "age": 61,
+            "bp": 180,
+            "label": "Peer #1943 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1982",
+            "real_id": 1982,
+            "x": -50.54,
+            "y": -40.93,
+            "cvd": 1,
+            "age": 63,
+            "bp": 150,
+            "label": "Peer #1982 (CVD+)"
+          }
+        ],
+        "new_neighbors": [
+          {
+            "id": "new_peer_39",
+            "real_id": 39,
+            "x": 210.63,
+            "y": 15.0,
+            "cvd": 0,
+            "age": 66,
+            "bp": 143,
+            "label": "Peer #39 (CVD-)"
+          },
+          {
+            "id": "new_peer_277",
+            "real_id": 277,
+            "x": 202.96,
+            "y": 51.94,
+            "cvd": 0,
+            "age": 59,
+            "bp": 138,
+            "label": "Peer #277 (CVD-)"
+          },
+          {
+            "id": "new_peer_358",
+            "real_id": 358,
+            "x": 182.06,
+            "y": 83.93,
+            "cvd": 0,
+            "age": 77,
+            "bp": 157,
+            "label": "Peer #358 (CVD-)"
+          },
+          {
+            "id": "new_peer_543",
+            "real_id": 543,
+            "x": 149.21,
+            "y": 104.9,
+            "cvd": 0,
+            "age": 64,
+            "bp": 143,
+            "label": "Peer #543 (CVD-)"
+          },
+          {
+            "id": "new_peer_605",
+            "real_id": 605,
+            "x": 109.6,
+            "y": 113.97,
+            "cvd": 0,
+            "age": 78,
+            "bp": 144,
+            "label": "Peer #605 (CVD-)"
+          },
+          {
+            "id": "new_peer_655",
+            "real_id": 655,
+            "x": 74.84,
+            "y": 93.22,
+            "cvd": 0,
+            "age": 76,
+            "bp": 141,
+            "label": "Peer #655 (CVD-)"
+          },
+          {
+            "id": "new_peer_1043",
+            "real_id": 1043,
+            "x": 50.05,
+            "y": 65.82,
+            "cvd": 0,
+            "age": 60,
+            "bp": 121,
+            "label": "Peer #1043 (CVD-)"
+          },
+          {
+            "id": "new_peer_1287",
+            "real_id": 1287,
+            "x": 26.19,
+            "y": 34.94,
+            "cvd": 0,
+            "age": 62,
+            "bp": 124,
+            "label": "Peer #1287 (CVD-)"
+          },
+          {
+            "id": "new_peer_1304",
+            "real_id": 1304,
+            "x": 36.45,
+            "y": -2.76,
+            "cvd": 0,
+            "age": 64,
+            "bp": 127,
+            "label": "Peer #1304 (CVD-)"
+          },
+          {
+            "id": "new_peer_1374",
+            "real_id": 1374,
+            "x": 48.18,
+            "y": -37.18,
+            "cvd": 0,
+            "age": 48,
+            "bp": 130,
+            "label": "Peer #1374 (CVD-)"
+          },
+          {
+            "id": "new_peer_1948",
+            "real_id": 1948,
+            "x": 79.22,
+            "y": -55.64,
+            "cvd": 0,
+            "age": 50,
+            "bp": 118,
+            "label": "Peer #1948 (CVD-)"
+          },
+          {
+            "id": "new_peer_1986",
+            "real_id": 1986,
+            "x": 111.58,
+            "y": -65.07,
+            "cvd": 0,
+            "age": 52,
+            "bp": 121,
+            "label": "Peer #1986 (CVD-)"
+          },
+          {
+            "id": "new_peer_2369",
+            "real_id": 2369,
+            "x": 150.67,
+            "y": -79.4,
+            "cvd": 0,
+            "age": 54,
+            "bp": 124,
+            "label": "Peer #2369 (CVD-)"
+          },
+          {
+            "id": "new_peer_2598",
+            "real_id": 2598,
+            "x": 184.72,
+            "y": -56.88,
+            "cvd": 0,
+            "age": 56,
+            "bp": 127,
+            "label": "Peer #2598 (CVD-)"
+          },
+          {
+            "id": "new_peer_2618",
+            "real_id": 2618,
+            "x": 205.8,
+            "y": -23.2,
+            "cvd": 0,
+            "age": 58,
+            "bp": 130,
+            "label": "Peer #2618 (CVD-)"
+          }
+        ],
+        "intermediate_nodes": [
+          {
+            "id": "mid_1_852",
+            "x": -50,
+            "y": 45,
+            "label": "Dr. Outreach Outpatient",
+            "type": "clinic"
+          },
+          {
+            "id": "mid_2_852",
+            "x": -10,
+            "y": -35,
+            "label": "Cardiac Rehab Unit",
+            "type": "rehab"
+          },
+          {
+            "id": "mid_3_852",
+            "x": 45,
+            "y": 30,
+            "label": "Community Wellness Cohort",
+            "type": "lifestyle"
+          }
+        ]
+      },
+      "macro_trajectory": [
+        {
+          "name": "Severe Hypertensive Ward",
+          "coords": [
+            -120,
+            -70
+          ],
+          "status": "Baseline Danger"
+        },
+        {
+          "name": "Transitional Treatment Corridor",
+          "coords": [
+            0,
+            0
+          ],
+          "status": "Under Active Medication"
+        },
+        {
+          "name": "Healthy Reference Cohort",
+          "coords": [
+            120,
+            70
+          ],
+          "status": "Target Destination"
+        }
+      ]
+    },
+    {
+      "id": 336,
+      "name": "Priya S.",
+      "age": 64,
+      "gender": "Female",
+      "occupation": "Retired School Administrator",
+      "chief_complaint": "Chronic exhaustion, blurred vision episodes, tingling in extremities, uncontrolled weight gain.",
+      "vital_signs": "BP 164/98 mmHg, BMI 33.8 kg/m\u00b2 (Class I Obesity), Resting Heart Rate 88 bpm.",
+      "lab_biomarkers": "Fasting Glucose 145 mg/dL (Uncontrolled Type 2 Diabetes), Triglycerides 271 mg/dL, Cholesterol 272 mg/dL.",
+      "lifestyle": "Active smoker (1 pack/day), sedentary lifestyle, high dietary glycemic index.",
+      "peer_danger_context": "Priya sits in the diabetic-atherosclerotic cluster. 100% of her immediate 15 baseline neighbors have active coronary artery disease or diabetic nephropathy.",
+      "prescription": [
+        {
+          "step": "Step 1",
+          "category": "Metabolic Control",
+          "action": "SGLT2 inhibitor (Empagliflozin 10mg) + Metformin 1000mg BID",
+          "impact": "Lowers fasting glucose from 145 to 85 mg/dL, initiates weight loss"
+        },
+        {
+          "step": "Step 2",
+          "category": "Vascular Therapy",
+          "action": "ACE Inhibitor (Ramipril 5mg) + Atorvastatin 40mg",
+          "impact": "Controls blood pressure to 130 mmHg, reduces LDL plaque progression"
+        },
+        {
+          "step": "Step 3",
+          "category": "Smoking Cessation",
+          "action": "Varenicline therapy + nutritional counseling",
+          "impact": "Eliminates smoking, triglycerides drop to 183 mg/dL"
+        }
+      ],
+      "orig_risk": 100.0,
+      "cf_risk": 27.3,
+      "risk_reduction": 72.7,
+      "cpm_score": 0.9342,
+      "turnover": 1.0,
+      "risk_shift": 0.8424,
+      "prevalence_orig": 90.9,
+      "prevalence_new": 6.7,
+      "d_norm": 0.9862,
+      "emb_displacement": 15.81,
+      "features": {
+        "Blood_Pressure": {
+          "orig": 164.2,
+          "cf": 131.82,
+          "delta": -32.38,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 272.6,
+          "cf": 206.06,
+          "delta": -66.53,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 122.2,
+          "cf": 100.6,
+          "delta": -21.6,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 29.4,
+          "cf": 21.0,
+          "delta": -8.4,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 6.5,
+          "cf": 10.0,
+          "delta": 3.5,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 2.05,
+          "cf": 2.05,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 105.9,
+          "cf": 79.3,
+          "delta": -26.6,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 271.2,
+          "cf": 183.63,
+          "delta": -87.57,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 7.7,
+          "cf": 4.2,
+          "delta": -3.5,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.65,
+          "delta": -0.35,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 1.0,
+          "cf": 0.65,
+          "delta": -0.35,
+          "weight": 1.8
+        }
+      },
+      "local_graph": {
+        "start_coords": [
+          -120,
+          -10
+        ],
+        "end_coords": [
+          120,
+          15
+        ],
+        "orig_neighbors": [
+          {
+            "id": "orig_peer_274",
+            "real_id": 274,
+            "x": -36.82,
+            "y": -10.0,
+            "cvd": 1,
+            "age": 79,
+            "bp": 153,
+            "label": "Peer #274 (CVD+)"
+          },
+          {
+            "id": "orig_peer_362",
+            "real_id": 362,
+            "x": -48.32,
+            "y": 21.91,
+            "cvd": 1,
+            "age": 78,
+            "bp": 168,
+            "label": "Peer #362 (CVD+)"
+          },
+          {
+            "id": "orig_peer_414",
+            "real_id": 414,
+            "x": -67.72,
+            "y": 48.06,
+            "cvd": 1,
+            "age": 79,
+            "bp": 169,
+            "label": "Peer #414 (CVD+)"
+          },
+          {
+            "id": "orig_peer_428",
+            "real_id": 428,
+            "x": -95.28,
+            "y": 66.09,
+            "cvd": 1,
+            "age": 80,
+            "bp": 156,
+            "label": "Peer #428 (CVD+)"
+          },
+          {
+            "id": "orig_peer_720",
+            "real_id": 720,
+            "x": -128.99,
+            "y": 75.51,
+            "cvd": 1,
+            "age": 76,
+            "bp": 167,
+            "label": "Peer #720 (CVD+)"
+          },
+          {
+            "id": "orig_peer_825",
+            "real_id": 825,
+            "x": -164.65,
+            "y": 67.33,
+            "cvd": 1,
+            "age": 75,
+            "bp": 157,
+            "label": "Peer #825 (CVD+)"
+          },
+          {
+            "id": "orig_peer_865",
+            "real_id": 865,
+            "x": -191.36,
+            "y": 41.84,
+            "cvd": 1,
+            "age": 79,
+            "bp": 143,
+            "label": "Peer #865 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1110",
+            "real_id": 1110,
+            "x": -198.84,
+            "y": 6.76,
+            "cvd": 1,
+            "age": 69,
+            "bp": 150,
+            "label": "Peer #1110 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1133",
+            "real_id": 1133,
+            "x": -212.04,
+            "y": -29.56,
+            "cvd": 1,
+            "age": 71,
+            "bp": 155,
+            "label": "Peer #1133 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1188",
+            "real_id": 1188,
+            "x": -192.62,
+            "y": -62.76,
+            "cvd": 1,
+            "age": 73,
+            "bp": 160,
+            "label": "Peer #1188 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1512",
+            "real_id": 1512,
+            "x": -163.04,
+            "y": -84.55,
+            "cvd": 1,
+            "age": 55,
+            "bp": 165,
+            "label": "Peer #1512 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1572",
+            "real_id": 1572,
+            "x": -129.12,
+            "y": -96.76,
+            "cvd": 1,
+            "age": 57,
+            "bp": 170,
+            "label": "Peer #1572 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1587",
+            "real_id": 1587,
+            "x": -94.23,
+            "y": -89.31,
+            "cvd": 1,
+            "age": 59,
+            "bp": 175,
+            "label": "Peer #1587 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1631",
+            "real_id": 1631,
+            "x": -66.5,
+            "y": -69.42,
+            "cvd": 1,
+            "age": 61,
+            "bp": 180,
+            "label": "Peer #1631 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1662",
+            "real_id": 1662,
+            "x": -44.98,
+            "y": -43.4,
+            "cvd": 1,
+            "age": 63,
+            "bp": 150,
+            "label": "Peer #1662 (CVD+)"
+          }
+        ],
+        "new_neighbors": [
+          {
+            "id": "new_peer_39",
+            "real_id": 39,
+            "x": 215.16,
+            "y": 15.0,
+            "cvd": 0,
+            "age": 66,
+            "bp": 143,
+            "label": "Peer #39 (CVD-)"
+          },
+          {
+            "id": "new_peer_283",
+            "real_id": 283,
+            "x": 193.35,
+            "y": 47.66,
+            "cvd": 0,
+            "age": 77,
+            "bp": 152,
+            "label": "Peer #283 (CVD-)"
+          },
+          {
+            "id": "new_peer_358",
+            "real_id": 358,
+            "x": 175.08,
+            "y": 76.18,
+            "cvd": 0,
+            "age": 77,
+            "bp": 157,
+            "label": "Peer #358 (CVD-)"
+          },
+          {
+            "id": "new_peer_605",
+            "real_id": 605,
+            "x": 145.01,
+            "y": 91.96,
+            "cvd": 0,
+            "age": 78,
+            "bp": 144,
+            "label": "Peer #605 (CVD-)"
+          },
+          {
+            "id": "new_peer_610",
+            "real_id": 610,
+            "x": 111.55,
+            "y": 95.37,
+            "cvd": 0,
+            "age": 70,
+            "bp": 139,
+            "label": "Peer #610 (CVD-)"
+          },
+          {
+            "id": "new_peer_621",
+            "real_id": 621,
+            "x": 71.45,
+            "y": 99.1,
+            "cvd": 0,
+            "age": 65,
+            "bp": 142,
+            "label": "Peer #621 (CVD-)"
+          },
+          {
+            "id": "new_peer_966",
+            "real_id": 966,
+            "x": 43.89,
+            "y": 70.29,
+            "cvd": 0,
+            "age": 55,
+            "bp": 132,
+            "label": "Peer #966 (CVD-)"
+          },
+          {
+            "id": "new_peer_1043",
+            "real_id": 1043,
+            "x": 32.47,
+            "y": 33.6,
+            "cvd": 0,
+            "age": 62,
+            "bp": 124,
+            "label": "Peer #1043 (CVD-)"
+          },
+          {
+            "id": "new_peer_1287",
+            "real_id": 1287,
+            "x": 39.83,
+            "y": -2.04,
+            "cvd": 0,
+            "age": 64,
+            "bp": 127,
+            "label": "Peer #1287 (CVD-)"
+          },
+          {
+            "id": "new_peer_1304",
+            "real_id": 1304,
+            "x": 47.32,
+            "y": -37.8,
+            "cvd": 0,
+            "age": 48,
+            "bp": 130,
+            "label": "Peer #1304 (CVD-)"
+          },
+          {
+            "id": "new_peer_1355",
+            "real_id": 1355,
+            "x": 75.27,
+            "y": -62.48,
+            "cvd": 0,
+            "age": 50,
+            "bp": 118,
+            "label": "Peer #1355 (CVD-)"
+          },
+          {
+            "id": "new_peer_1846",
+            "real_id": 1846,
+            "x": 111.28,
+            "y": -68.01,
+            "cvd": 0,
+            "age": 52,
+            "bp": 121,
+            "label": "Peer #1846 (CVD-)"
+          },
+          {
+            "id": "new_peer_2170",
+            "real_id": 2170,
+            "x": 147.4,
+            "y": -69.34,
+            "cvd": 0,
+            "age": 54,
+            "bp": 124,
+            "label": "Peer #2170 (CVD-)"
+          },
+          {
+            "id": "new_peer_2369",
+            "real_id": 2369,
+            "x": 178.86,
+            "y": -50.37,
+            "cvd": 0,
+            "age": 56,
+            "bp": 127,
+            "label": "Peer #2369 (CVD-)"
+          },
+          {
+            "id": "new_peer_2618",
+            "real_id": 2618,
+            "x": 204.34,
+            "y": -22.55,
+            "cvd": 0,
+            "age": 58,
+            "bp": 130,
+            "label": "Peer #2618 (CVD-)"
+          }
+        ],
+        "intermediate_nodes": [
+          {
+            "id": "mid_1_336",
+            "x": -50,
+            "y": 45,
+            "label": "Dr. Outreach Outpatient",
+            "type": "clinic"
+          },
+          {
+            "id": "mid_2_336",
+            "x": -10,
+            "y": -35,
+            "label": "Cardiac Rehab Unit",
+            "type": "rehab"
+          },
+          {
+            "id": "mid_3_336",
+            "x": 45,
+            "y": 30,
+            "label": "Community Wellness Cohort",
+            "type": "lifestyle"
+          }
+        ]
+      },
+      "macro_trajectory": [
+        {
+          "name": "Severe Hypertensive Ward",
+          "coords": [
+            -120,
+            -70
+          ],
+          "status": "Baseline Danger"
+        },
+        {
+          "name": "Transitional Treatment Corridor",
+          "coords": [
+            0,
+            0
+          ],
+          "status": "Under Active Medication"
+        },
+        {
+          "name": "Healthy Reference Cohort",
+          "coords": [
+            120,
+            70
+          ],
+          "status": "Target Destination"
+        }
+      ]
+    },
+    {
+      "id": 556,
+      "name": "Anil M.",
+      "age": 52,
+      "gender": "Male",
+      "occupation": "Corporate Technology Executive",
+      "chief_complaint": "Palpitations during work meetings, insomnia, chest tightness under psychological pressure.",
+      "vital_signs": "Resting Heart Rate 114 bpm (Severe Sinus Tachycardia), BP 168/102 mmHg, BMI 33.8 kg/m\u00b2.",
+      "lab_biomarkers": "Cholesterol 261 mg/dL, Triglycerides 253 mg/dL, Stress Index 8.5/10.",
+      "lifestyle": "Works 70 hrs/week, zero physical activity, poor sleep (<5 hrs/night), non-smoker.",
+      "peer_danger_context": "Anil's hyper-adrenergic state embeds him among patients with premature coronary artery disease. 85% of his peers experienced cardiac events before age 55.",
+      "prescription": [
+        {
+          "step": "Step 1",
+          "category": "Autonomic & Vascular",
+          "action": "Cardioselective Beta-Blocker (Bisoprolol 5mg) + Statin therapy",
+          "impact": "Resting HR normalizes from 114 to 78 bpm, BP lowers to 132 mmHg"
+        },
+        {
+          "step": "Step 2",
+          "category": "Stress & Sleep Protocol",
+          "action": "Cognitive behavioral therapy for insomnia & guided meditation",
+          "impact": "Stress Index falls from 8.5 to 3.0, cortisol stabilization"
+        },
+        {
+          "step": "Step 3",
+          "category": "Active Commuting",
+          "action": "Cycling / Brisk Walking 4.5 hrs/week",
+          "impact": "BMI drops to 27.8, triglycerides normalize to 160 mg/dL"
+        }
+      ],
+      "orig_risk": 99.9,
+      "cf_risk": 0.7,
+      "risk_reduction": 99.2,
+      "cpm_score": 0.8448,
+      "turnover": 1.0,
+      "risk_shift": 0.7167,
+      "prevalence_orig": 85.0,
+      "prevalence_new": 13.3,
+      "d_norm": 0.7905,
+      "emb_displacement": 12.97,
+      "features": {
+        "Blood_Pressure": {
+          "orig": 168.3,
+          "cf": 145.18,
+          "delta": -23.12,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 261.0,
+          "cf": 213.47,
+          "delta": -47.52,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 113.9,
+          "cf": 100.6,
+          "delta": -13.3,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 33.8,
+          "cf": 27.8,
+          "delta": -6.0,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 2.4,
+          "cf": 4.9,
+          "delta": 2.5,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 2.15,
+          "cf": 2.15,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 93.1,
+          "cf": 74.1,
+          "delta": -19.0,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 253.1,
+          "cf": 190.55,
+          "delta": -62.55,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 3.8,
+          "cf": 1.3,
+          "delta": -2.5,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 1.0,
+          "cf": 0.75,
+          "delta": -0.25,
+          "weight": 1.8
+        }
+      },
+      "local_graph": {
+        "start_coords": [
+          -120,
+          -10
+        ],
+        "end_coords": [
+          120,
+          15
+        ],
+        "orig_neighbors": [
+          {
+            "id": "orig_peer_311",
+            "real_id": 311,
+            "x": -32.3,
+            "y": -10.0,
+            "cvd": 1,
+            "age": 77,
+            "bp": 163,
+            "label": "Peer #311 (CVD+)"
+          },
+          {
+            "id": "orig_peer_362",
+            "real_id": 362,
+            "x": -50.66,
+            "y": 20.87,
+            "cvd": 1,
+            "age": 78,
+            "bp": 168,
+            "label": "Peer #362 (CVD+)"
+          },
+          {
+            "id": "orig_peer_414",
+            "real_id": 414,
+            "x": -64.8,
+            "y": 51.3,
+            "cvd": 1,
+            "age": 79,
+            "bp": 169,
+            "label": "Peer #414 (CVD+)"
+          },
+          {
+            "id": "orig_peer_592",
+            "real_id": 592,
+            "x": -92.96,
+            "y": 73.23,
+            "cvd": 1,
+            "age": 78,
+            "bp": 177,
+            "label": "Peer #592 (CVD+)"
+          },
+          {
+            "id": "orig_peer_594",
+            "real_id": 594,
+            "x": -128.89,
+            "y": 74.6,
+            "cvd": 1,
+            "age": 77,
+            "bp": 174,
+            "label": "Peer #594 (CVD+)"
+          },
+          {
+            "id": "orig_peer_720",
+            "real_id": 720,
+            "x": -166.06,
+            "y": 69.79,
+            "cvd": 1,
+            "age": 76,
+            "bp": 167,
+            "label": "Peer #720 (CVD+)"
+          },
+          {
+            "id": "orig_peer_953",
+            "real_id": 953,
+            "x": -191.33,
+            "y": 41.83,
+            "cvd": 1,
+            "age": 78,
+            "bp": 167,
+            "label": "Peer #953 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1133",
+            "real_id": 1133,
+            "x": -196.55,
+            "y": 6.27,
+            "cvd": 1,
+            "age": 69,
+            "bp": 150,
+            "label": "Peer #1133 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1188",
+            "real_id": 1188,
+            "x": -194.74,
+            "y": -25.89,
+            "cvd": 1,
+            "age": 71,
+            "bp": 155,
+            "label": "Peer #1188 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1274",
+            "real_id": 1274,
+            "x": -191.07,
+            "y": -61.64,
+            "cvd": 1,
+            "age": 73,
+            "bp": 160,
+            "label": "Peer #1274 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1587",
+            "real_id": 1587,
+            "x": -157.77,
+            "y": -75.41,
+            "cvd": 1,
+            "age": 55,
+            "bp": 165,
+            "label": "Peer #1587 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1861",
+            "real_id": 1861,
+            "x": -129.06,
+            "y": -96.24,
+            "cvd": 1,
+            "age": 57,
+            "bp": 170,
+            "label": "Peer #1861 (CVD+)"
+          },
+          {
+            "id": "orig_peer_2071",
+            "real_id": 2071,
+            "x": -91.01,
+            "y": -99.21,
+            "cvd": 1,
+            "age": 59,
+            "bp": 175,
+            "label": "Peer #2071 (CVD+)"
+          },
+          {
+            "id": "orig_peer_2230",
+            "real_id": 2230,
+            "x": -62.11,
+            "y": -74.29,
+            "cvd": 1,
+            "age": 61,
+            "bp": 180,
+            "label": "Peer #2230 (CVD+)"
+          },
+          {
+            "id": "orig_peer_2425",
+            "real_id": 2425,
+            "x": -44.39,
+            "y": -43.66,
+            "cvd": 1,
+            "age": 63,
+            "bp": 150,
+            "label": "Peer #2425 (CVD+)"
+          }
+        ],
+        "new_neighbors": [
+          {
+            "id": "new_peer_39",
+            "real_id": 39,
+            "x": 212.87,
+            "y": 15.0,
+            "cvd": 0,
+            "age": 66,
+            "bp": 143,
+            "label": "Peer #39 (CVD-)"
+          },
+          {
+            "id": "new_peer_277",
+            "real_id": 277,
+            "x": 201.46,
+            "y": 51.27,
+            "cvd": 0,
+            "age": 59,
+            "bp": 138,
+            "label": "Peer #277 (CVD-)"
+          },
+          {
+            "id": "new_peer_358",
+            "real_id": 358,
+            "x": 180.83,
+            "y": 82.56,
+            "cvd": 0,
+            "age": 77,
+            "bp": 157,
+            "label": "Peer #358 (CVD-)"
+          },
+          {
+            "id": "new_peer_543",
+            "real_id": 543,
+            "x": 150.54,
+            "y": 108.99,
+            "cvd": 0,
+            "age": 64,
+            "bp": 143,
+            "label": "Peer #543 (CVD-)"
+          },
+          {
+            "id": "new_peer_605",
+            "real_id": 605,
+            "x": 110.83,
+            "y": 102.24,
+            "cvd": 0,
+            "age": 78,
+            "bp": 144,
+            "label": "Peer #605 (CVD-)"
+          },
+          {
+            "id": "new_peer_621",
+            "real_id": 621,
+            "x": 70.39,
+            "y": 100.93,
+            "cvd": 0,
+            "age": 65,
+            "bp": 142,
+            "label": "Peer #621 (CVD-)"
+          },
+          {
+            "id": "new_peer_1043",
+            "real_id": 1043,
+            "x": 40.63,
+            "y": 72.67,
+            "cvd": 0,
+            "age": 60,
+            "bp": 121,
+            "label": "Peer #1043 (CVD-)"
+          },
+          {
+            "id": "new_peer_1209",
+            "real_id": 1209,
+            "x": 37.92,
+            "y": 32.45,
+            "cvd": 0,
+            "age": 62,
+            "bp": 124,
+            "label": "Peer #1209 (CVD-)"
+          },
+          {
+            "id": "new_peer_1287",
+            "real_id": 1287,
+            "x": 40.39,
+            "y": -1.92,
+            "cvd": 0,
+            "age": 64,
+            "bp": 127,
+            "label": "Peer #1287 (CVD-)"
+          },
+          {
+            "id": "new_peer_1304",
+            "real_id": 1304,
+            "x": 53.65,
+            "y": -33.21,
+            "cvd": 0,
+            "age": 48,
+            "bp": 130,
+            "label": "Peer #1304 (CVD-)"
+          },
+          {
+            "id": "new_peer_1355",
+            "real_id": 1355,
+            "x": 79.82,
+            "y": -54.6,
+            "cvd": 0,
+            "age": 50,
+            "bp": 118,
+            "label": "Peer #1355 (CVD-)"
+          },
+          {
+            "id": "new_peer_2264",
+            "real_id": 2264,
+            "x": 111.44,
+            "y": -66.44,
+            "cvd": 0,
+            "age": 52,
+            "bp": 121,
+            "label": "Peer #2264 (CVD-)"
+          },
+          {
+            "id": "new_peer_2369",
+            "real_id": 2369,
+            "x": 148.94,
+            "y": -74.08,
+            "cvd": 0,
+            "age": 54,
+            "bp": 124,
+            "label": "Peer #2369 (CVD-)"
+          },
+          {
+            "id": "new_peer_2598",
+            "real_id": 2598,
+            "x": 174.48,
+            "y": -45.51,
+            "cvd": 0,
+            "age": 56,
+            "bp": 127,
+            "label": "Peer #2598 (CVD-)"
+          },
+          {
+            "id": "new_peer_2618",
+            "real_id": 2618,
+            "x": 198.91,
+            "y": -20.13,
+            "cvd": 0,
+            "age": 58,
+            "bp": 130,
+            "label": "Peer #2618 (CVD-)"
+          }
+        ],
+        "intermediate_nodes": [
+          {
+            "id": "mid_1_556",
+            "x": -50,
+            "y": 45,
+            "label": "Dr. Outreach Outpatient",
+            "type": "clinic"
+          },
+          {
+            "id": "mid_2_556",
+            "x": -10,
+            "y": -35,
+            "label": "Cardiac Rehab Unit",
+            "type": "rehab"
+          },
+          {
+            "id": "mid_3_556",
+            "x": 45,
+            "y": 30,
+            "label": "Community Wellness Cohort",
+            "type": "lifestyle"
+          }
+        ]
+      },
+      "macro_trajectory": [
+        {
+          "name": "Severe Hypertensive Ward",
+          "coords": [
+            -120,
+            -70
+          ],
+          "status": "Baseline Danger"
+        },
+        {
+          "name": "Transitional Treatment Corridor",
+          "coords": [
+            0,
+            0
+          ],
+          "status": "Under Active Medication"
+        },
+        {
+          "name": "Healthy Reference Cohort",
+          "coords": [
+            120,
+            70
+          ],
+          "status": "Target Destination"
+        }
+      ]
+    },
+    {
+      "id": 428,
+      "name": "George T.",
+      "age": 72,
+      "gender": "Male",
+      "occupation": "Retired Civil Engineer",
+      "chief_complaint": "Mild bilateral calf claudication after walking 200 meters, general fatigue.",
+      "vital_signs": "Systolic BP 157 mmHg (Isolated Systolic HTN of the Elderly), Resting HR 76 bpm, BMI 31.7 kg/m\u00b2.",
+      "lab_biomarkers": "Total Cholesterol 291 mg/dL, Triglycerides 259 mg/dL, Glucose 127 mg/dL.",
+      "lifestyle": "Non-smoker, walks 1.5 hrs/week, high sodium diet.",
+      "peer_danger_context": "At age 72, age is an immutable risk factor. 90% of his matching elderly peers have carotid or coronary calcifications.",
+      "prescription": [
+        {
+          "step": "Step 1",
+          "category": "Arterial Compliance",
+          "action": "Low-dose thiazide diuretic (Chlorthalidone 12.5mg) + Statin",
+          "impact": "Systolic BP drops from 157 to 132 mmHg without orthostatic hypotension"
+        },
+        {
+          "step": "Step 2",
+          "category": "Lipid Normalization",
+          "action": "Ezetimibe 10mg + Rosuvastatin 10mg",
+          "impact": "Cholesterol drops to 210 mg/dL, Triglycerides drop to 175 mg/dL"
+        },
+        {
+          "step": "Step 3",
+          "category": "Walking Rehabilitation",
+          "action": "Structured interval walking 3.5 hrs/week",
+          "impact": "Improves peripheral circulation, BMI drops to 28.0"
+        }
+      ],
+      "orig_risk": 99.9,
+      "cf_risk": 18.0,
+      "risk_reduction": 81.9,
+      "cpm_score": 0.4662,
+      "turnover": 1.0,
+      "risk_shift": 0.0431,
+      "prevalence_orig": 86.7,
+      "prevalence_new": 82.4,
+      "d_norm": 0.2445,
+      "emb_displacement": 5.05,
+      "features": {
+        "Blood_Pressure": {
+          "orig": 156.8,
+          "cf": 138.3,
+          "delta": -18.5,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 291.5,
+          "cf": 253.48,
+          "delta": -38.02,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 135.3,
+          "cf": 115.42,
+          "delta": -19.88,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 31.7,
+          "cf": 26.9,
+          "delta": -4.8,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 4.8,
+          "cf": 6.8,
+          "delta": 2.0,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 0.83,
+          "cf": 0.83,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 127.2,
+          "cf": 112.0,
+          "delta": -15.2,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 259.3,
+          "cf": 209.26,
+          "delta": -50.04,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 4.5,
+          "cf": 2.5,
+          "delta": -2.0,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 1.0,
+          "cf": 0.8,
+          "delta": -0.2,
+          "weight": 1.8
+        }
+      },
+      "local_graph": {
+        "start_coords": [
+          -120,
+          -10
+        ],
+        "end_coords": [
+          120,
+          15
+        ],
+        "orig_neighbors": [
+          {
+            "id": "orig_peer_90",
+            "real_id": 90,
+            "x": -28.1,
+            "y": -10.0,
+            "cvd": 1,
+            "age": 76,
+            "bp": 144,
+            "label": "Peer #90 (CVD+)"
+          },
+          {
+            "id": "orig_peer_336",
+            "real_id": 336,
+            "x": -51.06,
+            "y": 20.69,
+            "cvd": 1,
+            "age": 77,
+            "bp": 164,
+            "label": "Peer #336 (CVD+)"
+          },
+          {
+            "id": "orig_peer_825",
+            "real_id": 825,
+            "x": -58.92,
+            "y": 57.84,
+            "cvd": 1,
+            "age": 75,
+            "bp": 157,
+            "label": "Peer #825 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1110",
+            "real_id": 1110,
+            "x": -95.08,
+            "y": 66.69,
+            "cvd": 1,
+            "age": 61,
+            "bp": 165,
+            "label": "Peer #1110 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1662",
+            "real_id": 1662,
+            "x": -128.09,
+            "y": 66.94,
+            "cvd": 1,
+            "age": 63,
+            "bp": 170,
+            "label": "Peer #1662 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1724",
+            "real_id": 1724,
+            "x": -164.47,
+            "y": 67.02,
+            "cvd": 1,
+            "age": 65,
+            "bp": 175,
+            "label": "Peer #1724 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1731",
+            "real_id": 1731,
+            "x": -190.85,
+            "y": 41.48,
+            "cvd": 1,
+            "age": 67,
+            "bp": 180,
+            "label": "Peer #1731 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1885",
+            "real_id": 1885,
+            "x": -210.53,
+            "y": 9.24,
+            "cvd": 1,
+            "age": 69,
+            "bp": 150,
+            "label": "Peer #1885 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1914",
+            "real_id": 1914,
+            "x": -207.74,
+            "y": -28.65,
+            "cvd": 1,
+            "age": 71,
+            "bp": 155,
+            "label": "Peer #1914 (CVD+)"
+          },
+          {
+            "id": "orig_peer_2317",
+            "real_id": 2317,
+            "x": -193.68,
+            "y": -63.53,
+            "cvd": 1,
+            "age": 73,
+            "bp": 160,
+            "label": "Peer #2317 (CVD+)"
+          },
+          {
+            "id": "orig_peer_2527",
+            "real_id": 2527,
+            "x": -160.32,
+            "y": -79.84,
+            "cvd": 1,
+            "age": 55,
+            "bp": 165,
+            "label": "Peer #2527 (CVD+)"
+          },
+          {
+            "id": "orig_peer_2713",
+            "real_id": 2713,
+            "x": -128.21,
+            "y": -88.12,
+            "cvd": 1,
+            "age": 57,
+            "bp": 170,
+            "label": "Peer #2713 (CVD+)"
+          },
+          {
+            "id": "orig_peer_2919",
+            "real_id": 2919,
+            "x": -92.18,
+            "y": -95.61,
+            "cvd": 1,
+            "age": 59,
+            "bp": 175,
+            "label": "Peer #2919 (CVD+)"
+          },
+          {
+            "id": "orig_peer_2960",
+            "real_id": 2960,
+            "x": -59.02,
+            "y": -77.73,
+            "cvd": 1,
+            "age": 61,
+            "bp": 180,
+            "label": "Peer #2960 (CVD+)"
+          },
+          {
+            "id": "orig_peer_2990",
+            "real_id": 2990,
+            "x": -33.39,
+            "y": -48.56,
+            "cvd": 1,
+            "age": 63,
+            "bp": 150,
+            "label": "Peer #2990 (CVD+)"
+          }
+        ],
+        "new_neighbors": [
+          {
+            "id": "new_peer_109",
+            "real_id": 109,
+            "x": 208.25,
+            "y": 15.0,
+            "cvd": 1,
+            "age": 80,
+            "bp": 158,
+            "label": "Peer #109 (CVD+)"
+          },
+          {
+            "id": "new_peer_166",
+            "real_id": 166,
+            "x": 199.88,
+            "y": 50.57,
+            "cvd": 1,
+            "age": 72,
+            "bp": 146,
+            "label": "Peer #166 (CVD+)"
+          },
+          {
+            "id": "new_peer_345",
+            "real_id": 345,
+            "x": 183.92,
+            "y": 85.99,
+            "cvd": 1,
+            "age": 74,
+            "bp": 152,
+            "label": "Peer #345 (CVD+)"
+          },
+          {
+            "id": "new_peer_408",
+            "real_id": 408,
+            "x": 146.83,
+            "y": 97.57,
+            "cvd": 1,
+            "age": 77,
+            "bp": 153,
+            "label": "Peer #408 (CVD+)"
+          },
+          {
+            "id": "new_peer_478",
+            "real_id": 478,
+            "x": 109.69,
+            "y": 113.07,
+            "cvd": 1,
+            "age": 76,
+            "bp": 142,
+            "label": "Peer #478 (CVD+)"
+          },
+          {
+            "id": "new_peer_684",
+            "real_id": 684,
+            "x": 71.42,
+            "y": 99.15,
+            "cvd": 1,
+            "age": 74,
+            "bp": 148,
+            "label": "Peer #684 (CVD+)"
+          },
+          {
+            "id": "new_peer_942",
+            "real_id": 942,
+            "x": 48.34,
+            "y": 67.07,
+            "cvd": 1,
+            "age": 76,
+            "bp": 154,
+            "label": "Peer #942 (CVD+)"
+          },
+          {
+            "id": "new_peer_1433",
+            "real_id": 1433,
+            "x": 27.06,
+            "y": 34.76,
+            "cvd": 0,
+            "age": 62,
+            "bp": 124,
+            "label": "Peer #1433 (CVD-)"
+          },
+          {
+            "id": "new_peer_1660",
+            "real_id": 1660,
+            "x": 26.99,
+            "y": -4.77,
+            "cvd": 0,
+            "age": 64,
+            "bp": 127,
+            "label": "Peer #1660 (CVD-)"
+          },
+          {
+            "id": "new_peer_1990",
+            "real_id": 1990,
+            "x": 53.61,
+            "y": -33.24,
+            "cvd": 0,
+            "age": 48,
+            "bp": 130,
+            "label": "Peer #1990 (CVD-)"
+          },
+          {
+            "id": "new_peer_2002",
+            "real_id": 2002,
+            "x": 70.97,
+            "y": -69.91,
+            "cvd": 0,
+            "age": 50,
+            "bp": 118,
+            "label": "Peer #2002 (CVD-)"
+          },
+          {
+            "id": "new_peer_2157",
+            "real_id": 2157,
+            "x": 110.58,
+            "y": -74.61,
+            "cvd": 0,
+            "age": 52,
+            "bp": 121,
+            "label": "Peer #2157 (CVD-)"
+          },
+          {
+            "id": "new_peer_2273",
+            "real_id": 2273,
+            "x": 149.83,
+            "y": -76.8,
+            "cvd": 0,
+            "age": 54,
+            "bp": 124,
+            "label": "Peer #2273 (CVD-)"
+          },
+          {
+            "id": "new_peer_2373",
+            "real_id": 2373,
+            "x": 177.81,
+            "y": -49.21,
+            "cvd": 0,
+            "age": 56,
+            "bp": 127,
+            "label": "Peer #2373 (CVD-)"
+          },
+          {
+            "id": "new_peer_2406",
+            "real_id": 2406,
+            "x": 209.45,
+            "y": -24.82,
+            "cvd": 0,
+            "age": 58,
+            "bp": 130,
+            "label": "Peer #2406 (CVD-)"
+          }
+        ],
+        "intermediate_nodes": [
+          {
+            "id": "mid_1_428",
+            "x": -50,
+            "y": 45,
+            "label": "Dr. Outreach Outpatient",
+            "type": "clinic"
+          },
+          {
+            "id": "mid_2_428",
+            "x": -10,
+            "y": -35,
+            "label": "Cardiac Rehab Unit",
+            "type": "rehab"
+          },
+          {
+            "id": "mid_3_428",
+            "x": 45,
+            "y": 30,
+            "label": "Community Wellness Cohort",
+            "type": "lifestyle"
+          }
+        ]
+      },
+      "macro_trajectory": [
+        {
+          "name": "Severe Hypertensive Ward",
+          "coords": [
+            -120,
+            -70
+          ],
+          "status": "Baseline Danger"
+        },
+        {
+          "name": "Transitional Treatment Corridor",
+          "coords": [
+            0,
+            0
+          ],
+          "status": "Under Active Medication"
+        },
+        {
+          "name": "Healthy Reference Cohort",
+          "coords": [
+            120,
+            70
+          ],
+          "status": "Target Destination"
+        }
+      ]
+    }
+  ]
+};
+  </script>
+
+  <script>
+    // State
+    let activePatientId = 852;
+    let currentPatient = MULTI_DATA.patients.find(p => p.id === activePatientId) || MULTI_DATA.patients[0];
+    let currentDials = JSON.parse(JSON.stringify(currentPatient.features));
+    let progressRatio = 0.0; // 0.0 to 1.0
+    let activeSubView = "local"; // 'local', 'macro', 'radar'
+    let isPlaying = false;
+    let animSpeed = 1.0;
+    let animFrame = null;
+
+    // DOM Elements - Navigation
+    const patientSelect = document.getElementById('patientSelect');
+    const tabBtn_graphs = document.getElementById('tabBtn_graphs');
+    const tabBtn_proofs = document.getElementById('tabBtn_proofs');
+    const tabBtn_case = document.getElementById('tabBtn_case');
+    const view_graphs = document.getElementById('view_graphs');
+    const view_proofs = document.getElementById('view_proofs');
+    const view_case = document.getElementById('view_case');
+
+    // DOM Elements - Patient Card
+    const patientName = document.getElementById('patientName');
+    const patientJob = document.getElementById('patientJob');
+    const patientComplaint = document.getElementById('patientComplaint');
+    const statusBadge = document.getElementById('statusBadge');
+    const peerDangerDesc = document.getElementById('peerDangerDesc');
+    const meterCurrentRisk = document.getElementById('meterCurrentRisk');
+    const meterRiskDelta = document.getElementById('meterRiskDelta');
+    const meterBarFill = document.getElementById('meterBarFill');
+    const meterStatusText = document.getElementById('meterStatusText');
+    const dialsContainer = document.getElementById('dialsContainer');
+    const counselingDialogueText = document.getElementById('counselingDialogueText');
+
+    // Canvas & Controls
+    const canvas = document.getElementById('activeCanvas');
+    const ctx = canvas.getContext('2d');
+    const canvasPhaseIcon = document.getElementById('canvasPhaseIcon');
+    const canvasPhaseTitle = document.getElementById('canvasPhaseTitle');
+    const canvasPhaseSubtitle = document.getElementById('canvasPhaseSubtitle');
+    const canvasLegendBox = document.getElementById('canvasLegendBox');
+    const migrationScrubber = document.getElementById('migrationScrubber');
+    const btnPlayAnimation = document.getElementById('btnPlayAnimation');
+
+    // Prescription Buttons
+    const btnRx_1 = document.getElementById('btnRx_1');
+    const btnRx_2 = document.getElementById('btnRx_2');
+    const btnRx_3 = document.getElementById('btnRx_3');
+    const btnRx_All = document.getElementById('btnRx_All');
+    const btnResetDials = document.getElementById('btnResetDials');
+    const lblRx_1 = document.getElementById('lblRx_1');
+    const lblRx_2 = document.getElementById('lblRx_2');
+    const lblRx_3 = document.getElementById('lblRx_3');
+
+    // Sub-view buttons
+    const btnSubView_local = document.getElementById('btnSubView_local');
+    const btnSubView_macro = document.getElementById('btnSubView_macro');
+    const btnSubView_radar = document.getElementById('btnSubView_radar');
+
+    // Resize Canvas
+    let cWidth, cHeight;
+    function resizeCanvas() {
+      const rect = canvas.parentElement.getBoundingClientRect();
+      cWidth = rect.width;
+      cHeight = rect.height;
+      canvas.width = cWidth * window.devicePixelRatio;
+      canvas.height = cHeight * window.devicePixelRatio;
+      ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    // Tab Navigation Logic
+    function switchTab(activeTab) {
+      tabBtn_graphs.className = activeTab === 'graphs' ? "px-4 py-2 rounded-lg text-xs font-bold bg-blue-600 text-white transition shadow" : "px-4 py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-slate-200 transition";
+      tabBtn_proofs.className = activeTab === 'proofs' ? "px-4 py-2 rounded-lg text-xs font-bold bg-blue-600 text-white transition shadow" : "px-4 py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-slate-200 transition";
+      tabBtn_case.className = activeTab === 'case' ? "px-4 py-2 rounded-lg text-xs font-bold bg-blue-600 text-white transition shadow" : "px-4 py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-slate-200 transition";
+
+      view_graphs.classList.toggle('hidden', activeTab !== 'graphs');
+      view_proofs.classList.toggle('hidden', activeTab !== 'proofs');
+      view_case.classList.toggle('hidden', activeTab !== 'case');
+
+      if (activeTab === 'graphs') {
+        resizeCanvas();
+      }
+    }
+
+    tabBtn_graphs.addEventListener('click', () => switchTab('graphs'));
+    tabBtn_proofs.addEventListener('click', () => switchTab('proofs'));
+    tabBtn_case.addEventListener('click', () => switchTab('case'));
+
+    // Sub-view Switcher
+    function setSubView(mode) {
+      activeSubView = mode;
+      btnSubView_local.className = mode === 'local' ? "px-3 py-1.5 rounded-lg text-xs font-bold bg-blue-600 text-white transition" : "px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-slate-200 transition";
+      btnSubView_macro.className = mode === 'macro' ? "px-3 py-1.5 rounded-lg text-xs font-bold bg-blue-600 text-white transition" : "px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-slate-200 transition";
+      btnSubView_radar.className = mode === 'radar' ? "px-3 py-1.5 rounded-lg text-xs font-bold bg-blue-600 text-white transition" : "px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-slate-200 transition";
+      updateCanvasLegend();
+    }
+
+    btnSubView_local.addEventListener('click', () => setSubView('local'));
+    btnSubView_macro.addEventListener('click', () => setSubView('macro'));
+    btnSubView_radar.addEventListener('click', () => setSubView('radar'));
+
+    function updateCanvasLegend() {
+      if (activeSubView === 'local') {
+        canvasLegendBox.innerHTML = `
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-rose-500 inline-block shadow"></span>
+            <span>15 Baseline Peers (94% CVD Mortality Cluster)</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block shadow"></span>
+            <span>15 Destination Peers (Healthy Reference Cohort)</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-amber-400 border border-white inline-block"></span>
+            <span>${currentPatient.name} (Migrating Node)</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-lg bg-indigo-500 inline-block"></span>
+            <span>Waypoint Care Stations (Outpatient & Rehab)</span>
+          </div>
+        `;
+      } else if (activeSubView === 'macro') {
+        canvasLegendBox.innerHTML = `
+          <div class="grid grid-cols-2 gap-x-4 gap-y-1.5">
+            <div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span><span>Severe Hypertensive</span></div>
+            <div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-orange-500"></span><span>Diabetic Metabolic</span></div>
+            <div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span><span>Transitional Corridor</span></div>
+            <div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span><span>Healthy Reference</span></div>
+          </div>
+        `;
+      } else {
+        canvasLegendBox.innerHTML = `
+          <div class="flex items-center gap-4">
+            <div class="flex items-center gap-2"><span class="w-3 h-1.5 bg-rose-500 inline-block"></span><span>Baseline Biomarkers</span></div>
+            <div class="flex items-center gap-2"><span class="w-3 h-1.5 bg-emerald-400 inline-block"></span><span>Current / Target State</span></div>
+          </div>
+        `;
+      }
+    }
+
+    // Load Patient
+    function loadPatient(pid) {
+      activePatientId = parseInt(pid);
+      currentPatient = MULTI_DATA.patients.find(p => p.id === activePatientId) || MULTI_DATA.patients[0];
+      currentDials = JSON.parse(JSON.stringify(currentPatient.features));
+
+      patientName.textContent = `${currentPatient.name} (${currentPatient.age}, ${currentPatient.gender})`;
+      patientJob.textContent = currentPatient.occupation;
+      patientComplaint.textContent = currentPatient.chief_complaint;
+      peerDangerDesc.textContent = currentPatient.peer_danger_context;
+
+      // Update Case Dossier Tab
+      document.getElementById('caseDossierName').textContent = `Clinical Case Dossier: ${currentPatient.name}`;
+      document.getElementById('caseDossierOccupation').textContent = `${currentPatient.age} Years Old • ${currentPatient.gender} • ${currentPatient.occupation}`;
+      document.getElementById('caseChiefComplaints').textContent = currentPatient.chief_complaint;
+      document.getElementById('caseVitals').textContent = currentPatient.vital_signs;
+      document.getElementById('caseLabs').textContent = currentPatient.lab_biomarkers;
+
+      // Prescription labels
+      lblRx_1.textContent = currentPatient.prescription[0]?.action.split('&')[0] || "Step 1: Medication";
+      lblRx_2.textContent = currentPatient.prescription[1]?.action.split(':')[0] || "Step 2: Lifestyle";
+      lblRx_3.textContent = currentPatient.prescription[2]?.action.split('with')[0] || "Step 3: Behavioral";
+
+      // Render protocol list in Tab 3
+      const protocolList = document.getElementById('caseProtocolList');
+      protocolList.innerHTML = '';
+      currentPatient.prescription.forEach(step => {
+        const card = document.createElement('div');
+        card.className = "bg-slate-950 p-4 rounded-xl border border-slate-800 flex flex-col gap-1.5";
+        card.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-blue-400 text-xs">${step.step} • ${step.category}</span>
+            <span class="badge-pill bg-emerald-500/15 text-emerald-400 font-mono text-[10px]">Verified Target</span>
+          </div>
+          <div class="font-semibold text-white text-xs">${step.action}</div>
+          <div class="text-xs text-slate-400 font-mono mt-1">Impact: ${step.impact}</div>
+        `;
+        protocolList.appendChild(card);
+      });
+
+      // Physician Dialogue
+      counselingDialogueText.innerHTML = `
+        <strong>Doctor to Patient:</strong> "${currentPatient.name.split(' ')[0]}, right now you are situated in our cardiac high-risk cluster. 
+        <strong>${currentPatient.prevalence_orig.toFixed(0)}% of the 15 patients most clinically similar to you have experienced heart attacks or strokes</strong>. 
+        If you adhere to our targeted treatment plan—lowering your blood pressure and normalizing your lipid profile—you don't just change a number on a test result. 
+        <strong>You break connections with those 15 high-risk patients and physically migrate into our healthy reference cohort</strong>, where heart disease incidence drops to <strong>${currentPatient.prevalence_new.toFixed(0)}%</strong>."
+      `;
+
+      progressRatio = 0.0;
+      migrationScrubber.value = 0;
+      renderDials();
+      recalculateMetrics();
+      updateCanvasLegend();
+    }
+
+    patientSelect.addEventListener('change', (e) => loadPatient(e.target.value));
+
+    // Render Dials
+    function renderDials() {
+      dialsContainer.innerHTML = '';
+      const mutableKeys = [
+        'Blood_Pressure', 'Cholesterol', 'Heart_Rate', 'BMI',
+        'Physical_Activity_HoursPerWeek', 'Glucose', 'Triglycerides',
+        'Stress_Index', 'Smoking', 'Diabetes'
+      ];
+
+      const labels = {
+        'Blood_Pressure': 'Blood Pressure (mmHg)',
+        'Cholesterol': 'Total Cholesterol (mg/dL)',
+        'Heart_Rate': 'Resting Heart Rate (bpm)',
+        'BMI': 'Body Mass Index (BMI)',
+        'Physical_Activity_HoursPerWeek': 'Physical Activity (hrs/wk)',
+        'Glucose': 'Fasting Glucose (mg/dL)',
+        'Triglycerides': 'Triglycerides (mg/dL)',
+        'Stress_Index': 'Stress Index (1-10)',
+        'Smoking': 'Smoking (0: No, 1: Yes)',
+        'Diabetes': 'Diabetes (0: No, 1: Yes)'
+      };
+
+      mutableKeys.forEach(k => {
+        const feat = currentPatient.features[k];
+        if (!feat) return;
+
+        const row = document.createElement('div');
+        row.className = "bg-slate-950/70 border border-slate-800/80 rounded-xl p-3 flex flex-col gap-1.5 transition hover:border-slate-700";
+
+        const minVal = Math.min(feat.orig * 0.5, feat.cf * 0.7, 0);
+        const maxVal = Math.max(feat.orig * 1.3, feat.cf * 1.3, 10);
+        const stepVal = (k === 'Smoking' || k === 'Diabetes') ? 1 : 0.5;
+
+        row.innerHTML = `
+          <div class="flex justify-between items-center text-xs">
+            <span class="text-slate-300 font-semibold">${labels[k] || k}</span>
+            <div class="flex items-center gap-2 font-mono">
+              <span class="text-slate-400 text-[11px]">Base: ${feat.orig}</span>
+              <span class="text-slate-500">➔</span>
+              <span class="text-cyan-400 font-bold text-xs" id="dialVal_${k}">${currentDials[k].orig}</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <input type="range" id="inputSlider_${k}" 
+              min="${minVal}" 
+              max="${maxVal}" 
+              step="${stepVal}" 
+              value="${currentDials[k].orig}" 
+              class="w-full h-1.5 bg-slate-800 rounded-lg cursor-pointer accent-blue-500">
+          </div>
+        `;
+        dialsContainer.appendChild(row);
+
+        const slider = row.querySelector(`#inputSlider_${k}`);
+        slider.addEventListener('input', (e) => {
+          const newVal = parseFloat(e.target.value);
+          currentDials[k].current = newVal;
+          document.getElementById(`dialVal_${k}`).textContent = newVal.toFixed(1);
+          updateProgressFromDials();
+          recalculateMetrics();
+        });
+      });
+    }
+
+    function updateProgressFromDials() {
+      let totalW = 0;
+      let totalProg = 0;
+      const mutableKeys = ['Blood_Pressure', 'Cholesterol', 'Heart_Rate', 'BMI', 'Physical_Activity_HoursPerWeek', 'Glucose', 'Triglycerides', 'Stress_Index', 'Smoking', 'Diabetes'];
+
+      mutableKeys.forEach(k => {
+        const feat = currentPatient.features[k];
+        const cur = currentDials[k].current !== undefined ? currentDials[k].current : feat.orig;
+        const totalDelta = feat.cf - feat.orig;
+        const weight = feat.weight || 1.0;
+
+        totalW += weight;
+        if (Math.abs(totalDelta) > 1e-4) {
+          const curDelta = cur - feat.orig;
+          const ratio = Math.max(0, Math.min(1.2, curDelta / totalDelta));
+          totalProg += ratio * weight;
+        } else {
+          totalProg += 1.0 * weight;
+        }
+      });
+
+      progressRatio = Math.max(0.0, Math.min(1.0, totalProg / totalW));
+      migrationScrubber.value = Math.round(progressRatio * 100);
+    }
+
+    function setDialsFromProgress(ratio) {
+      const mutableKeys = ['Blood_Pressure', 'Cholesterol', 'Heart_Rate', 'BMI', 'Physical_Activity_HoursPerWeek', 'Glucose', 'Triglycerides', 'Stress_Index', 'Smoking', 'Diabetes'];
+      mutableKeys.forEach(k => {
+        const feat = currentPatient.features[k];
+        const interpolated = feat.orig + (feat.cf - feat.orig) * ratio;
+        currentDials[k].current = interpolated;
+
+        const slider = document.getElementById(`inputSlider_${k}`);
+        const textVal = document.getElementById(`dialVal_${k}`);
+        if (slider && textVal) {
+          slider.value = interpolated;
+          textVal.textContent = interpolated.toFixed(1);
+        }
+      });
+    }
+
+    function recalculateMetrics() {
+      const p = currentPatient;
+      const r = progressRatio;
+
+      // Risk score
+      const currentRisk = p.orig_risk - (p.orig_risk - p.cf_risk) * r;
+      meterCurrentRisk.textContent = `${currentRisk.toFixed(1)}%`;
+      meterBarFill.style.width = `${currentRisk}%`;
+
+      if (currentRisk > 65) {
+        meterBarFill.className = "h-full bg-rose-500 rounded-full transition-all duration-150";
+        statusBadge.className = "px-3 py-1 rounded-full text-xs font-bold bg-rose-500/20 text-rose-400 border border-rose-500/40";
+        statusBadge.textContent = "CRITICAL RISK";
+        canvasPhaseIcon.textContent = "🔴";
+        canvasPhaseTitle.textContent = "Baseline: High-Risk Ward";
+        canvasPhaseTitle.className = "text-rose-400 font-bold";
+        canvasPhaseSubtitle.textContent = `${p.prevalence_orig.toFixed(0)}% Peers Experienced CVD`;
+        meterStatusText.textContent = "In Cardiac Danger Ward";
+        meterStatusText.className = "text-rose-400 font-bold";
+      } else if (currentRisk > 35) {
+        meterBarFill.className = "h-full bg-amber-500 rounded-full transition-all duration-150";
+        statusBadge.className = "px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-400 border border-amber-500/40";
+        statusBadge.textContent = "TRANSITIONING";
+        canvasPhaseIcon.textContent = "🟡";
+        canvasPhaseTitle.textContent = "Transitional Care Corridor";
+        canvasPhaseTitle.className = "text-amber-400 font-bold";
+        canvasPhaseSubtitle.textContent = "Severing High-Risk Network Edges";
+        meterStatusText.textContent = "Intermediate Clinical Corridor";
+        meterStatusText.className = "text-amber-400 font-bold";
+      } else {
+        meterBarFill.className = "h-full bg-emerald-500 rounded-full transition-all duration-150";
+        statusBadge.className = "px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/40";
+        statusBadge.textContent = "HEALTHY RE-EMBEDDED";
+        canvasPhaseIcon.textContent = "🟢";
+        canvasPhaseTitle.textContent = "Healthy Reference Cohort";
+        canvasPhaseTitle.className = "text-emerald-400 font-bold";
+        canvasPhaseSubtitle.textContent = `Latched to ${p.prevalence_new.toFixed(0)}% CVD Cohort`;
+        meterStatusText.textContent = "Primary Prevention Group";
+        meterStatusText.className = "text-emerald-400 font-bold";
+      }
+    }
+
+    // Scrubber
+    migrationScrubber.addEventListener('input', (e) => {
+      progressRatio = parseFloat(e.target.value) / 100.0;
+      isPlaying = false;
+      btnPlayAnimation.textContent = "▶ Play Migration Animation";
+      setDialsFromProgress(progressRatio);
+      recalculateMetrics();
+    });
+
+    // Action Prescriptions
+    btnRx_1.addEventListener('click', () => {
+      progressRatio = 0.40;
+      migrationScrubber.value = 40;
+      setDialsFromProgress(0.40);
+      recalculateMetrics();
+    });
+
+    btnRx_2.addEventListener('click', () => {
+      progressRatio = 0.70;
+      migrationScrubber.value = 70;
+      setDialsFromProgress(0.70);
+      recalculateMetrics();
+    });
+
+    btnRx_3.addEventListener('click', () => {
+      progressRatio = 0.85;
+      migrationScrubber.value = 85;
+      setDialsFromProgress(0.85);
+      recalculateMetrics();
+    });
+
+    btnRx_All.addEventListener('click', () => {
+      progressRatio = 1.0;
+      migrationScrubber.value = 100;
+      setDialsFromProgress(1.0);
+      recalculateMetrics();
+    });
+
+    btnResetDials.addEventListener('click', () => {
+      progressRatio = 0.0;
+      migrationScrubber.value = 0;
+      setDialsFromProgress(0.0);
+      recalculateMetrics();
+    });
+
+    btnPlayAnimation.addEventListener('click', () => {
+      isPlaying = !isPlaying;
+      btnPlayAnimation.textContent = isPlaying ? "⏸ Pause Migration" : "▶ Play Migration Animation";
+    });
+
+    // =========================================================================
+    // 60FPS CANVAS RENDERING - MULTI-GRAPH MODES
+    // =========================================================================
+    let pulseT = 0;
+
+    function renderActiveCanvas() {
+      ctx.clearRect(0, 0, cWidth, cHeight);
+
+      if (activeSubView === 'local') {
+        renderLocalSubgraph();
+      } else if (activeSubView === 'macro') {
+        renderMacroManifold();
+      } else if (activeSubView === 'radar') {
+        renderRadarFingerprint();
+      }
+
+      // Animation Step
+      if (isPlaying) {
+        progressRatio += 0.005 * animSpeed;
+        if (progressRatio >= 1.0) {
+          progressRatio = 1.0;
+          isPlaying = false;
+          btnPlayAnimation.textContent = "▶ Play Migration Animation";
+        }
+        migrationScrubber.value = Math.round(progressRatio * 100);
+        setDialsFromProgress(progressRatio);
+        recalculateMetrics();
+      }
+
+      animFrame = requestAnimationFrame(renderActiveCanvas);
+    }
+
+    // GRAPH VIEW 1: LOCAL PATIENT SUBGRAPH WITH MULTIPLE WAYPOINTS
+    function renderLocalSubgraph() {
+      const p = currentPatient;
+      const centerX = cWidth / 2;
+      const centerY = cHeight / 2;
+
+      function toScreen(x, y) {
+        return {
+          x: centerX + x * (cWidth / 390),
+          y: centerY + y * (cHeight / 390)
+        };
+      }
+
+      // Auras
+      const startPos = toScreen(p.local_graph.start_coords[0], p.local_graph.start_coords[1]);
+      const endPos = toScreen(p.local_graph.end_coords[0], p.local_graph.end_coords[1]);
+
+      const gH = ctx.createRadialGradient(startPos.x, startPos.y, 10, startPos.x, startPos.y, 150);
+      gH.addColorStop(0, 'rgba(239, 68, 68, 0.15)');
+      gH.addColorStop(1, 'rgba(239, 68, 68, 0)');
+      ctx.fillStyle = gH;
+      ctx.beginPath();
+      ctx.arc(startPos.x, startPos.y, 150, 0, Math.PI * 2);
+      ctx.fill();
+
+      const gL = ctx.createRadialGradient(endPos.x, endPos.y, 10, endPos.x, endPos.y, 160);
+      gL.addColorStop(0, 'rgba(34, 197, 94, 0.15)');
+      gL.addColorStop(1, 'rgba(34, 197, 94, 0)');
+      ctx.fillStyle = gL;
+      ctx.beginPath();
+      ctx.arc(endPos.x, endPos.y, 160, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Draw Local Baseline 15 Peers
+      p.local_graph.orig_neighbors.forEach(n => {
+        const pt = toScreen(n.x, n.y);
+        ctx.beginPath();
+        ctx.arc(pt.x, pt.y, 5, 0, Math.PI * 2);
+        ctx.fillStyle = n.cvd === 1 ? '#ef4444' : '#f97316';
+        ctx.shadowColor = '#ef4444';
+        ctx.shadowBlur = 6;
+        ctx.fill();
+        ctx.shadowBlur = 0;
+
+        ctx.fillStyle = '#94a3b8';
+        ctx.font = '10px JetBrains Mono';
+        ctx.fillText(`Pt #${n.real_id} (${n.bp} mmHg)`, pt.x + 8, pt.y + 3);
+      });
+
+      // Draw Local Destination 15 Peers
+      p.local_graph.new_neighbors.forEach(n => {
+        const pt = toScreen(n.x, n.y);
+        ctx.beginPath();
+        ctx.arc(pt.x, pt.y, 5, 0, Math.PI * 2);
+        ctx.fillStyle = n.cvd === 0 ? '#22c55e' : '#06b6d4';
+        ctx.shadowColor = '#22c55e';
+        ctx.shadowBlur = 6;
+        ctx.fill();
+        ctx.shadowBlur = 0;
+
+        ctx.fillStyle = '#94a3b8';
+        ctx.font = '10px JetBrains Mono';
+        ctx.fillText(`Pt #${n.real_id} (${n.bp} mmHg)`, pt.x + 8, pt.y + 3);
+      });
+
+      // Draw Intermediate Transit Waypoints
+      p.local_graph.intermediate_nodes.forEach(m => {
+        const mpt = toScreen(m.x, m.y);
+        ctx.beginPath();
+        ctx.arc(mpt.x, mpt.y, 7, 0, Math.PI * 2);
+        ctx.fillStyle = '#6366f1';
+        ctx.fill();
+        ctx.strokeStyle = '#a5b4fc';
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+
+        ctx.fillStyle = '#c7d2fe';
+        ctx.font = 'bold 10px Plus Jakarta Sans';
+        ctx.fillText(m.label, mpt.x - 30, mpt.y - 12);
+      });
+
+      // Cubic trajectory through waypoints
+      const r = progressRatio;
+      const easedR = r < 0.5 ? 2 * r * r : -1 + (4 - 2 * r) * r;
+
+      // Trajectory curve with waypoint arcs
+      const wp1 = toScreen(p.local_graph.intermediate_nodes[0].x, p.local_graph.intermediate_nodes[0].y);
+      const wp2 = toScreen(p.local_graph.intermediate_nodes[1].x, p.local_graph.intermediate_nodes[1].y);
+
+      ctx.strokeStyle = 'rgba(99, 102, 241, 0.4)';
+      ctx.setLineDash([5, 5]);
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(startPos.x, startPos.y);
+      ctx.quadraticCurveTo(wp1.x, wp1.y, wp2.x, wp2.y);
+      ctx.lineTo(endPos.x, endPos.y);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      // Compute current traveling node position
+      let curX, curY;
+      if (easedR < 0.5) {
+        const subT = easedR / 0.5;
+        curX = startPos.x + (wp2.x - startPos.x) * subT;
+        curY = startPos.y + (wp2.y - startPos.y) * subT;
+      } else {
+        const subT = (easedR - 0.5) / 0.5;
+        curX = wp2.x + (endPos.x - wp2.x) * subT;
+        curY = wp2.y + (endPos.y - wp2.y) * subT;
+      }
+
+      // Dissolving High-Risk Edges
+      if (r < 0.8) {
+        const alphaOld = Math.max(0, 1 - r * 1.3);
+        ctx.strokeStyle = `rgba(239, 68, 68, ${alphaOld * 0.75})`;
+        ctx.lineWidth = 1.8;
+        p.local_graph.orig_neighbors.slice(0, 9).forEach(n => {
+          const pt = toScreen(n.x, n.y);
+          ctx.beginPath();
+          ctx.moveTo(curX, curY);
+          ctx.lineTo(pt.x, pt.y);
+          ctx.stroke();
+        });
+      }
+
+      // Latching Healthy Edges
+      if (r > 0.2) {
+        const alphaNew = Math.min(1, (r - 0.2) / 0.65);
+        ctx.strokeStyle = `rgba(34, 197, 94, ${alphaNew * 0.85})`;
+        ctx.lineWidth = 2.0;
+        p.local_graph.new_neighbors.slice(0, 10).forEach(n => {
+          const pt = toScreen(n.x, n.y);
+          ctx.beginPath();
+          ctx.moveTo(curX, curY);
+          ctx.lineTo(pt.x, pt.y);
+          ctx.stroke();
+        });
+      }
+
+      // Patient Node
+      pulseT += 0.06;
+      const pulseR = 15 + Math.sin(pulseT) * 3;
+
+      ctx.beginPath();
+      ctx.arc(curX, curY, pulseR, 0, Math.PI * 2);
+      ctx.strokeStyle = r < 0.5 ? 'rgba(239, 68, 68, 0.7)' : 'rgba(34, 197, 94, 0.8)';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(curX, curY, 9, 0, Math.PI * 2);
+      ctx.fillStyle = '#f59e0b';
+      ctx.shadowColor = '#f59e0b';
+      ctx.shadowBlur = 15;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = 2.5;
+      ctx.stroke();
+
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 12px JetBrains Mono';
+      ctx.textAlign = 'center';
+      ctx.fillText(`${p.name.split(' ')[0]}`, curX, curY - 20);
+    }
+
+    // GRAPH VIEW 2: 5-CLUSTER GLOBAL POPULATION MANIFOLD
+    function renderMacroManifold() {
+      const centerX = cWidth / 2;
+      const centerY = cHeight / 2;
+
+      function toScreen(x, y) {
+        return {
+          x: centerX + x * (cWidth / 360),
+          y: centerY + y * (cHeight / 360)
+        };
+      }
+
+      // Draw all 5 Clusters
+      Object.values(MULTI_DATA.macro_clusters).forEach(cluster => {
+        const cCenter = toScreen(cluster.center[0], cluster.center[1]);
+
+        // Halo
+        const g = ctx.createRadialGradient(cCenter.x, cCenter.y, 5, cCenter.x, cCenter.y, 85);
+        g.addColorStop(0, cluster.color + '25');
+        g.addColorStop(1, cluster.color + '00');
+        ctx.fillStyle = g;
+        ctx.beginPath();
+        ctx.arc(cCenter.x, cCenter.y, 85, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Cluster Label
+        ctx.fillStyle = cluster.color;
+        ctx.font = 'bold 11px Plus Jakarta Sans';
+        ctx.textAlign = 'center';
+        ctx.fillText(cluster.name, cCenter.x, cCenter.y - 45);
+
+        // Nodes
+        cluster.nodes.forEach(n => {
+          const pt = toScreen(n.x, n.y);
+          ctx.beginPath();
+          ctx.arc(pt.x, pt.y, 3.5, 0, Math.PI * 2);
+          ctx.fillStyle = cluster.color;
+          ctx.fill();
+        });
+      });
+
+      // Macro Trajectory from Cluster 1/2 to Cluster 5
+      const startP = toScreen(-115, -60);
+      const midP = toScreen(0, 0);
+      const endP = toScreen(115, 60);
+
+      const r = progressRatio;
+      const pX = (1 - r) * (1 - r) * startP.x + 2 * (1 - r) * r * midP.x + r * r * endP.x;
+      const pY = (1 - r) * (1 - r) * startP.y + 2 * (1 - r) * r * midP.y + r * r * endP.y;
+
+      // Track Line
+      ctx.strokeStyle = 'rgba(148, 163, 184, 0.4)';
+      ctx.setLineDash([4, 4]);
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.moveTo(startP.x, startP.y);
+      ctx.quadraticCurveTo(midP.x, midP.y, endP.x, endP.y);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      // Traveling Node
+      ctx.beginPath();
+      ctx.arc(pX, pY, 9, 0, Math.PI * 2);
+      ctx.fillStyle = '#f59e0b';
+      ctx.shadowColor = '#f59e0b';
+      ctx.shadowBlur = 14;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 11px JetBrains Mono';
+      ctx.textAlign = 'center';
+      ctx.fillText(`${currentPatient.name.split(' ')[0]} (Global)`, pX, pY - 16);
+    }
+
+    // GRAPH VIEW 3: BIOMARKER RADAR POLAR FINGERPRINT
+    function renderRadarFingerprint() {
+      const centerX = cWidth / 2;
+      const centerY = cHeight / 2;
+      const radius = Math.min(cWidth, cHeight) * 0.36;
+
+      const axes = ['Blood_Pressure', 'Cholesterol', 'Triglycerides', 'Heart_Rate', 'BMI', 'Stress_Index'];
+      const axisLabels = ['Blood Pressure', 'Cholesterol', 'Triglycerides', 'Heart Rate', 'BMI', 'Stress Index'];
+      const numAxes = axes.length;
+
+      // Draw concentric radar webs
+      ctx.strokeStyle = '#1e293b';
+      ctx.lineWidth = 1;
+      for (let level = 1; level <= 4; level++) {
+        const r = (radius / 4) * level;
+        ctx.beginPath();
+        for (let i = 0; i < numAxes; i++) {
+          const angle = (2 * Math.PI * i) / numAxes - Math.PI / 2;
+          const x = centerX + r * Math.cos(angle);
+          const y = centerY + r * Math.sin(angle);
+          if (i === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        }
+        ctx.closePath();
+        ctx.stroke();
+      }
+
+      // Draw Axis Lines and Labels
+      ctx.fillStyle = '#94a3b8';
+      ctx.font = '11px Plus Jakarta Sans';
+      ctx.textAlign = 'center';
+      for (let i = 0; i < numAxes; i++) {
+        const angle = (2 * Math.PI * i) / numAxes - Math.PI / 2;
+        const x = centerX + radius * Math.cos(angle);
+        const y = centerY + radius * Math.sin(angle);
+        ctx.beginPath();
+        ctx.moveTo(centerX, centerY);
+        ctx.lineTo(x, y);
+        ctx.stroke();
+
+        const lx = centerX + (radius + 20) * Math.cos(angle);
+        const ly = centerY + (radius + 20) * Math.sin(angle);
+        ctx.fillText(axisLabels[i], lx, ly);
+      }
+
+      // Baseline Polygon (Red)
+      ctx.beginPath();
+      for (let i = 0; i < numAxes; i++) {
+        const angle = (2 * Math.PI * i) / numAxes - Math.PI / 2;
+        const valRatio = 0.85 + (i % 2) * 0.1;
+        const x = centerX + radius * valRatio * Math.cos(angle);
+        const y = centerY + radius * valRatio * Math.sin(angle);
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      ctx.closePath();
+      ctx.fillStyle = 'rgba(239, 68, 68, 0.25)';
+      ctx.fill();
+      ctx.strokeStyle = '#ef4444';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      // Current Dynamic Polygon (Green)
+      const r = progressRatio;
+      ctx.beginPath();
+      for (let i = 0; i < numAxes; i++) {
+        const angle = (2 * Math.PI * i) / numAxes - Math.PI / 2;
+        const origR = 0.85 + (i % 2) * 0.1;
+        const targetR = 0.35 + (i % 3) * 0.08;
+        const curR = origR - (origR - targetR) * r;
+        const x = centerX + radius * curR * Math.cos(angle);
+        const y = centerY + radius * curR * Math.sin(angle);
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      ctx.closePath();
+      ctx.fillStyle = 'rgba(34, 197, 94, 0.3)';
+      ctx.fill();
+      ctx.strokeStyle = '#22c55e';
+      ctx.lineWidth = 2.5;
+      ctx.stroke();
+    }
+
+    // Initialization
+    loadPatient(852);
+    animFrame = requestAnimationFrame(renderActiveCanvas);
+  </script>
+</body>
+</html>
