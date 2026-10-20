@@ -1,0 +1,4936 @@
+{
+  "weights": {
+    "turnover": 0.4,
+    "risk_shift": 0.4,
+    "embedding": 0.2
+  },
+  "clinical_weights": {
+    "Age": 1.5,
+    "Blood_Pressure": 1.8,
+    "Cholesterol": 2.0,
+    "Heart_Rate": 1.0,
+    "BMI": 1.3,
+    "Diabetes": 1.8,
+    "Smoking": 1.6,
+    "Physical_Activity_HoursPerWeek": 1.0,
+    "ECG_Score": 1.4,
+    "Family_History": 1.5,
+    "Glucose": 1.7,
+    "Triglycerides": 1.5,
+    "Stress_Index": 1.0,
+    "Gender": 0.5
+  },
+  "background_nodes": [
+    {
+      "id": "bg_h_0",
+      "x": -94.09,
+      "y": -9.68,
+      "cvd": 1,
+      "label": "CVD+ Peer #100"
+    },
+    {
+      "id": "bg_h_1",
+      "x": -89.87,
+      "y": 36.84,
+      "cvd": 1,
+      "label": "CVD+ Peer #101"
+    },
+    {
+      "id": "bg_h_2",
+      "x": -114.56,
+      "y": -12.36,
+      "cvd": 1,
+      "label": "CVD+ Peer #102"
+    },
+    {
+      "id": "bg_h_3",
+      "x": -63.78,
+      "y": 15.68,
+      "cvd": 1,
+      "label": "CVD+ Peer #103"
+    },
+    {
+      "id": "bg_h_4",
+      "x": -121.15,
+      "y": 9.39,
+      "cvd": 1,
+      "label": "CVD+ Peer #104"
+    },
+    {
+      "id": "bg_h_5",
+      "x": -120.98,
+      "y": -18.85,
+      "cvd": 1,
+      "label": "CVD+ Peer #105"
+    },
+    {
+      "id": "bg_h_6",
+      "x": -101.23,
+      "y": -59.38,
+      "cvd": 1,
+      "label": "CVD+ Peer #106"
+    },
+    {
+      "id": "bg_h_7",
+      "x": -156.3,
+      "y": -21.55,
+      "cvd": 1,
+      "label": "CVD+ Peer #107"
+    },
+    {
+      "id": "bg_h_8",
+      "x": -136.36,
+      "y": 2.99,
+      "cvd": 1,
+      "label": "CVD+ Peer #108"
+    },
+    {
+      "id": "bg_h_9",
+      "x": -133.43,
+      "y": -45.35,
+      "cvd": 1,
+      "label": "CVD+ Peer #109"
+    },
+    {
+      "id": "bg_h_10",
+      "x": -66.96,
+      "y": -12.13,
+      "cvd": 1,
+      "label": "CVD+ Peer #110"
+    },
+    {
+      "id": "bg_h_11",
+      "x": -106.11,
+      "y": -45.7,
+      "cvd": 1,
+      "label": "CVD+ Peer #111"
+    },
+    {
+      "id": "bg_h_12",
+      "x": -123.24,
+      "y": -2.7,
+      "cvd": 1,
+      "label": "CVD+ Peer #112"
+    },
+    {
+      "id": "bg_h_13",
+      "x": -140.23,
+      "y": 4.71,
+      "cvd": 1,
+      "label": "CVD+ Peer #113"
+    },
+    {
+      "id": "bg_h_14",
+      "x": -124.82,
+      "y": -13.97,
+      "cvd": 1,
+      "label": "CVD+ Peer #114"
+    },
+    {
+      "id": "bg_h_15",
+      "x": -124.85,
+      "y": 46.06,
+      "cvd": 1,
+      "label": "CVD+ Peer #115"
+    },
+    {
+      "id": "bg_h_16",
+      "x": -108.38,
+      "y": -35.42,
+      "cvd": 1,
+      "label": "CVD+ Peer #116"
+    },
+    {
+      "id": "bg_h_17",
+      "x": -84.97,
+      "y": -39.99,
+      "cvd": 1,
+      "label": "CVD+ Peer #117"
+    },
+    {
+      "id": "bg_h_18",
+      "x": -102.15,
+      "y": -60.68,
+      "cvd": 1,
+      "label": "CVD+ Peer #118"
+    },
+    {
+      "id": "bg_h_19",
+      "x": -145.19,
+      "y": -0.29,
+      "cvd": 1,
+      "label": "CVD+ Peer #119"
+    },
+    {
+      "id": "bg_h_20",
+      "x": -87.32,
+      "y": -1.01,
+      "cvd": 1,
+      "label": "CVD+ Peer #120"
+    },
+    {
+      "id": "bg_h_21",
+      "x": -111.24,
+      "y": -14.24,
+      "cvd": 1,
+      "label": "CVD+ Peer #121"
+    },
+    {
+      "id": "bg_h_22",
+      "x": -149.4,
+      "y": -25.96,
+      "cvd": 1,
+      "label": "CVD+ Peer #122"
+    },
+    {
+      "id": "bg_h_23",
+      "x": -120.9,
+      "y": 23.79,
+      "cvd": 1,
+      "label": "CVD+ Peer #123"
+    },
+    {
+      "id": "bg_h_24",
+      "x": -98.38,
+      "y": -55.17,
+      "cvd": 1,
+      "label": "CVD+ Peer #124"
+    },
+    {
+      "id": "bg_h_25",
+      "x": -98.93,
+      "y": -16.59,
+      "cvd": 1,
+      "label": "CVD+ Peer #125"
+    },
+    {
+      "id": "bg_h_26",
+      "x": -126.96,
+      "y": 11.32,
+      "cvd": 1,
+      "label": "CVD+ Peer #126"
+    },
+    {
+      "id": "bg_h_27",
+      "x": -79.13,
+      "y": 20.27,
+      "cvd": 1,
+      "label": "CVD+ Peer #127"
+    },
+    {
+      "id": "bg_h_28",
+      "x": -131.5,
+      "y": -14.46,
+      "cvd": 1,
+      "label": "CVD+ Peer #128"
+    },
+    {
+      "id": "bg_h_29",
+      "x": -98.73,
+      "y": 21.51,
+      "cvd": 1,
+      "label": "CVD+ Peer #129"
+    },
+    {
+      "id": "bg_l_0",
+      "x": 44.65,
+      "y": -12.87,
+      "cvd": 0,
+      "label": "Healthy Peer #200"
+    },
+    {
+      "id": "bg_l_1",
+      "x": 24.58,
+      "y": -45.2,
+      "cvd": 0,
+      "label": "Healthy Peer #201"
+    },
+    {
+      "id": "bg_l_2",
+      "x": 85.99,
+      "y": 36.48,
+      "cvd": 0,
+      "label": "Healthy Peer #202"
+    },
+    {
+      "id": "bg_l_3",
+      "x": 57.68,
+      "y": 25.19,
+      "cvd": 0,
+      "label": "Healthy Peer #203"
+    },
+    {
+      "id": "bg_l_4",
+      "x": 71.56,
+      "y": -27.57,
+      "cvd": 0,
+      "label": "Healthy Peer #204"
+    },
+    {
+      "id": "bg_l_5",
+      "x": 71.55,
+      "y": 42.29,
+      "cvd": 0,
+      "label": "Healthy Peer #205"
+    },
+    {
+      "id": "bg_l_6",
+      "x": 58.84,
+      "y": 43.14,
+      "cvd": 0,
+      "label": "Healthy Peer #206"
+    },
+    {
+      "id": "bg_l_7",
+      "x": -23.84,
+      "y": 19.38,
+      "cvd": 0,
+      "label": "Healthy Peer #207"
+    },
+    {
+      "id": "bg_l_8",
+      "x": 62.77,
+      "y": -16.49,
+      "cvd": 0,
+      "label": "Healthy Peer #208"
+    },
+    {
+      "id": "bg_l_9",
+      "x": 62.92,
+      "y": -70.53,
+      "cvd": 0,
+      "label": "Healthy Peer #209"
+    },
+    {
+      "id": "bg_l_10",
+      "x": 52.96,
+      "y": 4.5,
+      "cvd": 0,
+      "label": "Healthy Peer #210"
+    },
+    {
+      "id": "bg_l_11",
+      "x": 107.28,
+      "y": -23.51,
+      "cvd": 0,
+      "label": "Healthy Peer #211"
+    },
+    {
+      "id": "bg_l_12",
+      "x": 34.12,
+      "y": -22.98,
+      "cvd": 0,
+      "label": "Healthy Peer #212"
+    },
+    {
+      "id": "bg_l_13",
+      "x": 89.28,
+      "y": 3.6,
+      "cvd": 0,
+      "label": "Healthy Peer #213"
+    },
+    {
+      "id": "bg_l_14",
+      "x": 43.03,
+      "y": 9.5,
+      "cvd": 0,
+      "label": "Healthy Peer #214"
+    },
+    {
+      "id": "bg_l_15",
+      "x": 63.09,
+      "y": 24.07,
+      "cvd": 0,
+      "label": "Healthy Peer #215"
+    },
+    {
+      "id": "bg_l_16",
+      "x": 37.52,
+      "y": -17.41,
+      "cvd": 0,
+      "label": "Healthy Peer #216"
+    },
+    {
+      "id": "bg_l_17",
+      "x": 47.44,
+      "y": -53.76,
+      "cvd": 0,
+      "label": "Healthy Peer #217"
+    },
+    {
+      "id": "bg_l_18",
+      "x": 69.46,
+      "y": 1.43,
+      "cvd": 0,
+      "label": "Healthy Peer #218"
+    },
+    {
+      "id": "bg_l_19",
+      "x": 60.15,
+      "y": -14.43,
+      "cvd": 0,
+      "label": "Healthy Peer #219"
+    },
+    {
+      "id": "bg_l_20",
+      "x": 14.7,
+      "y": -20.38,
+      "cvd": 0,
+      "label": "Healthy Peer #220"
+    },
+    {
+      "id": "bg_l_21",
+      "x": 49.02,
+      "y": -32.6,
+      "cvd": 0,
+      "label": "Healthy Peer #221"
+    },
+    {
+      "id": "bg_l_22",
+      "x": 54.83,
+      "y": 6.01,
+      "cvd": 0,
+      "label": "Healthy Peer #222"
+    },
+    {
+      "id": "bg_l_23",
+      "x": 120.35,
+      "y": -1.34,
+      "cvd": 0,
+      "label": "Healthy Peer #223"
+    },
+    {
+      "id": "bg_l_24",
+      "x": 68.23,
+      "y": -9.31,
+      "cvd": 0,
+      "label": "Healthy Peer #224"
+    },
+    {
+      "id": "bg_l_25",
+      "x": -1.41,
+      "y": -7.77,
+      "cvd": 0,
+      "label": "Healthy Peer #225"
+    },
+    {
+      "id": "bg_l_26",
+      "x": 61.91,
+      "y": 71.9,
+      "cvd": 0,
+      "label": "Healthy Peer #226"
+    },
+    {
+      "id": "bg_l_27",
+      "x": 53.83,
+      "y": 2.73,
+      "cvd": 0,
+      "label": "Healthy Peer #227"
+    },
+    {
+      "id": "bg_l_28",
+      "x": 58.88,
+      "y": -44.32,
+      "cvd": 0,
+      "label": "Healthy Peer #228"
+    },
+    {
+      "id": "bg_l_29",
+      "x": 96.56,
+      "y": 17.14,
+      "cvd": 0,
+      "label": "Healthy Peer #229"
+    },
+    {
+      "id": "bg_l_30",
+      "x": 85.3,
+      "y": -36.02,
+      "cvd": 0,
+      "label": "Healthy Peer #230"
+    },
+    {
+      "id": "bg_l_31",
+      "x": 104.88,
+      "y": -51.78,
+      "cvd": 0,
+      "label": "Healthy Peer #231"
+    },
+    {
+      "id": "bg_l_32",
+      "x": 78.77,
+      "y": 63.17,
+      "cvd": 0,
+      "label": "Healthy Peer #232"
+    },
+    {
+      "id": "bg_l_33",
+      "x": 28.29,
+      "y": -25.05,
+      "cvd": 0,
+      "label": "Healthy Peer #233"
+    },
+    {
+      "id": "bg_l_34",
+      "x": 63.18,
+      "y": -23.04,
+      "cvd": 0,
+      "label": "Healthy Peer #234"
+    }
+  ],
+  "center_high": [
+    -108.00153846153844,
+    -5.805897435897437
+  ],
+  "center_low": [
+    59.987179487179496,
+    -6.924102564102564
+  ],
+  "patients": [
+    {
+      "id": 852,
+      "name": "Severe Hypertensive with Critical Hyperlipidemia",
+      "age": 76,
+      "gender": "Female",
+      "orig_risk": 100.0,
+      "cf_risk": 10.5,
+      "risk_reduction": 89.5,
+      "cpm_score": 0.944,
+      "turnover": 1.0,
+      "prevalence_orig": 94.4,
+      "prevalence_new": 6.7,
+      "risk_shift": 0.8778,
+      "emb_displacement": 15.49,
+      "d_norm": 0.9642,
+      "f_norm": 0.8485,
+      "n_features_changed": 9,
+      "coords": {
+        "orig_x": -138.61,
+        "orig_y": -7.36,
+        "new_x": 112.98,
+        "new_y": -10.18
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 170.7,
+          "cf": 133.7,
+          "delta": -37.0,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 292.9,
+          "cf": 216.86,
+          "delta": -76.04,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 129.5,
+          "cf": 100.6,
+          "delta": -28.9,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 29.2,
+          "cf": 19.6,
+          "delta": -9.6,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 6.7,
+          "cf": 10.0,
+          "delta": 3.3,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 1.76,
+          "cf": 1.76,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 76.5,
+          "cf": 70.0,
+          "delta": -6.5,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 290.1,
+          "cf": 190.02,
+          "delta": -100.08,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 2.6,
+          "cf": 0.0,
+          "delta": -2.6,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.6,
+          "delta": -0.4,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 76.0,
+          "cf": 76.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 18,
+      "new_neighbor_count": 15,
+      "orig_cvd_count": 17,
+      "new_cvd_count": 1
+    },
+    {
+      "id": 336,
+      "name": "Metabolic Syndrome & Heavy Smoker",
+      "age": 77,
+      "gender": "Male",
+      "orig_risk": 100.0,
+      "cf_risk": 27.3,
+      "risk_reduction": 72.7,
+      "cpm_score": 0.9342,
+      "turnover": 1.0,
+      "prevalence_orig": 90.9,
+      "prevalence_new": 6.7,
+      "risk_shift": 0.8424,
+      "emb_displacement": 15.81,
+      "d_norm": 0.9862,
+      "f_norm": 0.7421,
+      "n_features_changed": 10,
+      "coords": {
+        "orig_x": -130.76,
+        "orig_y": -3.87,
+        "new_x": 126.04,
+        "new_y": -6.19
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 164.2,
+          "cf": 131.82,
+          "delta": -32.38,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 272.6,
+          "cf": 206.06,
+          "delta": -66.53,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 122.2,
+          "cf": 100.6,
+          "delta": -21.6,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 29.4,
+          "cf": 21.0,
+          "delta": -8.4,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 6.5,
+          "cf": 10.0,
+          "delta": 3.5,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 2.05,
+          "cf": 2.05,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 105.9,
+          "cf": 79.3,
+          "delta": -26.6,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 271.2,
+          "cf": 183.63,
+          "delta": -87.57,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 7.7,
+          "cf": 4.2,
+          "delta": -3.5,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.65,
+          "delta": -0.35,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 1.0,
+          "cf": 0.65,
+          "delta": -0.35,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 77.0,
+          "cf": 77.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 22,
+      "new_neighbor_count": 15,
+      "orig_cvd_count": 20,
+      "new_cvd_count": 1
+    },
+    {
+      "id": 668,
+      "name": "High-Risk Cardiac Patient #668",
+      "age": 79,
+      "gender": "Male",
+      "orig_risk": 100.0,
+      "cf_risk": 22.5,
+      "risk_reduction": 77.4,
+      "cpm_score": 0.9221,
+      "turnover": 1.0,
+      "prevalence_orig": 92.3,
+      "prevalence_new": 6.7,
+      "risk_shift": 0.8564,
+      "emb_displacement": 14.52,
+      "d_norm": 0.8976,
+      "f_norm": 0.6276,
+      "n_features_changed": 10,
+      "coords": {
+        "orig_x": -96.12,
+        "orig_y": -12.94,
+        "new_x": 139.74,
+        "new_y": -6.98
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 150.3,
+          "cf": 122.55,
+          "delta": -27.75,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 268.0,
+          "cf": 210.97,
+          "delta": -57.03,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 125.5,
+          "cf": 100.6,
+          "delta": -24.9,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 27.6,
+          "cf": 20.4,
+          "delta": -7.2,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 5.3,
+          "cf": 8.3,
+          "delta": 3.0,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 2.2,
+          "cf": 2.2,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 100.7,
+          "cf": 77.9,
+          "delta": -22.8,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 248.8,
+          "cf": 173.74,
+          "delta": -75.06,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 8.9,
+          "cf": 5.9,
+          "delta": -3.0,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.7,
+          "delta": -0.3,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 1.0,
+          "cf": 0.7,
+          "delta": -0.3,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 79.0,
+          "cf": 79.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 26,
+      "new_neighbor_count": 15,
+      "orig_cvd_count": 24,
+      "new_cvd_count": 1
+    },
+    {
+      "id": 29,
+      "name": "High-Risk Cardiac Patient #29",
+      "age": 78,
+      "gender": "Female",
+      "orig_risk": 100.0,
+      "cf_risk": 8.0,
+      "risk_reduction": 92.0,
+      "cpm_score": 0.9145,
+      "turnover": 1.0,
+      "prevalence_orig": 95.5,
+      "prevalence_new": 6.7,
+      "risk_shift": 0.8879,
+      "emb_displacement": 13.06,
+      "d_norm": 0.7967,
+      "f_norm": 0.6369,
+      "n_features_changed": 9,
+      "coords": {
+        "orig_x": -98.79,
+        "orig_y": -16.11,
+        "new_x": 113.14,
+        "new_y": -6.76
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 159.0,
+          "cf": 131.25,
+          "delta": -27.75,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 275.1,
+          "cf": 218.07,
+          "delta": -57.03,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 138.5,
+          "cf": 108.68,
+          "delta": -29.82,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 31.0,
+          "cf": 23.8,
+          "delta": -7.2,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 2.5,
+          "cf": 5.5,
+          "delta": 3.0,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 1.16,
+          "cf": 1.16,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 97.1,
+          "cf": 74.3,
+          "delta": -22.8,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 238.2,
+          "cf": 163.14,
+          "delta": -75.06,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 7.1,
+          "cf": 4.1,
+          "delta": -3.0,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.7,
+          "delta": -0.3,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 78.0,
+          "cf": 78.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 22,
+      "new_neighbor_count": 15,
+      "orig_cvd_count": 21,
+      "new_cvd_count": 1
+    },
+    {
+      "id": 105,
+      "name": "High-Risk Cardiac Patient #105",
+      "age": 73,
+      "gender": "Female",
+      "orig_risk": 100.0,
+      "cf_risk": 37.2,
+      "risk_reduction": 62.8,
+      "cpm_score": 0.9124,
+      "turnover": 1.0,
+      "prevalence_orig": 87.5,
+      "prevalence_new": 0.0,
+      "risk_shift": 0.875,
+      "emb_displacement": 13.28,
+      "d_norm": 0.8119,
+      "f_norm": 0.6369,
+      "n_features_changed": 10,
+      "coords": {
+        "orig_x": -68.82,
+        "orig_y": -14.44,
+        "new_x": 146.52,
+        "new_y": -2.43
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 150.7,
+          "cf": 122.95,
+          "delta": -27.75,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 269.8,
+          "cf": 212.77,
+          "delta": -57.03,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 142.6,
+          "cf": 112.78,
+          "delta": -29.82,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 27.0,
+          "cf": 19.8,
+          "delta": -7.2,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 3.9,
+          "cf": 6.9,
+          "delta": 3.0,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 1.78,
+          "cf": 1.78,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 109.8,
+          "cf": 87.0,
+          "delta": -22.8,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 224.6,
+          "cf": 149.54,
+          "delta": -75.06,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 3.7,
+          "cf": 0.7,
+          "delta": -3.0,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.7,
+          "delta": -0.3,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 1.0,
+          "cf": 0.7,
+          "delta": -0.3,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 73.0,
+          "cf": 73.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 24,
+      "new_neighbor_count": 15,
+      "orig_cvd_count": 21,
+      "new_cvd_count": 0
+    },
+    {
+      "id": 535,
+      "name": "High-Risk Cardiac Patient #535",
+      "age": 78,
+      "gender": "Female",
+      "orig_risk": 100.0,
+      "cf_risk": 22.0,
+      "risk_reduction": 78.0,
+      "cpm_score": 0.9009,
+      "turnover": 1.0,
+      "prevalence_orig": 95.7,
+      "prevalence_new": 13.3,
+      "risk_shift": 0.8232,
+      "emb_displacement": 13.95,
+      "d_norm": 0.8581,
+      "f_norm": 0.7533,
+      "n_features_changed": 9,
+      "coords": {
+        "orig_x": -108.59,
+        "orig_y": -18.39,
+        "new_x": 117.19,
+        "new_y": -0.41
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 165.2,
+          "cf": 132.82,
+          "delta": -32.38,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 282.7,
+          "cf": 216.16,
+          "delta": -66.53,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 140.2,
+          "cf": 105.41,
+          "delta": -34.79,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 29.7,
+          "cf": 21.3,
+          "delta": -8.4,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 5.4,
+          "cf": 8.9,
+          "delta": 3.5,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 1.69,
+          "cf": 1.69,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 88.4,
+          "cf": 70.0,
+          "delta": -18.4,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 231.4,
+          "cf": 143.83,
+          "delta": -87.57,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 3.8,
+          "cf": 0.3,
+          "delta": -3.5,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.65,
+          "delta": -0.35,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 78.0,
+          "cf": 78.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 23,
+      "new_neighbor_count": 15,
+      "orig_cvd_count": 22,
+      "new_cvd_count": 2
+    },
+    {
+      "id": 871,
+      "name": "High-Risk Cardiac Patient #871",
+      "age": 80,
+      "gender": "Male",
+      "orig_risk": 100.0,
+      "cf_risk": 21.2,
+      "risk_reduction": 78.8,
+      "cpm_score": 0.8996,
+      "turnover": 1.0,
+      "prevalence_orig": 88.2,
+      "prevalence_new": 13.3,
+      "risk_shift": 0.749,
+      "emb_displacement": 16.01,
+      "d_norm": 1.0,
+      "f_norm": 1.0,
+      "n_features_changed": 10,
+      "coords": {
+        "orig_x": -107.4,
+        "orig_y": -8.5,
+        "new_x": 150.0,
+        "new_y": 21.77
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 166.3,
+          "cf": 124.67,
+          "delta": -41.62,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 271.3,
+          "cf": 185.75,
+          "delta": -85.55,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 135.0,
+          "cf": 100.6,
+          "delta": -34.4,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 31.7,
+          "cf": 20.9,
+          "delta": -10.8,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 6.4,
+          "cf": 10.0,
+          "delta": 3.6,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 3.13,
+          "cf": 3.13,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 126.2,
+          "cf": 92.0,
+          "delta": -34.2,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 208.4,
+          "cf": 95.81,
+          "delta": -112.59,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 6.3,
+          "cf": 1.8,
+          "delta": -4.5,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.55,
+          "delta": -0.45,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 1.0,
+          "cf": 0.55,
+          "delta": -0.45,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 80.0,
+          "cf": 80.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 17,
+      "new_neighbor_count": 15,
+      "orig_cvd_count": 15,
+      "new_cvd_count": 2
+    },
+    {
+      "id": 441,
+      "name": "High-Risk Cardiac Patient #441",
+      "age": 78,
+      "gender": "Male",
+      "orig_risk": 100.0,
+      "cf_risk": 39.5,
+      "risk_reduction": 60.5,
+      "cpm_score": 0.8975,
+      "turnover": 1.0,
+      "prevalence_orig": 93.8,
+      "prevalence_new": 6.7,
+      "risk_shift": 0.8708,
+      "emb_displacement": 12.32,
+      "d_norm": 0.7456,
+      "f_norm": 0.6148,
+      "n_features_changed": 9,
+      "coords": {
+        "orig_x": -150.0,
+        "orig_y": 5.48,
+        "new_x": 49.63,
+        "new_y": -7.71
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 167.3,
+          "cf": 139.55,
+          "delta": -27.75,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 279.6,
+          "cf": 222.57,
+          "delta": -57.03,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 116.8,
+          "cf": 100.6,
+          "delta": -16.2,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 24.7,
+          "cf": 18.0,
+          "delta": -6.7,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 4.8,
+          "cf": 7.8,
+          "delta": 3.0,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 1.82,
+          "cf": 1.82,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 106.2,
+          "cf": 83.4,
+          "delta": -22.8,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 319.5,
+          "cf": 244.44,
+          "delta": -75.06,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 8.7,
+          "cf": 5.7,
+          "delta": -3.0,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.7,
+          "delta": -0.3,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 78.0,
+          "cf": 78.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 16,
+      "new_neighbor_count": 15,
+      "orig_cvd_count": 15,
+      "new_cvd_count": 1
+    },
+    {
+      "id": 542,
+      "name": "Stage 2 Hypertension with Chronic Stress",
+      "age": 79,
+      "gender": "Female",
+      "orig_risk": 100.0,
+      "cf_risk": 11.1,
+      "risk_reduction": 88.9,
+      "cpm_score": 0.8816,
+      "turnover": 1.0,
+      "prevalence_orig": 94.4,
+      "prevalence_new": 20.0,
+      "risk_shift": 0.7444,
+      "emb_displacement": 14.83,
+      "d_norm": 0.919,
+      "f_norm": 0.8395,
+      "n_features_changed": 9,
+      "coords": {
+        "orig_x": -149.88,
+        "orig_y": -7.38,
+        "new_x": 90.95,
+        "new_y": -7.1
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 179.0,
+          "cf": 142.0,
+          "delta": -37.0,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 292.3,
+          "cf": 216.26,
+          "delta": -76.04,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 123.8,
+          "cf": 100.6,
+          "delta": -23.2,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 32.9,
+          "cf": 23.3,
+          "delta": -9.6,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 4.5,
+          "cf": 8.5,
+          "delta": 4.0,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 1.48,
+          "cf": 1.48,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 72.0,
+          "cf": 70.0,
+          "delta": -2.0,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 279.7,
+          "cf": 179.62,
+          "delta": -100.08,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 2.1,
+          "cf": 0.0,
+          "delta": -2.1,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.6,
+          "delta": -0.4,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 79.0,
+          "cf": 79.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 18,
+      "new_neighbor_count": 15,
+      "orig_cvd_count": 17,
+      "new_cvd_count": 3
+    },
+    {
+      "id": 980,
+      "name": "High-Risk Cardiac Patient #980",
+      "age": 80,
+      "gender": "Male",
+      "orig_risk": 100.0,
+      "cf_risk": 27.4,
+      "risk_reduction": 72.6,
+      "cpm_score": 0.8814,
+      "turnover": 1.0,
+      "prevalence_orig": 81.8,
+      "prevalence_new": 0.0,
+      "risk_shift": 0.8182,
+      "emb_displacement": 12.68,
+      "d_norm": 0.7708,
+      "f_norm": 0.6326,
+      "n_features_changed": 9,
+      "coords": {
+        "orig_x": -95.62,
+        "orig_y": -15.58,
+        "new_x": 110.33,
+        "new_y": -10.5
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 156.6,
+          "cf": 128.85,
+          "delta": -27.75,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 280.9,
+          "cf": 223.87,
+          "delta": -57.03,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 146.0,
+          "cf": 116.18,
+          "delta": -29.82,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 35.3,
+          "cf": 28.1,
+          "delta": -7.2,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 5.0,
+          "cf": 8.0,
+          "delta": 3.0,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 2.43,
+          "cf": 2.43,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 89.9,
+          "cf": 70.0,
+          "delta": -19.9,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 249.5,
+          "cf": 174.44,
+          "delta": -75.06,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 3.9,
+          "cf": 0.9,
+          "delta": -3.0,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.7,
+          "delta": -0.3,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 80.0,
+          "cf": 80.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 22,
+      "new_neighbor_count": 15,
+      "orig_cvd_count": 18,
+      "new_cvd_count": 0
+    },
+    {
+      "id": 968,
+      "name": "High-Risk Cardiac Patient #968",
+      "age": 80,
+      "gender": "Male",
+      "orig_risk": 100.0,
+      "cf_risk": 24.8,
+      "risk_reduction": 75.2,
+      "cpm_score": 0.8644,
+      "turnover": 1.0,
+      "prevalence_orig": 95.5,
+      "prevalence_new": 6.7,
+      "risk_shift": 0.8879,
+      "emb_displacement": 9.43,
+      "d_norm": 0.5463,
+      "f_norm": 0.3751,
+      "n_features_changed": 9,
+      "coords": {
+        "orig_x": -109.52,
+        "orig_y": 1.4,
+        "new_x": 43.2,
+        "new_y": -9.27
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 161.5,
+          "cf": 143.0,
+          "delta": -18.5,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 259.6,
+          "cf": 221.58,
+          "delta": -38.02,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 116.7,
+          "cf": 100.6,
+          "delta": -16.1,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 30.8,
+          "cf": 26.0,
+          "delta": -4.8,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 2.8,
+          "cf": 4.8,
+          "delta": 2.0,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 1.99,
+          "cf": 1.99,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 94.3,
+          "cf": 79.1,
+          "delta": -15.2,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 295.4,
+          "cf": 245.36,
+          "delta": -50.04,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 4.9,
+          "cf": 2.9,
+          "delta": -2.0,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.8,
+          "delta": -0.2,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 80.0,
+          "cf": 80.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 22,
+      "new_neighbor_count": 15,
+      "orig_cvd_count": 21,
+      "new_cvd_count": 1
+    },
+    {
+      "id": 953,
+      "name": "High-Risk Smoker with Severe BMI Elevation",
+      "age": 78,
+      "gender": "Male",
+      "orig_risk": 100.0,
+      "cf_risk": 5.5,
+      "risk_reduction": 94.4,
+      "cpm_score": 0.8595,
+      "turnover": 1.0,
+      "prevalence_orig": 93.3,
+      "prevalence_new": 20.0,
+      "risk_shift": 0.7333,
+      "emb_displacement": 13.55,
+      "d_norm": 0.8306,
+      "f_norm": 0.6076,
+      "n_features_changed": 9,
+      "coords": {
+        "orig_x": -140.61,
+        "orig_y": -5.57,
+        "new_x": 79.48,
+        "new_y": -3.78
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 167.8,
+          "cf": 140.05,
+          "delta": -27.75,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 270.3,
+          "cf": 213.27,
+          "delta": -57.03,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 107.9,
+          "cf": 100.6,
+          "delta": -7.3,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 35.4,
+          "cf": 28.2,
+          "delta": -7.2,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 6.3,
+          "cf": 9.3,
+          "delta": 3.0,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 2.02,
+          "cf": 2.02,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 112.9,
+          "cf": 90.1,
+          "delta": -22.8,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 238.6,
+          "cf": 163.54,
+          "delta": -75.06,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 8.4,
+          "cf": 5.4,
+          "delta": -3.0,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.7,
+          "delta": -0.3,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 78.0,
+          "cf": 78.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 15,
+      "new_neighbor_count": 15,
+      "orig_cvd_count": 14,
+      "new_cvd_count": 3
+    },
+    {
+      "id": 700,
+      "name": "High-Risk Cardiac Patient #700",
+      "age": 79,
+      "gender": "Male",
+      "orig_risk": 100.0,
+      "cf_risk": 7.2,
+      "risk_reduction": 92.8,
+      "cpm_score": 0.8543,
+      "turnover": 1.0,
+      "prevalence_orig": 88.2,
+      "prevalence_new": 13.3,
+      "risk_shift": 0.749,
+      "emb_displacement": 12.72,
+      "d_norm": 0.7732,
+      "f_norm": 0.6335,
+      "n_features_changed": 9,
+      "coords": {
+        "orig_x": -106.43,
+        "orig_y": -16.45,
+        "new_x": 99.23,
+        "new_y": 1.08
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 166.9,
+          "cf": 139.15,
+          "delta": -27.75,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 275.9,
+          "cf": 218.87,
+          "delta": -57.03,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 128.7,
+          "cf": 100.6,
+          "delta": -28.1,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 33.2,
+          "cf": 26.0,
+          "delta": -7.2,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 6.0,
+          "cf": 9.0,
+          "delta": 3.0,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 1.68,
+          "cf": 1.68,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 96.7,
+          "cf": 73.9,
+          "delta": -22.8,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 204.8,
+          "cf": 129.74,
+          "delta": -75.06,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 7.4,
+          "cf": 4.4,
+          "delta": -3.0,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.7,
+          "delta": -0.3,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 79.0,
+          "cf": 79.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 17,
+      "new_neighbor_count": 15,
+      "orig_cvd_count": 15,
+      "new_cvd_count": 2
+    },
+    {
+      "id": 556,
+      "name": "Borderline Diabetic with Vascular Strain",
+      "age": 73,
+      "gender": "Female",
+      "orig_risk": 99.9,
+      "cf_risk": 0.7,
+      "risk_reduction": 99.2,
+      "cpm_score": 0.8448,
+      "turnover": 1.0,
+      "prevalence_orig": 85.0,
+      "prevalence_new": 13.3,
+      "risk_shift": 0.7167,
+      "emb_displacement": 12.97,
+      "d_norm": 0.7905,
+      "f_norm": 0.4911,
+      "n_features_changed": 9,
+      "coords": {
+        "orig_x": -120.42,
+        "orig_y": -4.04,
+        "new_x": 90.25,
+        "new_y": -7.57
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 168.3,
+          "cf": 145.18,
+          "delta": -23.12,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 261.0,
+          "cf": 213.47,
+          "delta": -47.52,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 113.9,
+          "cf": 100.6,
+          "delta": -13.3,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 33.8,
+          "cf": 27.8,
+          "delta": -6.0,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 2.4,
+          "cf": 4.9,
+          "delta": 2.5,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 2.15,
+          "cf": 2.15,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 93.1,
+          "cf": 74.1,
+          "delta": -19.0,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 253.1,
+          "cf": 190.55,
+          "delta": -62.55,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 3.8,
+          "cf": 1.3,
+          "delta": -2.5,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 1.0,
+          "cf": 0.75,
+          "delta": -0.25,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 73.0,
+          "cf": 73.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 20,
+      "new_neighbor_count": 15,
+      "orig_cvd_count": 17,
+      "new_cvd_count": 2
+    },
+    {
+      "id": 632,
+      "name": "High-Risk Cardiac Patient #632",
+      "age": 76,
+      "gender": "Male",
+      "orig_risk": 100.0,
+      "cf_risk": 25.1,
+      "risk_reduction": 74.8,
+      "cpm_score": 0.844,
+      "turnover": 1.0,
+      "prevalence_orig": 92.3,
+      "prevalence_new": 13.3,
+      "risk_shift": 0.7897,
+      "emb_displacement": 10.79,
+      "d_norm": 0.6405,
+      "f_norm": 0.5025,
+      "n_features_changed": 9,
+      "coords": {
+        "orig_x": -98.05,
+        "orig_y": -3.55,
+        "new_x": 77.1,
+        "new_y": -11.6
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 163.5,
+          "cf": 140.38,
+          "delta": -23.12,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 267.7,
+          "cf": 220.18,
+          "delta": -47.52,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 132.9,
+          "cf": 108.05,
+          "delta": -24.85,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 23.9,
+          "cf": 18.0,
+          "delta": -5.9,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 6.7,
+          "cf": 9.2,
+          "delta": 2.5,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 0.28,
+          "cf": 0.28,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 83.9,
+          "cf": 70.0,
+          "delta": -13.9,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 284.2,
+          "cf": 221.65,
+          "delta": -62.55,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 4.5,
+          "cf": 2.0,
+          "delta": -2.5,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.75,
+          "delta": -0.25,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 76.0,
+          "cf": 76.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 26,
+      "new_neighbor_count": 15,
+      "orig_cvd_count": 24,
+      "new_cvd_count": 2
+    },
+    {
+      "id": 400,
+      "name": "High-Risk Cardiac Patient #400",
+      "age": 71,
+      "gender": "Female",
+      "orig_risk": 100.0,
+      "cf_risk": 34.1,
+      "risk_reduction": 65.9,
+      "cpm_score": 0.8293,
+      "turnover": 1.0,
+      "prevalence_orig": 84.2,
+      "prevalence_new": 0.0,
+      "risk_shift": 0.8421,
+      "emb_displacement": 8.21,
+      "d_norm": 0.4624,
+      "f_norm": 0.3722,
+      "n_features_changed": 9,
+      "coords": {
+        "orig_x": -71.93,
+        "orig_y": -4.11,
+        "new_x": 61.36,
+        "new_y": -8.15
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 168.7,
+          "cf": 150.2,
+          "delta": -18.5,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 259.2,
+          "cf": 221.18,
+          "delta": -38.02,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 135.3,
+          "cf": 115.42,
+          "delta": -19.88,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 25.1,
+          "cf": 20.3,
+          "delta": -4.8,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 5.8,
+          "cf": 7.8,
+          "delta": 2.0,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 1.34,
+          "cf": 1.34,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 76.3,
+          "cf": 70.0,
+          "delta": -6.3,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 265.0,
+          "cf": 214.96,
+          "delta": -50.04,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 4.0,
+          "cf": 2.0,
+          "delta": -2.0,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.8,
+          "delta": -0.2,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 71.0,
+          "cf": 71.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 19,
+      "new_neighbor_count": 18,
+      "orig_cvd_count": 16,
+      "new_cvd_count": 0
+    },
+    {
+      "id": 760,
+      "name": "High-Risk Cardiac Patient #760",
+      "age": 70,
+      "gender": "Female",
+      "orig_risk": 100.0,
+      "cf_risk": 42.1,
+      "risk_reduction": 57.9,
+      "cpm_score": 0.8288,
+      "turnover": 1.0,
+      "prevalence_orig": 86.7,
+      "prevalence_new": 26.7,
+      "risk_shift": 0.6,
+      "emb_displacement": 15.2,
+      "d_norm": 0.9441,
+      "f_norm": 0.9636,
+      "n_features_changed": 9,
+      "coords": {
+        "orig_x": -115.13,
+        "orig_y": -18.81,
+        "new_x": 130.85,
+        "new_y": -2.9
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 155.4,
+          "cf": 113.78,
+          "delta": -41.62,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 310.1,
+          "cf": 224.56,
+          "delta": -85.55,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 123.5,
+          "cf": 100.6,
+          "delta": -22.9,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 18.5,
+          "cf": 18.0,
+          "delta": -0.5,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 2.5,
+          "cf": 7.0,
+          "delta": 4.5,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 1.96,
+          "cf": 1.96,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 90.0,
+          "cf": 70.0,
+          "delta": -20.0,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 248.3,
+          "cf": 135.71,
+          "delta": -112.59,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 4.6,
+          "cf": 0.1,
+          "delta": -4.5,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.55,
+          "delta": -0.45,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 70.0,
+          "cf": 70.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 15,
+      "new_neighbor_count": 15,
+      "orig_cvd_count": 13,
+      "new_cvd_count": 4
+    },
+    {
+      "id": 678,
+      "name": "High-Risk Cardiac Patient #678",
+      "age": 74,
+      "gender": "Female",
+      "orig_risk": 100.0,
+      "cf_risk": 3.3,
+      "risk_reduction": 96.7,
+      "cpm_score": 0.8263,
+      "turnover": 1.0,
+      "prevalence_orig": 86.4,
+      "prevalence_new": 17.6,
+      "risk_shift": 0.6872,
+      "emb_displacement": 12.49,
+      "d_norm": 0.7574,
+      "f_norm": 0.6369,
+      "n_features_changed": 9,
+      "coords": {
+        "orig_x": -99.7,
+        "orig_y": -2.13,
+        "new_x": 102.83,
+        "new_y": -13.28
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 160.4,
+          "cf": 132.65,
+          "delta": -27.75,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 276.5,
+          "cf": 219.47,
+          "delta": -57.03,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 157.0,
+          "cf": 127.18,
+          "delta": -29.82,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 30.2,
+          "cf": 23.0,
+          "delta": -7.2,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 2.2,
+          "cf": 5.2,
+          "delta": 3.0,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 1.92,
+          "cf": 1.92,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 101.0,
+          "cf": 78.2,
+          "delta": -22.8,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 284.8,
+          "cf": 209.74,
+          "delta": -75.06,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 5.6,
+          "cf": 2.6,
+          "delta": -3.0,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.7,
+          "delta": -0.3,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 74.0,
+          "cf": 74.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 22,
+      "new_neighbor_count": 17,
+      "orig_cvd_count": 19,
+      "new_cvd_count": 3
+    },
+    {
+      "id": 555,
+      "name": "High-Risk Cardiac Patient #555",
+      "age": 72,
+      "gender": "Male",
+      "orig_risk": 100.0,
+      "cf_risk": 8.8,
+      "risk_reduction": 91.2,
+      "cpm_score": 0.8261,
+      "turnover": 1.0,
+      "prevalence_orig": 79.2,
+      "prevalence_new": 5.6,
+      "risk_shift": 0.7361,
+      "emb_displacement": 11.05,
+      "d_norm": 0.6584,
+      "f_norm": 0.5095,
+      "n_features_changed": 9,
+      "coords": {
+        "orig_x": -76.83,
+        "orig_y": -2.68,
+        "new_x": 102.56,
+        "new_y": -8.25
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 161.7,
+          "cf": 138.57,
+          "delta": -23.12,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 262.0,
+          "cf": 214.47,
+          "delta": -47.52,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 149.0,
+          "cf": 124.15,
+          "delta": -24.85,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 26.4,
+          "cf": 20.4,
+          "delta": -6.0,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 3.2,
+          "cf": 5.7,
+          "delta": 2.5,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 1.69,
+          "cf": 1.69,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 104.8,
+          "cf": 85.8,
+          "delta": -19.0,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 250.1,
+          "cf": 187.55,
+          "delta": -62.55,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 5.4,
+          "cf": 2.9,
+          "delta": -2.5,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.75,
+          "delta": -0.25,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 72.0,
+          "cf": 72.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 24,
+      "new_neighbor_count": 18,
+      "orig_cvd_count": 19,
+      "new_cvd_count": 1
+    },
+    {
+      "id": 274,
+      "name": "High-Risk Cardiac Patient #274",
+      "age": 79,
+      "gender": "Male",
+      "orig_risk": 100.0,
+      "cf_risk": 47.0,
+      "risk_reduction": 53.0,
+      "cpm_score": 0.824,
+      "turnover": 1.0,
+      "prevalence_orig": 86.7,
+      "prevalence_new": 6.2,
+      "risk_shift": 0.8042,
+      "emb_displacement": 8.92,
+      "d_norm": 0.5115,
+      "f_norm": 0.3821,
+      "n_features_changed": 9,
+      "coords": {
+        "orig_x": -82.77,
+        "orig_y": -6.15,
+        "new_x": 62.07,
+        "new_y": -11.68
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 153.6,
+          "cf": 135.1,
+          "delta": -18.5,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 261.5,
+          "cf": 223.48,
+          "delta": -38.02,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 129.0,
+          "cf": 109.12,
+          "delta": -19.88,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 27.6,
+          "cf": 22.8,
+          "delta": -4.8,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 5.7,
+          "cf": 7.7,
+          "delta": 2.0,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 2.05,
+          "cf": 2.05,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 97.5,
+          "cf": 82.3,
+          "delta": -15.2,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 274.6,
+          "cf": 224.56,
+          "delta": -50.04,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 3.5,
+          "cf": 1.5,
+          "delta": -2.0,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.8,
+          "delta": -0.2,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 79.0,
+          "cf": 79.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 30,
+      "new_neighbor_count": 16,
+      "orig_cvd_count": 26,
+      "new_cvd_count": 1
+    },
+    {
+      "id": 720,
+      "name": "High-Risk Cardiac Patient #720",
+      "age": 76,
+      "gender": "Female",
+      "orig_risk": 100.0,
+      "cf_risk": 10.6,
+      "risk_reduction": 89.4,
+      "cpm_score": 0.8203,
+      "turnover": 1.0,
+      "prevalence_orig": 89.3,
+      "prevalence_new": 20.0,
+      "risk_shift": 0.6929,
+      "emb_displacement": 11.88,
+      "d_norm": 0.7155,
+      "f_norm": 0.5053,
+      "n_features_changed": 9,
+      "coords": {
+        "orig_x": -115.95,
+        "orig_y": -4.49,
+        "new_x": 77.02,
+        "new_y": -9.62
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 167.0,
+          "cf": 143.88,
+          "delta": -23.12,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 265.6,
+          "cf": 218.07,
+          "delta": -47.52,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 123.6,
+          "cf": 100.6,
+          "delta": -23.0,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 22.8,
+          "cf": 18.0,
+          "delta": -4.8,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 2.3,
+          "cf": 4.8,
+          "delta": 2.5,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 2.18,
+          "cf": 2.18,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 94.6,
+          "cf": 75.6,
+          "delta": -19.0,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 261.7,
+          "cf": 199.15,
+          "delta": -62.55,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 5.0,
+          "cf": 2.5,
+          "delta": -2.5,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.75,
+          "delta": -0.25,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 76.0,
+          "cf": 76.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 28,
+      "new_neighbor_count": 15,
+      "orig_cvd_count": 25,
+      "new_cvd_count": 3
+    },
+    {
+      "id": 594,
+      "name": "High-Risk Cardiac Patient #594",
+      "age": 77,
+      "gender": "Male",
+      "orig_risk": 99.8,
+      "cf_risk": 2.6,
+      "risk_reduction": 97.3,
+      "cpm_score": 0.8071,
+      "turnover": 1.0,
+      "prevalence_orig": 88.2,
+      "prevalence_new": 12.5,
+      "risk_shift": 0.7574,
+      "emb_displacement": 9.06,
+      "d_norm": 0.5207,
+      "f_norm": 0.3821,
+      "n_features_changed": 8,
+      "coords": {
+        "orig_x": -114.81,
+        "orig_y": 5.5,
+        "new_x": 32.06,
+        "new_y": -2.48
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 174.3,
+          "cf": 155.8,
+          "delta": -18.5,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 249.3,
+          "cf": 211.28,
+          "delta": -38.02,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 123.5,
+          "cf": 103.62,
+          "delta": -19.88,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 33.5,
+          "cf": 28.7,
+          "delta": -4.8,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 3.0,
+          "cf": 5.0,
+          "delta": 2.0,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 1.84,
+          "cf": 1.84,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 99.5,
+          "cf": 84.3,
+          "delta": -15.2,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 268.1,
+          "cf": 218.06,
+          "delta": -50.04,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 3.8,
+          "cf": 1.8,
+          "delta": -2.0,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 77.0,
+          "cf": 77.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 17,
+      "new_neighbor_count": 16,
+      "orig_cvd_count": 15,
+      "new_cvd_count": 2
+    },
+    {
+      "id": 615,
+      "name": "High-Risk Cardiac Patient #615",
+      "age": 77,
+      "gender": "Male",
+      "orig_risk": 100.0,
+      "cf_risk": 6.9,
+      "risk_reduction": 93.1,
+      "cpm_score": 0.802,
+      "turnover": 1.0,
+      "prevalence_orig": 76.0,
+      "prevalence_new": 13.3,
+      "risk_shift": 0.6267,
+      "emb_displacement": 12.48,
+      "d_norm": 0.7568,
+      "f_norm": 0.6251,
+      "n_features_changed": 9,
+      "coords": {
+        "orig_x": -72.06,
+        "orig_y": -12.81,
+        "new_x": 130.67,
+        "new_y": -10.65
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 154.0,
+          "cf": 126.25,
+          "delta": -27.75,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 274.2,
+          "cf": 217.17,
+          "delta": -57.03,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 134.7,
+          "cf": 104.88,
+          "delta": -29.82,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 27.6,
+          "cf": 20.4,
+          "delta": -7.2,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 5.8,
+          "cf": 8.8,
+          "delta": 3.0,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 1.36,
+          "cf": 1.36,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 83.4,
+          "cf": 70.0,
+          "delta": -13.4,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 261.5,
+          "cf": 186.44,
+          "delta": -75.06,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 5.9,
+          "cf": 2.9,
+          "delta": -3.0,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.7,
+          "delta": -0.3,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 77.0,
+          "cf": 77.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 25,
+      "new_neighbor_count": 15,
+      "orig_cvd_count": 19,
+      "new_cvd_count": 2
+    },
+    {
+      "id": 645,
+      "name": "High-Risk Cardiac Patient #645",
+      "age": 68,
+      "gender": "Female",
+      "orig_risk": 99.9,
+      "cf_risk": 40.1,
+      "risk_reduction": 59.9,
+      "cpm_score": 0.8018,
+      "turnover": 1.0,
+      "prevalence_orig": 89.7,
+      "prevalence_new": 18.8,
+      "risk_shift": 0.7091,
+      "emb_displacement": 10.08,
+      "d_norm": 0.591,
+      "f_norm": 0.5095,
+      "n_features_changed": 10,
+      "coords": {
+        "orig_x": -92.55,
+        "orig_y": 2.8,
+        "new_x": 70.49,
+        "new_y": -10.01
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 156.5,
+          "cf": 133.38,
+          "delta": -23.12,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 265.6,
+          "cf": 218.07,
+          "delta": -47.52,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 140.1,
+          "cf": 115.25,
+          "delta": -24.85,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 32.6,
+          "cf": 26.6,
+          "delta": -6.0,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 1.4,
+          "cf": 3.9,
+          "delta": 2.5,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 1.46,
+          "cf": 1.46,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 109.1,
+          "cf": 90.1,
+          "delta": -19.0,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 293.4,
+          "cf": 230.85,
+          "delta": -62.55,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 5.3,
+          "cf": 2.8,
+          "delta": -2.5,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.75,
+          "delta": -0.25,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 1.0,
+          "cf": 0.75,
+          "delta": -0.25,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 68.0,
+          "cf": 68.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 29,
+      "new_neighbor_count": 16,
+      "orig_cvd_count": 26,
+      "new_cvd_count": 3
+    },
+    {
+      "id": 865,
+      "name": "High-Risk Cardiac Patient #865",
+      "age": 79,
+      "gender": "Female",
+      "orig_risk": 100.0,
+      "cf_risk": 37.2,
+      "risk_reduction": 62.8,
+      "cpm_score": 0.7888,
+      "turnover": 1.0,
+      "prevalence_orig": 83.3,
+      "prevalence_new": 20.0,
+      "risk_shift": 0.6333,
+      "emb_displacement": 11.33,
+      "d_norm": 0.6774,
+      "f_norm": 0.4929,
+      "n_features_changed": 9,
+      "coords": {
+        "orig_x": -74.87,
+        "orig_y": -13.02,
+        "new_x": 109.15,
+        "new_y": -15.31
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 143.3,
+          "cf": 120.17,
+          "delta": -23.12,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 271.1,
+          "cf": 223.57,
+          "delta": -47.52,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 115.4,
+          "cf": 100.6,
+          "delta": -14.8,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 29.3,
+          "cf": 23.3,
+          "delta": -6.0,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 5.1,
+          "cf": 7.6,
+          "delta": 2.5,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 1.54,
+          "cf": 1.54,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 94.7,
+          "cf": 75.7,
+          "delta": -19.0,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 278.8,
+          "cf": 216.25,
+          "delta": -62.55,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 3.7,
+          "cf": 1.2,
+          "delta": -2.5,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.75,
+          "delta": -0.25,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 79.0,
+          "cf": 79.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 18,
+      "new_neighbor_count": 15,
+      "orig_cvd_count": 15,
+      "new_cvd_count": 3
+    },
+    {
+      "id": 592,
+      "name": "High-Risk Cardiac Patient #592",
+      "age": 78,
+      "gender": "Male",
+      "orig_risk": 99.9,
+      "cf_risk": 9.7,
+      "risk_reduction": 90.3,
+      "cpm_score": 0.7882,
+      "turnover": 1.0,
+      "prevalence_orig": 88.9,
+      "prevalence_new": 25.0,
+      "risk_shift": 0.6389,
+      "emb_displacement": 11.12,
+      "d_norm": 0.6632,
+      "f_norm": 0.5095,
+      "n_features_changed": 9,
+      "coords": {
+        "orig_x": -123.54,
+        "orig_y": 0.75,
+        "new_x": 57.09,
+        "new_y": -2.49
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 177.3,
+          "cf": 154.18,
+          "delta": -23.12,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 258.9,
+          "cf": 211.38,
+          "delta": -47.52,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 130.1,
+          "cf": 105.25,
+          "delta": -24.85,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 28.8,
+          "cf": 22.8,
+          "delta": -6.0,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 3.2,
+          "cf": 5.7,
+          "delta": 2.5,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 1.46,
+          "cf": 1.46,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 104.9,
+          "cf": 85.9,
+          "delta": -19.0,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 247.2,
+          "cf": 184.65,
+          "delta": -62.55,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 6.2,
+          "cf": 3.7,
+          "delta": -2.5,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 1.0,
+          "cf": 0.75,
+          "delta": -0.25,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 78.0,
+          "cf": 78.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 18,
+      "new_neighbor_count": 16,
+      "orig_cvd_count": 16,
+      "new_cvd_count": 4
+    },
+    {
+      "id": 899,
+      "name": "High-Risk Cardiac Patient #899",
+      "age": 80,
+      "gender": "Male",
+      "orig_risk": 100.0,
+      "cf_risk": 13.7,
+      "risk_reduction": 86.3,
+      "cpm_score": 0.774,
+      "turnover": 1.0,
+      "prevalence_orig": 94.1,
+      "prevalence_new": 26.7,
+      "risk_shift": 0.6745,
+      "emb_displacement": 9.06,
+      "d_norm": 0.5212,
+      "f_norm": 0.3806,
+      "n_features_changed": 9,
+      "coords": {
+        "orig_x": -130.87,
+        "orig_y": 11.83,
+        "new_x": 15.77,
+        "new_y": -0.31
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 167.3,
+          "cf": 148.8,
+          "delta": -18.5,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 257.5,
+          "cf": 219.48,
+          "delta": -38.02,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 119.7,
+          "cf": 100.6,
+          "delta": -19.1,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 29.6,
+          "cf": 24.8,
+          "delta": -4.8,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 2.6,
+          "cf": 4.6,
+          "delta": 2.0,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 0.89,
+          "cf": 0.89,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 107.8,
+          "cf": 92.6,
+          "delta": -15.2,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 316.4,
+          "cf": 266.36,
+          "delta": -50.04,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 8.2,
+          "cf": 6.2,
+          "delta": -2.0,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.8,
+          "delta": -0.2,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 80.0,
+          "cf": 80.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 17,
+      "new_neighbor_count": 15,
+      "orig_cvd_count": 16,
+      "new_cvd_count": 4
+    },
+    {
+      "id": 109,
+      "name": "High-Risk Cardiac Patient #109",
+      "age": 80,
+      "gender": "Female",
+      "orig_risk": 100.0,
+      "cf_risk": 31.7,
+      "risk_reduction": 68.3,
+      "cpm_score": 0.7664,
+      "turnover": 1.0,
+      "prevalence_orig": 90.5,
+      "prevalence_new": 26.7,
+      "risk_shift": 0.6381,
+      "emb_displacement": 9.56,
+      "d_norm": 0.5557,
+      "f_norm": 0.3713,
+      "n_features_changed": 10,
+      "coords": {
+        "orig_x": -83.49,
+        "orig_y": -6.18,
+        "new_x": 71.76,
+        "new_y": -4.87
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 158.5,
+          "cf": 140.0,
+          "delta": -18.5,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 250.5,
+          "cf": 212.48,
+          "delta": -38.02,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 114.3,
+          "cf": 100.6,
+          "delta": -13.7,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 33.7,
+          "cf": 28.9,
+          "delta": -4.8,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 5.7,
+          "cf": 7.7,
+          "delta": 2.0,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 1.93,
+          "cf": 1.93,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 108.3,
+          "cf": 93.1,
+          "delta": -15.2,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 219.6,
+          "cf": 169.56,
+          "delta": -50.04,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 7.6,
+          "cf": 5.6,
+          "delta": -2.0,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.8,
+          "delta": -0.2,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 1.0,
+          "cf": 0.8,
+          "delta": -0.2,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 80.0,
+          "cf": 80.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 21,
+      "new_neighbor_count": 15,
+      "orig_cvd_count": 19,
+      "new_cvd_count": 4
+    },
+    {
+      "id": 447,
+      "name": "High-Risk Cardiac Patient #447",
+      "age": 62,
+      "gender": "Male",
+      "orig_risk": 99.7,
+      "cf_risk": 39.9,
+      "risk_reduction": 59.8,
+      "cpm_score": 0.758,
+      "turnover": 1.0,
+      "prevalence_orig": 100.0,
+      "prevalence_new": 40.0,
+      "risk_shift": 0.6,
+      "emb_displacement": 10.06,
+      "d_norm": 0.59,
+      "f_norm": 0.5095,
+      "n_features_changed": 9,
+      "coords": {
+        "orig_x": -132.78,
+        "orig_y": 1.47,
+        "new_x": 30.07,
+        "new_y": -11.32
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 153.3,
+          "cf": 130.18,
+          "delta": -23.12,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 291.6,
+          "cf": 244.07,
+          "delta": -47.52,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 126.1,
+          "cf": 101.25,
+          "delta": -24.85,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 32.0,
+          "cf": 26.0,
+          "delta": -6.0,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 5.9,
+          "cf": 8.4,
+          "delta": 2.5,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 1.76,
+          "cf": 1.76,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 110.3,
+          "cf": 91.3,
+          "delta": -19.0,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 330.1,
+          "cf": 267.55,
+          "delta": -62.55,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 2.9,
+          "cf": 0.4,
+          "delta": -2.5,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.75,
+          "delta": -0.25,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 62.0,
+          "cf": 62.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 17,
+      "new_neighbor_count": 15,
+      "orig_cvd_count": 17,
+      "new_cvd_count": 6
+    },
+    {
+      "id": 677,
+      "name": "High-Risk Cardiac Patient #677",
+      "age": 77,
+      "gender": "Female",
+      "orig_risk": 99.7,
+      "cf_risk": 44.5,
+      "risk_reduction": 55.2,
+      "cpm_score": 0.6832,
+      "turnover": 1.0,
+      "prevalence_orig": 95.0,
+      "prevalence_new": 40.0,
+      "risk_shift": 0.55,
+      "emb_displacement": 6.08,
+      "d_norm": 0.3158,
+      "f_norm": 0.2548,
+      "n_features_changed": 8,
+      "coords": {
+        "orig_x": -105.33,
+        "orig_y": 9.26,
+        "new_x": -6.98,
+        "new_y": 2.38
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 173.5,
+          "cf": 159.62,
+          "delta": -13.88,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 254.1,
+          "cf": 225.59,
+          "delta": -28.52,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 135.3,
+          "cf": 120.39,
+          "delta": -14.91,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 30.8,
+          "cf": 27.2,
+          "delta": -3.6,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 4.1,
+          "cf": 5.6,
+          "delta": 1.5,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 1.75,
+          "cf": 1.75,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 89.1,
+          "cf": 77.7,
+          "delta": -11.4,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 307.1,
+          "cf": 269.57,
+          "delta": -37.53,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 6.5,
+          "cf": 5.0,
+          "delta": -1.5,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 77.0,
+          "cf": 77.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 20,
+      "new_neighbor_count": 20,
+      "orig_cvd_count": 19,
+      "new_cvd_count": 8
+    },
+    {
+      "id": 355,
+      "name": "High-Risk Cardiac Patient #355",
+      "age": 76,
+      "gender": "Female",
+      "orig_risk": 99.5,
+      "cf_risk": 1.3,
+      "risk_reduction": 98.2,
+      "cpm_score": 0.6584,
+      "turnover": 1.0,
+      "prevalence_orig": 93.8,
+      "prevalence_new": 53.3,
+      "risk_shift": 0.4042,
+      "emb_displacement": 8.52,
+      "d_norm": 0.4839,
+      "f_norm": 0.4839,
+      "n_features_changed": 7,
+      "coords": {
+        "orig_x": -135.86,
+        "orig_y": -12.59,
+        "new_x": 2.36,
+        "new_y": -14.21
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 171.3,
+          "cf": 148.18,
+          "delta": -23.12,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 294.9,
+          "cf": 247.38,
+          "delta": -47.52,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 119.8,
+          "cf": 100.6,
+          "delta": -19.2,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 26.6,
+          "cf": 20.6,
+          "delta": -6.0,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 3.9,
+          "cf": 6.4,
+          "delta": 2.5,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 1.83,
+          "cf": 1.83,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 70.0,
+          "cf": 70.0,
+          "delta": 0.0,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 268.2,
+          "cf": 205.65,
+          "delta": -62.55,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 4.4,
+          "cf": 1.9,
+          "delta": -2.5,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 76.0,
+          "cf": 76.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 16,
+      "new_neighbor_count": 15,
+      "orig_cvd_count": 15,
+      "new_cvd_count": 8
+    },
+    {
+      "id": 317,
+      "name": "High-Risk Cardiac Patient #317",
+      "age": 75,
+      "gender": "Female",
+      "orig_risk": 100.0,
+      "cf_risk": 29.5,
+      "risk_reduction": 70.5,
+      "cpm_score": 0.6454,
+      "turnover": 1.0,
+      "prevalence_orig": 82.4,
+      "prevalence_new": 40.0,
+      "risk_shift": 0.4235,
+      "emb_displacement": 7.01,
+      "d_norm": 0.3799,
+      "f_norm": 0.2548,
+      "n_features_changed": 9,
+      "coords": {
+        "orig_x": -95.94,
+        "orig_y": 11.38,
+        "new_x": 17.54,
+        "new_y": 4.46
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 166.7,
+          "cf": 152.82,
+          "delta": -13.88,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 245.2,
+          "cf": 216.69,
+          "delta": -28.52,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 122.0,
+          "cf": 107.09,
+          "delta": -14.91,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 33.0,
+          "cf": 29.4,
+          "delta": -3.6,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 2.3,
+          "cf": 3.8,
+          "delta": 1.5,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 1.74,
+          "cf": 1.74,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 97.1,
+          "cf": 85.7,
+          "delta": -11.4,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 313.6,
+          "cf": 276.07,
+          "delta": -37.53,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 5.7,
+          "cf": 4.2,
+          "delta": -1.5,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.85,
+          "delta": -0.15,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 75.0,
+          "cf": 75.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 17,
+      "new_neighbor_count": 15,
+      "orig_cvd_count": 14,
+      "new_cvd_count": 6
+    },
+    {
+      "id": 311,
+      "name": "High-Risk Cardiac Patient #311",
+      "age": 77,
+      "gender": "Male",
+      "orig_risk": 99.3,
+      "cf_risk": 23.0,
+      "risk_reduction": 76.3,
+      "cpm_score": 0.5474,
+      "turnover": 0.975,
+      "prevalence_orig": 77.3,
+      "prevalence_new": 47.4,
+      "risk_shift": 0.299,
+      "emb_displacement": 4.24,
+      "d_norm": 0.1891,
+      "f_norm": 0.1268,
+      "n_features_changed": 7,
+      "coords": {
+        "orig_x": -87.23,
+        "orig_y": -6.19,
+        "new_x": -18.5,
+        "new_y": -10.91
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 163.5,
+          "cf": 154.25,
+          "delta": -9.25,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 262.1,
+          "cf": 243.09,
+          "delta": -19.01,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 129.5,
+          "cf": 119.56,
+          "delta": -9.94,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 18.0,
+          "cf": 18.0,
+          "delta": 0.0,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 2.5,
+          "cf": 3.5,
+          "delta": 1.0,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 2.55,
+          "cf": 2.55,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 89.0,
+          "cf": 81.4,
+          "delta": -7.6,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 262.0,
+          "cf": 236.98,
+          "delta": -25.02,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 4.2,
+          "cf": 3.2,
+          "delta": -1.0,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 77.0,
+          "cf": 77.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 22,
+      "new_neighbor_count": 19,
+      "orig_cvd_count": 17,
+      "new_cvd_count": 9
+    },
+    {
+      "id": 362,
+      "name": "High-Risk Cardiac Patient #362",
+      "age": 78,
+      "gender": "Female",
+      "orig_risk": 99.7,
+      "cf_risk": 6.3,
+      "risk_reduction": 93.4,
+      "cpm_score": 0.5423,
+      "turnover": 1.0,
+      "prevalence_orig": 85.7,
+      "prevalence_new": 68.4,
+      "risk_shift": 0.1729,
+      "emb_displacement": 6.8,
+      "d_norm": 0.3654,
+      "f_norm": 0.2548,
+      "n_features_changed": 8,
+      "coords": {
+        "orig_x": -130.47,
+        "orig_y": -1.75,
+        "new_x": -20.17,
+        "new_y": -7.48
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 168.1,
+          "cf": 154.22,
+          "delta": -13.88,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 260.5,
+          "cf": 231.99,
+          "delta": -28.52,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 119.7,
+          "cf": 104.79,
+          "delta": -14.91,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 28.0,
+          "cf": 24.4,
+          "delta": -3.6,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 3.6,
+          "cf": 5.1,
+          "delta": 1.5,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 1.59,
+          "cf": 1.59,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 103.0,
+          "cf": 91.6,
+          "delta": -11.4,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 261.3,
+          "cf": 223.77,
+          "delta": -37.53,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 7.5,
+          "cf": 6.0,
+          "delta": -1.5,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 78.0,
+          "cf": 78.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 21,
+      "new_neighbor_count": 19,
+      "orig_cvd_count": 18,
+      "new_cvd_count": 13
+    },
+    {
+      "id": 414,
+      "name": "High-Risk Cardiac Patient #414",
+      "age": 79,
+      "gender": "Male",
+      "orig_risk": 99.8,
+      "cf_risk": 14.3,
+      "risk_reduction": 85.5,
+      "cpm_score": 0.5412,
+      "turnover": 1.0,
+      "prevalence_orig": 92.3,
+      "prevalence_new": 72.2,
+      "risk_shift": 0.2009,
+      "emb_displacement": 5.92,
+      "d_norm": 0.3043,
+      "f_norm": 0.2548,
+      "n_features_changed": 8,
+      "coords": {
+        "orig_x": -132.38,
+        "orig_y": -4.4,
+        "new_x": -36.54,
+        "new_y": -10.55
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 169.3,
+          "cf": 155.43,
+          "delta": -13.88,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 271.1,
+          "cf": 242.59,
+          "delta": -28.52,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 124.0,
+          "cf": 109.09,
+          "delta": -14.91,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 29.9,
+          "cf": 26.3,
+          "delta": -3.6,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 1.7,
+          "cf": 3.2,
+          "delta": 1.5,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 2.01,
+          "cf": 2.01,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 92.7,
+          "cf": 81.3,
+          "delta": -11.4,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 271.6,
+          "cf": 234.07,
+          "delta": -37.53,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 4.2,
+          "cf": 2.7,
+          "delta": -1.5,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 79.0,
+          "cf": 79.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 26,
+      "new_neighbor_count": 18,
+      "orig_cvd_count": 24,
+      "new_cvd_count": 13
+    },
+    {
+      "id": 825,
+      "name": "High-Risk Cardiac Patient #825",
+      "age": 75,
+      "gender": "Female",
+      "orig_risk": 100.0,
+      "cf_risk": 33.2,
+      "risk_reduction": 66.8,
+      "cpm_score": 0.5089,
+      "turnover": 1.0,
+      "prevalence_orig": 88.9,
+      "prevalence_new": 75.0,
+      "risk_shift": 0.1389,
+      "emb_displacement": 5.37,
+      "d_norm": 0.2669,
+      "f_norm": 0.2548,
+      "n_features_changed": 9,
+      "coords": {
+        "orig_x": -122.88,
+        "orig_y": -8.59,
+        "new_x": -35.86,
+        "new_y": -12.28
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 157.8,
+          "cf": 143.93,
+          "delta": -13.88,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 279.5,
+          "cf": 250.99,
+          "delta": -28.52,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 119.9,
+          "cf": 104.99,
+          "delta": -14.91,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 25.6,
+          "cf": 22.0,
+          "delta": -3.6,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 2.9,
+          "cf": 4.4,
+          "delta": 1.5,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 2.62,
+          "cf": 2.62,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 110.4,
+          "cf": 99.0,
+          "delta": -11.4,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 264.3,
+          "cf": 226.77,
+          "delta": -37.53,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 5.0,
+          "cf": 3.5,
+          "delta": -1.5,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 1.0,
+          "cf": 0.85,
+          "delta": -0.15,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 75.0,
+          "cf": 75.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 18,
+      "new_neighbor_count": 16,
+      "orig_cvd_count": 16,
+      "new_cvd_count": 12
+    },
+    {
+      "id": 428,
+      "name": "Sedentary Senior with High Triglycerides",
+      "age": 80,
+      "gender": "Male",
+      "orig_risk": 99.9,
+      "cf_risk": 18.0,
+      "risk_reduction": 81.9,
+      "cpm_score": 0.4662,
+      "turnover": 1.0,
+      "prevalence_orig": 86.7,
+      "prevalence_new": 82.4,
+      "risk_shift": 0.0431,
+      "emb_displacement": 5.05,
+      "d_norm": 0.2445,
+      "f_norm": 0.3821,
+      "n_features_changed": 9,
+      "coords": {
+        "orig_x": -125.9,
+        "orig_y": -9.05,
+        "new_x": -45.02,
+        "new_y": -11.44
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 156.8,
+          "cf": 138.3,
+          "delta": -18.5,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 291.5,
+          "cf": 253.48,
+          "delta": -38.02,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 135.3,
+          "cf": 115.42,
+          "delta": -19.88,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 31.7,
+          "cf": 26.9,
+          "delta": -4.8,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 4.8,
+          "cf": 6.8,
+          "delta": 2.0,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 0.83,
+          "cf": 0.83,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 127.2,
+          "cf": 112.0,
+          "delta": -15.2,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 259.3,
+          "cf": 209.26,
+          "delta": -50.04,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 4.5,
+          "cf": 2.5,
+          "delta": -2.0,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 1.0,
+          "cf": 0.8,
+          "delta": -0.2,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 80.0,
+          "cf": 80.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 15,
+      "new_neighbor_count": 17,
+      "orig_cvd_count": 13,
+      "new_cvd_count": 14
+    },
+    {
+      "id": 458,
+      "name": "High-Risk Cardiac Patient #458",
+      "age": 76,
+      "gender": "Male",
+      "orig_risk": 99.3,
+      "cf_risk": 7.3,
+      "risk_reduction": 92.0,
+      "cpm_score": 0.2832,
+      "turnover": 0.7,
+      "prevalence_orig": 77.3,
+      "prevalence_new": 76.5,
+      "risk_shift": 0.008,
+      "emb_displacement": 1.5,
+      "d_norm": 0.0,
+      "f_norm": 0.0,
+      "n_features_changed": 8,
+      "coords": {
+        "orig_x": -70.95,
+        "orig_y": -7.4,
+        "new_x": -47.02,
+        "new_y": -11.83
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 151.5,
+          "cf": 146.88,
+          "delta": -4.62,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 266.3,
+          "cf": 256.8,
+          "delta": -9.51,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 120.1,
+          "cf": 115.13,
+          "delta": -4.97,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 22.4,
+          "cf": 21.2,
+          "delta": -1.2,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 2.4,
+          "cf": 2.9,
+          "delta": 0.5,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 2.05,
+          "cf": 2.05,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 86.3,
+          "cf": 82.5,
+          "delta": -3.8,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 291.6,
+          "cf": 279.09,
+          "delta": -12.51,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 7.2,
+          "cf": 6.7,
+          "delta": -0.5,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 76.0,
+          "cf": 76.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 22,
+      "new_neighbor_count": 17,
+      "orig_cvd_count": 17,
+      "new_cvd_count": 13
+    },
+    {
+      "id": 846,
+      "name": "High-Risk Cardiac Patient #846",
+      "age": 73,
+      "gender": "Male",
+      "orig_risk": 97.9,
+      "cf_risk": 9.1,
+      "risk_reduction": 88.8,
+      "cpm_score": 0.2705,
+      "turnover": 0.6667,
+      "prevalence_orig": 70.6,
+      "prevalence_new": 80.0,
+      "risk_shift": 0.0,
+      "emb_displacement": 1.78,
+      "d_norm": 0.0192,
+      "f_norm": 0.0,
+      "n_features_changed": 8,
+      "coords": {
+        "orig_x": -98.22,
+        "orig_y": -21.77,
+        "new_x": -69.84,
+        "new_y": -19.23
+      },
+      "features": {
+        "Blood_Pressure": {
+          "orig": 152.7,
+          "cf": 148.07,
+          "delta": -4.62,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 284.4,
+          "cf": 274.89,
+          "delta": -9.51,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 107.2,
+          "cf": 102.23,
+          "delta": -4.97,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 30.1,
+          "cf": 28.9,
+          "delta": -1.2,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 2.0,
+          "cf": 2.5,
+          "delta": 0.5,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 1.99,
+          "cf": 1.99,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 95.3,
+          "cf": 91.5,
+          "delta": -3.8,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 213.5,
+          "cf": 200.99,
+          "delta": -12.51,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 3.8,
+          "cf": 3.3,
+          "delta": -0.5,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        },
+        "Age": {
+          "orig": 73.0,
+          "cf": 73.0,
+          "delta": 0.0,
+          "weight": 1.5
+        },
+        "Gender": {
+          "orig": 1.0,
+          "cf": 1.0,
+          "delta": 0.0,
+          "weight": 0.5
+        },
+        "Family_History": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.5
+        }
+      },
+      "orig_neighbor_count": 17,
+      "new_neighbor_count": 15,
+      "orig_cvd_count": 12,
+      "new_cvd_count": 12
+    }
+  ]
+}

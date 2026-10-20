@@ -1,0 +1,2718 @@
+{
+  "macro_clusters": {
+    "cluster_1": {
+      "name": "Severe Hypertensive Ward",
+      "color": "#ef4444",
+      "center": [
+        -120,
+        -70
+      ],
+      "nodes": [
+        {
+          "id": "cluster_1_0",
+          "x": -109.07,
+          "y": -73.04,
+          "label": "Peer #1",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_1",
+          "x": -105.75,
+          "y": -36.49,
+          "label": "Peer #2",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_2",
+          "x": -125.15,
+          "y": -75.15,
+          "label": "Peer #3",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_3",
+          "x": -85.26,
+          "y": -53.12,
+          "label": "Peer #4",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_4",
+          "x": -130.33,
+          "y": -58.06,
+          "label": "Peer #5",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_5",
+          "x": -130.2,
+          "y": -80.25,
+          "label": "Peer #6",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_6",
+          "x": -114.68,
+          "y": -112.09,
+          "label": "Peer #7",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_7",
+          "x": -157.95,
+          "y": -82.37,
+          "label": "Peer #8",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_8",
+          "x": -142.28,
+          "y": -63.09,
+          "label": "Peer #9",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_9",
+          "x": -139.98,
+          "y": -101.07,
+          "label": "Peer #10",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_10",
+          "x": -87.76,
+          "y": -74.97,
+          "label": "Peer #11",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_11",
+          "x": -118.51,
+          "y": -101.34,
+          "label": "Peer #12",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_12",
+          "x": -131.98,
+          "y": -67.56,
+          "label": "Peer #13",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_13",
+          "x": -145.32,
+          "y": -61.73,
+          "label": "Peer #14",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_14",
+          "x": -133.21,
+          "y": -76.42,
+          "label": "Peer #15",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_15",
+          "x": -133.24,
+          "y": -29.25,
+          "label": "Peer #16",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_16",
+          "x": -120.3,
+          "y": -93.27,
+          "label": "Peer #17",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_17",
+          "x": -101.9,
+          "y": -96.86,
+          "label": "Peer #18",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_18",
+          "x": -115.41,
+          "y": -113.11,
+          "label": "Peer #19",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_19",
+          "x": -149.22,
+          "y": -65.67,
+          "label": "Peer #20",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_20",
+          "x": -103.75,
+          "y": -66.23,
+          "label": "Peer #21",
+          "color": "#ef4444"
+        },
+        {
+          "id": "cluster_1_21",
+          "x": -122.54,
+          "y": -76.62,
+          "label": "Peer #22",
+          "color": "#ef4444"
+        }
+      ]
+    },
+    "cluster_2": {
+      "name": "Diabetic & Metabolic Syndrome",
+      "color": "#f97316",
+      "center": [
+        -110,
+        60
+      ],
+      "nodes": [
+        {
+          "id": "cluster_2_0",
+          "x": -142.53,
+          "y": 44.16,
+          "label": "Peer #1",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_1",
+          "x": -120.13,
+          "y": 83.26,
+          "label": "Peer #2",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_2",
+          "x": -102.44,
+          "y": 21.21,
+          "label": "Peer #3",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_3",
+          "x": -102.87,
+          "y": 51.53,
+          "label": "Peer #4",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_4",
+          "x": -124.89,
+          "y": 73.46,
+          "label": "Peer #5",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_5",
+          "x": -87.32,
+          "y": 80.49,
+          "label": "Peer #6",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_6",
+          "x": -128.46,
+          "y": 53.2,
+          "label": "Peer #7",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_7",
+          "x": -102.71,
+          "y": 81.46,
+          "label": "Peer #8",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_8",
+          "x": -120.54,
+          "y": 55.92,
+          "label": "Peer #9",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_9",
+          "x": -134.34,
+          "y": 33.68,
+          "label": "Peer #10",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_10",
+          "x": -92.12,
+          "y": 89.84,
+          "label": "Peer #11",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_11",
+          "x": -111.58,
+          "y": 82.08,
+          "label": "Peer #12",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_12",
+          "x": -102.04,
+          "y": 45.81,
+          "label": "Peer #13",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_13",
+          "x": -102.05,
+          "y": 93.84,
+          "label": "Peer #14",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_14",
+          "x": -110.79,
+          "y": 94.42,
+          "label": "Peer #15",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_15",
+          "x": -167.63,
+          "y": 78.08,
+          "label": "Peer #16",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_16",
+          "x": -108.08,
+          "y": 53.42,
+          "label": "Peer #17",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_17",
+          "x": -107.98,
+          "y": 16.27,
+          "label": "Peer #18",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_18",
+          "x": -114.83,
+          "y": 67.86,
+          "label": "Peer #19",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_19",
+          "x": -77.49,
+          "y": 48.6,
+          "label": "Peer #20",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_20",
+          "x": -127.79,
+          "y": 48.96,
+          "label": "Peer #21",
+          "color": "#f97316"
+        },
+        {
+          "id": "cluster_2_21",
+          "x": -89.86,
+          "y": 67.23,
+          "label": "Peer #22",
+          "color": "#f97316"
+        }
+      ]
+    },
+    "cluster_3": {
+      "name": "Transitional / Outpatient Corridor",
+      "color": "#eab308",
+      "center": [
+        0,
+        0
+      ],
+      "nodes": [
+        {
+          "id": "cluster_3_0",
+          "x": -11.65,
+          "y": 11.29,
+          "label": "Peer #1",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_1",
+          "x": 2.14,
+          "y": 21.31,
+          "label": "Peer #2",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_2",
+          "x": -15.45,
+          "y": -7.21,
+          "label": "Peer #3",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_3",
+          "x": -8.63,
+          "y": -32.2,
+          "label": "Peer #4",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_4",
+          "x": 6.51,
+          "y": 5.74,
+          "label": "Peer #5",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_5",
+          "x": 0.11,
+          "y": -5.16,
+          "label": "Peer #6",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_6",
+          "x": -31.14,
+          "y": -9.25,
+          "label": "Peer #7",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_7",
+          "x": -7.54,
+          "y": -17.65,
+          "label": "Peer #8",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_8",
+          "x": -3.55,
+          "y": 8.89,
+          "label": "Peer #9",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_9",
+          "x": 41.5,
+          "y": 3.84,
+          "label": "Peer #10",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_10",
+          "x": 5.67,
+          "y": -1.64,
+          "label": "Peer #11",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_11",
+          "x": -42.21,
+          "y": -0.58,
+          "label": "Peer #12",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_12",
+          "x": 1.33,
+          "y": 54.19,
+          "label": "Peer #13",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_13",
+          "x": -4.23,
+          "y": 6.63,
+          "label": "Peer #14",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_14",
+          "x": -0.76,
+          "y": -25.71,
+          "label": "Peer #15",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_15",
+          "x": 25.14,
+          "y": 16.54,
+          "label": "Peer #16",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_16",
+          "x": 17.4,
+          "y": -20.01,
+          "label": "Peer #17",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_17",
+          "x": 30.86,
+          "y": -30.84,
+          "label": "Peer #18",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_18",
+          "x": 12.91,
+          "y": 48.19,
+          "label": "Peer #19",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_19",
+          "x": -21.79,
+          "y": -12.46,
+          "label": "Peer #20",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_20",
+          "x": 2.19,
+          "y": -11.08,
+          "label": "Peer #21",
+          "color": "#eab308"
+        },
+        {
+          "id": "cluster_3_21",
+          "x": -34.11,
+          "y": 1.51,
+          "label": "Peer #22",
+          "color": "#eab308"
+        }
+      ]
+    },
+    "cluster_4": {
+      "name": "Controlled Primary Care",
+      "color": "#06b6d4",
+      "center": [
+        100,
+        -60
+      ],
+      "nodes": [
+        {
+          "id": "cluster_4_0",
+          "x": 76.63,
+          "y": -49.58,
+          "label": "Peer #1",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_1",
+          "x": 79.77,
+          "y": -25.9,
+          "label": "Peer #2",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_2",
+          "x": 82.77,
+          "y": -67.09,
+          "label": "Peer #3",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_3",
+          "x": 117.9,
+          "y": -87.08,
+          "label": "Peer #4",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_4",
+          "x": 105.0,
+          "y": -31.24,
+          "label": "Peer #5",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_5",
+          "x": 64.64,
+          "y": -55.94,
+          "label": "Peer #6",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_6",
+          "x": 105.72,
+          "y": -42.8,
+          "label": "Peer #7",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_7",
+          "x": 72.79,
+          "y": -89.05,
+          "label": "Peer #8",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_8",
+          "x": 111.48,
+          "y": -53.47,
+          "label": "Peer #9",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_9",
+          "x": 105.51,
+          "y": -52.38,
+          "label": "Peer #10",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_10",
+          "x": 85.04,
+          "y": -54.89,
+          "label": "Peer #11",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_11",
+          "x": 106.45,
+          "y": -75.72,
+          "label": "Peer #12",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_12",
+          "x": 141.05,
+          "y": -49.58,
+          "label": "Peer #13",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_13",
+          "x": 73.79,
+          "y": -45.56,
+          "label": "Peer #14",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_14",
+          "x": 78.56,
+          "y": -42.68,
+          "label": "Peer #15",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_15",
+          "x": 125.49,
+          "y": -78.06,
+          "label": "Peer #16",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_16",
+          "x": 121.19,
+          "y": -50.92,
+          "label": "Peer #17",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_17",
+          "x": 118.09,
+          "y": -18.27,
+          "label": "Peer #18",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_18",
+          "x": 94.6,
+          "y": -76.58,
+          "label": "Peer #19",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_19",
+          "x": 80.43,
+          "y": -77.95,
+          "label": "Peer #20",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_20",
+          "x": 98.3,
+          "y": -52.49,
+          "label": "Peer #21",
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cluster_4_21",
+          "x": 106.09,
+          "y": -41.8,
+          "label": "Peer #22",
+          "color": "#06b6d4"
+        }
+      ]
+    },
+    "cluster_5": {
+      "name": "Low-Risk Healthy Reference Cohort",
+      "color": "#22c55e",
+      "center": [
+        120,
+        70
+      ],
+      "nodes": [
+        {
+          "id": "cluster_5_0",
+          "x": 120.29,
+          "y": 101.98,
+          "label": "Peer #1",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_1",
+          "x": 114.18,
+          "y": 129.84,
+          "label": "Peer #2",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_2",
+          "x": 133.76,
+          "y": 51.14,
+          "label": "Peer #3",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_3",
+          "x": 96.44,
+          "y": 80.61,
+          "label": "Peer #4",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_4",
+          "x": 115.08,
+          "y": 85.71,
+          "label": "Peer #5",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_5",
+          "x": 130.41,
+          "y": 68.4,
+          "label": "Peer #6",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_6",
+          "x": 101.37,
+          "y": 36.67,
+          "label": "Peer #7",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_7",
+          "x": 110.18,
+          "y": 88.84,
+          "label": "Peer #8",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_8",
+          "x": 124.71,
+          "y": 42.59,
+          "label": "Peer #9",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_9",
+          "x": 123.81,
+          "y": 78.48,
+          "label": "Peer #10",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_10",
+          "x": 100.56,
+          "y": 73.38,
+          "label": "Peer #11",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_11",
+          "x": 121.28,
+          "y": 44.85,
+          "label": "Peer #12",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_12",
+          "x": 127.87,
+          "y": 82.34,
+          "label": "Peer #13",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_13",
+          "x": 143.83,
+          "y": 93.18,
+          "label": "Peer #14",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_14",
+          "x": 89.69,
+          "y": 49.37,
+          "label": "Peer #15",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_15",
+          "x": 131.33,
+          "y": 81.3,
+          "label": "Peer #16",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_16",
+          "x": 131.33,
+          "y": 154.76,
+          "label": "Peer #17",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_17",
+          "x": 132.56,
+          "y": 94.98,
+          "label": "Peer #18",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_18",
+          "x": 140.99,
+          "y": 84.33,
+          "label": "Peer #19",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_19",
+          "x": 113.06,
+          "y": 86.7,
+          "label": "Peer #20",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_20",
+          "x": 103.0,
+          "y": 64.79,
+          "label": "Peer #21",
+          "color": "#22c55e"
+        },
+        {
+          "id": "cluster_5_21",
+          "x": 109.32,
+          "y": 71.8,
+          "label": "Peer #22",
+          "color": "#22c55e"
+        }
+      ]
+    }
+  },
+  "patients": [
+    {
+      "id": 852,
+      "name": "Ramesh K.",
+      "age": 58,
+      "gender": "Male",
+      "occupation": "Senior Bank Manager (10 hrs/day desk work)",
+      "chief_complaint": "Recurring morning throbbing occipital headaches, exertional shortness of breath when climbing stairs, bilateral ankle tightness.",
+      "vital_signs": "Resting BP 172/105 mmHg (Grade 2 HTN), Resting Heart Rate 92 bpm, BMI 29.2 kg/m\u00b2.",
+      "lab_biomarkers": "Total Cholesterol 293 mg/dL, Triglycerides 290 mg/dL, Fasting Glucose 76.5 mg/dL.",
+      "lifestyle": "Sedentary (0 hrs structured exercise/wk), active smoker (12 cigarettes/day), high job stress (Stress Index 7.5/10).",
+      "peer_danger_context": "Ramesh's baseline biological profile connects him to 15 clinically matching patients in the registry. 14 of those 15 patients (94.4%) suffered acute myocardial infarctions or strokes within 36 months.",
+      "prescription": [
+        {
+          "step": "Step 1",
+          "category": "Pharmacotherapy",
+          "action": "Dual Antihypertensive (Telmisartan 40mg + Amlodipine 5mg) & High-Intensity Statin (Rosuvastatin 20mg)",
+          "impact": "Drops BP to 134 mmHg, Total Cholesterol to 216 mg/dL, Triglycerides to 190 mg/dL"
+        },
+        {
+          "step": "Step 2",
+          "category": "Lifestyle Intervention",
+          "action": "Supervised Cardiac Aerobic Walking: 45 min sessions, 4 days/week",
+          "impact": "Increases activity to 4.0 hrs/wk, resting HR slows to 74 bpm, BMI drops to 26.5"
+        },
+        {
+          "step": "Step 3",
+          "category": "Behavioral",
+          "action": "Structured Smoking Cessation with nicotine patches & stress management",
+          "impact": "Flips smoking to 0, reduces stress index from 7.5 to 3.5"
+        }
+      ],
+      "orig_risk": 100.0,
+      "cf_risk": 10.5,
+      "risk_reduction": 89.5,
+      "cpm_score": 0.944,
+      "turnover": 1.0,
+      "risk_shift": 0.8778,
+      "prevalence_orig": 94.4,
+      "prevalence_new": 6.7,
+      "d_norm": 0.9642,
+      "emb_displacement": 15.49,
+      "features": {
+        "Blood_Pressure": {
+          "orig": 170.7,
+          "cf": 133.7,
+          "delta": -37.0,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 292.9,
+          "cf": 216.86,
+          "delta": -76.04,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 129.5,
+          "cf": 100.6,
+          "delta": -28.9,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 29.2,
+          "cf": 19.6,
+          "delta": -9.6,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 6.7,
+          "cf": 10.0,
+          "delta": 3.3,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 1.76,
+          "cf": 1.76,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 76.5,
+          "cf": 70.0,
+          "delta": -6.5,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 290.1,
+          "cf": 190.02,
+          "delta": -100.08,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 2.6,
+          "cf": 0.0,
+          "delta": -2.6,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.6,
+          "delta": -0.4,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.8
+        }
+      },
+      "local_graph": {
+        "start_coords": [
+          -120,
+          -10
+        ],
+        "end_coords": [
+          120,
+          15
+        ],
+        "orig_neighbors": [
+          {
+            "id": "orig_peer_355",
+            "real_id": 355,
+            "x": -35.69,
+            "y": -10.0,
+            "cvd": 1,
+            "age": 76,
+            "bp": 171,
+            "label": "Peer #355 (CVD+)"
+          },
+          {
+            "id": "orig_peer_542",
+            "real_id": 542,
+            "x": -41.57,
+            "y": 24.92,
+            "cvd": 1,
+            "age": 79,
+            "bp": 179,
+            "label": "Peer #542 (CVD+)"
+          },
+          {
+            "id": "orig_peer_632",
+            "real_id": 632,
+            "x": -65.98,
+            "y": 49.99,
+            "cvd": 1,
+            "age": 76,
+            "bp": 163,
+            "label": "Peer #632 (CVD+)"
+          },
+          {
+            "id": "orig_peer_986",
+            "real_id": 986,
+            "x": -93.17,
+            "y": 72.57,
+            "cvd": 0,
+            "age": 68,
+            "bp": 162,
+            "label": "Peer #986 (CVD-)"
+          },
+          {
+            "id": "orig_peer_1276",
+            "real_id": 1276,
+            "x": -127.9,
+            "y": 65.2,
+            "cvd": 1,
+            "age": 63,
+            "bp": 170,
+            "label": "Peer #1276 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1297",
+            "real_id": 1297,
+            "x": -157.87,
+            "y": 55.6,
+            "cvd": 1,
+            "age": 65,
+            "bp": 175,
+            "label": "Peer #1297 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1313",
+            "real_id": 1313,
+            "x": -193.99,
+            "y": 43.75,
+            "cvd": 1,
+            "age": 67,
+            "bp": 180,
+            "label": "Peer #1313 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1325",
+            "real_id": 1325,
+            "x": -200.41,
+            "y": 7.09,
+            "cvd": 1,
+            "age": 69,
+            "bp": 150,
+            "label": "Peer #1325 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1440",
+            "real_id": 1440,
+            "x": -195.85,
+            "y": -26.12,
+            "cvd": 1,
+            "age": 71,
+            "bp": 155,
+            "label": "Peer #1440 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1451",
+            "real_id": 1451,
+            "x": -189.13,
+            "y": -60.22,
+            "cvd": 1,
+            "age": 73,
+            "bp": 160,
+            "label": "Peer #1451 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1580",
+            "real_id": 1580,
+            "x": -165.2,
+            "y": -88.29,
+            "cvd": 1,
+            "age": 55,
+            "bp": 165,
+            "label": "Peer #1580 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1686",
+            "real_id": 1686,
+            "x": -128.29,
+            "y": -88.88,
+            "cvd": 1,
+            "age": 57,
+            "bp": 170,
+            "label": "Peer #1686 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1725",
+            "real_id": 1725,
+            "x": -92.97,
+            "y": -93.18,
+            "cvd": 1,
+            "age": 59,
+            "bp": 175,
+            "label": "Peer #1725 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1943",
+            "real_id": 1943,
+            "x": -68.67,
+            "y": -67.0,
+            "cvd": 1,
+            "age": 61,
+            "bp": 180,
+            "label": "Peer #1943 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1982",
+            "real_id": 1982,
+            "x": -50.54,
+            "y": -40.93,
+            "cvd": 1,
+            "age": 63,
+            "bp": 150,
+            "label": "Peer #1982 (CVD+)"
+          }
+        ],
+        "new_neighbors": [
+          {
+            "id": "new_peer_39",
+            "real_id": 39,
+            "x": 210.63,
+            "y": 15.0,
+            "cvd": 0,
+            "age": 66,
+            "bp": 143,
+            "label": "Peer #39 (CVD-)"
+          },
+          {
+            "id": "new_peer_277",
+            "real_id": 277,
+            "x": 202.96,
+            "y": 51.94,
+            "cvd": 0,
+            "age": 59,
+            "bp": 138,
+            "label": "Peer #277 (CVD-)"
+          },
+          {
+            "id": "new_peer_358",
+            "real_id": 358,
+            "x": 182.06,
+            "y": 83.93,
+            "cvd": 0,
+            "age": 77,
+            "bp": 157,
+            "label": "Peer #358 (CVD-)"
+          },
+          {
+            "id": "new_peer_543",
+            "real_id": 543,
+            "x": 149.21,
+            "y": 104.9,
+            "cvd": 0,
+            "age": 64,
+            "bp": 143,
+            "label": "Peer #543 (CVD-)"
+          },
+          {
+            "id": "new_peer_605",
+            "real_id": 605,
+            "x": 109.6,
+            "y": 113.97,
+            "cvd": 0,
+            "age": 78,
+            "bp": 144,
+            "label": "Peer #605 (CVD-)"
+          },
+          {
+            "id": "new_peer_655",
+            "real_id": 655,
+            "x": 74.84,
+            "y": 93.22,
+            "cvd": 0,
+            "age": 76,
+            "bp": 141,
+            "label": "Peer #655 (CVD-)"
+          },
+          {
+            "id": "new_peer_1043",
+            "real_id": 1043,
+            "x": 50.05,
+            "y": 65.82,
+            "cvd": 0,
+            "age": 60,
+            "bp": 121,
+            "label": "Peer #1043 (CVD-)"
+          },
+          {
+            "id": "new_peer_1287",
+            "real_id": 1287,
+            "x": 26.19,
+            "y": 34.94,
+            "cvd": 0,
+            "age": 62,
+            "bp": 124,
+            "label": "Peer #1287 (CVD-)"
+          },
+          {
+            "id": "new_peer_1304",
+            "real_id": 1304,
+            "x": 36.45,
+            "y": -2.76,
+            "cvd": 0,
+            "age": 64,
+            "bp": 127,
+            "label": "Peer #1304 (CVD-)"
+          },
+          {
+            "id": "new_peer_1374",
+            "real_id": 1374,
+            "x": 48.18,
+            "y": -37.18,
+            "cvd": 0,
+            "age": 48,
+            "bp": 130,
+            "label": "Peer #1374 (CVD-)"
+          },
+          {
+            "id": "new_peer_1948",
+            "real_id": 1948,
+            "x": 79.22,
+            "y": -55.64,
+            "cvd": 0,
+            "age": 50,
+            "bp": 118,
+            "label": "Peer #1948 (CVD-)"
+          },
+          {
+            "id": "new_peer_1986",
+            "real_id": 1986,
+            "x": 111.58,
+            "y": -65.07,
+            "cvd": 0,
+            "age": 52,
+            "bp": 121,
+            "label": "Peer #1986 (CVD-)"
+          },
+          {
+            "id": "new_peer_2369",
+            "real_id": 2369,
+            "x": 150.67,
+            "y": -79.4,
+            "cvd": 0,
+            "age": 54,
+            "bp": 124,
+            "label": "Peer #2369 (CVD-)"
+          },
+          {
+            "id": "new_peer_2598",
+            "real_id": 2598,
+            "x": 184.72,
+            "y": -56.88,
+            "cvd": 0,
+            "age": 56,
+            "bp": 127,
+            "label": "Peer #2598 (CVD-)"
+          },
+          {
+            "id": "new_peer_2618",
+            "real_id": 2618,
+            "x": 205.8,
+            "y": -23.2,
+            "cvd": 0,
+            "age": 58,
+            "bp": 130,
+            "label": "Peer #2618 (CVD-)"
+          }
+        ],
+        "intermediate_nodes": [
+          {
+            "id": "mid_1_852",
+            "x": -50,
+            "y": 45,
+            "label": "Dr. Outreach Outpatient",
+            "type": "clinic"
+          },
+          {
+            "id": "mid_2_852",
+            "x": -10,
+            "y": -35,
+            "label": "Cardiac Rehab Unit",
+            "type": "rehab"
+          },
+          {
+            "id": "mid_3_852",
+            "x": 45,
+            "y": 30,
+            "label": "Community Wellness Cohort",
+            "type": "lifestyle"
+          }
+        ]
+      },
+      "macro_trajectory": [
+        {
+          "name": "Severe Hypertensive Ward",
+          "coords": [
+            -120,
+            -70
+          ],
+          "status": "Baseline Danger"
+        },
+        {
+          "name": "Transitional Treatment Corridor",
+          "coords": [
+            0,
+            0
+          ],
+          "status": "Under Active Medication"
+        },
+        {
+          "name": "Healthy Reference Cohort",
+          "coords": [
+            120,
+            70
+          ],
+          "status": "Target Destination"
+        }
+      ]
+    },
+    {
+      "id": 336,
+      "name": "Priya S.",
+      "age": 64,
+      "gender": "Female",
+      "occupation": "Retired School Administrator",
+      "chief_complaint": "Chronic exhaustion, blurred vision episodes, tingling in extremities, uncontrolled weight gain.",
+      "vital_signs": "BP 164/98 mmHg, BMI 33.8 kg/m\u00b2 (Class I Obesity), Resting Heart Rate 88 bpm.",
+      "lab_biomarkers": "Fasting Glucose 145 mg/dL (Uncontrolled Type 2 Diabetes), Triglycerides 271 mg/dL, Cholesterol 272 mg/dL.",
+      "lifestyle": "Active smoker (1 pack/day), sedentary lifestyle, high dietary glycemic index.",
+      "peer_danger_context": "Priya sits in the diabetic-atherosclerotic cluster. 100% of her immediate 15 baseline neighbors have active coronary artery disease or diabetic nephropathy.",
+      "prescription": [
+        {
+          "step": "Step 1",
+          "category": "Metabolic Control",
+          "action": "SGLT2 inhibitor (Empagliflozin 10mg) + Metformin 1000mg BID",
+          "impact": "Lowers fasting glucose from 145 to 85 mg/dL, initiates weight loss"
+        },
+        {
+          "step": "Step 2",
+          "category": "Vascular Therapy",
+          "action": "ACE Inhibitor (Ramipril 5mg) + Atorvastatin 40mg",
+          "impact": "Controls blood pressure to 130 mmHg, reduces LDL plaque progression"
+        },
+        {
+          "step": "Step 3",
+          "category": "Smoking Cessation",
+          "action": "Varenicline therapy + nutritional counseling",
+          "impact": "Eliminates smoking, triglycerides drop to 183 mg/dL"
+        }
+      ],
+      "orig_risk": 100.0,
+      "cf_risk": 27.3,
+      "risk_reduction": 72.7,
+      "cpm_score": 0.9342,
+      "turnover": 1.0,
+      "risk_shift": 0.8424,
+      "prevalence_orig": 90.9,
+      "prevalence_new": 6.7,
+      "d_norm": 0.9862,
+      "emb_displacement": 15.81,
+      "features": {
+        "Blood_Pressure": {
+          "orig": 164.2,
+          "cf": 131.82,
+          "delta": -32.38,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 272.6,
+          "cf": 206.06,
+          "delta": -66.53,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 122.2,
+          "cf": 100.6,
+          "delta": -21.6,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 29.4,
+          "cf": 21.0,
+          "delta": -8.4,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 6.5,
+          "cf": 10.0,
+          "delta": 3.5,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 2.05,
+          "cf": 2.05,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 105.9,
+          "cf": 79.3,
+          "delta": -26.6,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 271.2,
+          "cf": 183.63,
+          "delta": -87.57,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 7.7,
+          "cf": 4.2,
+          "delta": -3.5,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 1.0,
+          "cf": 0.65,
+          "delta": -0.35,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 1.0,
+          "cf": 0.65,
+          "delta": -0.35,
+          "weight": 1.8
+        }
+      },
+      "local_graph": {
+        "start_coords": [
+          -120,
+          -10
+        ],
+        "end_coords": [
+          120,
+          15
+        ],
+        "orig_neighbors": [
+          {
+            "id": "orig_peer_274",
+            "real_id": 274,
+            "x": -36.82,
+            "y": -10.0,
+            "cvd": 1,
+            "age": 79,
+            "bp": 153,
+            "label": "Peer #274 (CVD+)"
+          },
+          {
+            "id": "orig_peer_362",
+            "real_id": 362,
+            "x": -48.32,
+            "y": 21.91,
+            "cvd": 1,
+            "age": 78,
+            "bp": 168,
+            "label": "Peer #362 (CVD+)"
+          },
+          {
+            "id": "orig_peer_414",
+            "real_id": 414,
+            "x": -67.72,
+            "y": 48.06,
+            "cvd": 1,
+            "age": 79,
+            "bp": 169,
+            "label": "Peer #414 (CVD+)"
+          },
+          {
+            "id": "orig_peer_428",
+            "real_id": 428,
+            "x": -95.28,
+            "y": 66.09,
+            "cvd": 1,
+            "age": 80,
+            "bp": 156,
+            "label": "Peer #428 (CVD+)"
+          },
+          {
+            "id": "orig_peer_720",
+            "real_id": 720,
+            "x": -128.99,
+            "y": 75.51,
+            "cvd": 1,
+            "age": 76,
+            "bp": 167,
+            "label": "Peer #720 (CVD+)"
+          },
+          {
+            "id": "orig_peer_825",
+            "real_id": 825,
+            "x": -164.65,
+            "y": 67.33,
+            "cvd": 1,
+            "age": 75,
+            "bp": 157,
+            "label": "Peer #825 (CVD+)"
+          },
+          {
+            "id": "orig_peer_865",
+            "real_id": 865,
+            "x": -191.36,
+            "y": 41.84,
+            "cvd": 1,
+            "age": 79,
+            "bp": 143,
+            "label": "Peer #865 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1110",
+            "real_id": 1110,
+            "x": -198.84,
+            "y": 6.76,
+            "cvd": 1,
+            "age": 69,
+            "bp": 150,
+            "label": "Peer #1110 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1133",
+            "real_id": 1133,
+            "x": -212.04,
+            "y": -29.56,
+            "cvd": 1,
+            "age": 71,
+            "bp": 155,
+            "label": "Peer #1133 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1188",
+            "real_id": 1188,
+            "x": -192.62,
+            "y": -62.76,
+            "cvd": 1,
+            "age": 73,
+            "bp": 160,
+            "label": "Peer #1188 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1512",
+            "real_id": 1512,
+            "x": -163.04,
+            "y": -84.55,
+            "cvd": 1,
+            "age": 55,
+            "bp": 165,
+            "label": "Peer #1512 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1572",
+            "real_id": 1572,
+            "x": -129.12,
+            "y": -96.76,
+            "cvd": 1,
+            "age": 57,
+            "bp": 170,
+            "label": "Peer #1572 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1587",
+            "real_id": 1587,
+            "x": -94.23,
+            "y": -89.31,
+            "cvd": 1,
+            "age": 59,
+            "bp": 175,
+            "label": "Peer #1587 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1631",
+            "real_id": 1631,
+            "x": -66.5,
+            "y": -69.42,
+            "cvd": 1,
+            "age": 61,
+            "bp": 180,
+            "label": "Peer #1631 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1662",
+            "real_id": 1662,
+            "x": -44.98,
+            "y": -43.4,
+            "cvd": 1,
+            "age": 63,
+            "bp": 150,
+            "label": "Peer #1662 (CVD+)"
+          }
+        ],
+        "new_neighbors": [
+          {
+            "id": "new_peer_39",
+            "real_id": 39,
+            "x": 215.16,
+            "y": 15.0,
+            "cvd": 0,
+            "age": 66,
+            "bp": 143,
+            "label": "Peer #39 (CVD-)"
+          },
+          {
+            "id": "new_peer_283",
+            "real_id": 283,
+            "x": 193.35,
+            "y": 47.66,
+            "cvd": 0,
+            "age": 77,
+            "bp": 152,
+            "label": "Peer #283 (CVD-)"
+          },
+          {
+            "id": "new_peer_358",
+            "real_id": 358,
+            "x": 175.08,
+            "y": 76.18,
+            "cvd": 0,
+            "age": 77,
+            "bp": 157,
+            "label": "Peer #358 (CVD-)"
+          },
+          {
+            "id": "new_peer_605",
+            "real_id": 605,
+            "x": 145.01,
+            "y": 91.96,
+            "cvd": 0,
+            "age": 78,
+            "bp": 144,
+            "label": "Peer #605 (CVD-)"
+          },
+          {
+            "id": "new_peer_610",
+            "real_id": 610,
+            "x": 111.55,
+            "y": 95.37,
+            "cvd": 0,
+            "age": 70,
+            "bp": 139,
+            "label": "Peer #610 (CVD-)"
+          },
+          {
+            "id": "new_peer_621",
+            "real_id": 621,
+            "x": 71.45,
+            "y": 99.1,
+            "cvd": 0,
+            "age": 65,
+            "bp": 142,
+            "label": "Peer #621 (CVD-)"
+          },
+          {
+            "id": "new_peer_966",
+            "real_id": 966,
+            "x": 43.89,
+            "y": 70.29,
+            "cvd": 0,
+            "age": 55,
+            "bp": 132,
+            "label": "Peer #966 (CVD-)"
+          },
+          {
+            "id": "new_peer_1043",
+            "real_id": 1043,
+            "x": 32.47,
+            "y": 33.6,
+            "cvd": 0,
+            "age": 62,
+            "bp": 124,
+            "label": "Peer #1043 (CVD-)"
+          },
+          {
+            "id": "new_peer_1287",
+            "real_id": 1287,
+            "x": 39.83,
+            "y": -2.04,
+            "cvd": 0,
+            "age": 64,
+            "bp": 127,
+            "label": "Peer #1287 (CVD-)"
+          },
+          {
+            "id": "new_peer_1304",
+            "real_id": 1304,
+            "x": 47.32,
+            "y": -37.8,
+            "cvd": 0,
+            "age": 48,
+            "bp": 130,
+            "label": "Peer #1304 (CVD-)"
+          },
+          {
+            "id": "new_peer_1355",
+            "real_id": 1355,
+            "x": 75.27,
+            "y": -62.48,
+            "cvd": 0,
+            "age": 50,
+            "bp": 118,
+            "label": "Peer #1355 (CVD-)"
+          },
+          {
+            "id": "new_peer_1846",
+            "real_id": 1846,
+            "x": 111.28,
+            "y": -68.01,
+            "cvd": 0,
+            "age": 52,
+            "bp": 121,
+            "label": "Peer #1846 (CVD-)"
+          },
+          {
+            "id": "new_peer_2170",
+            "real_id": 2170,
+            "x": 147.4,
+            "y": -69.34,
+            "cvd": 0,
+            "age": 54,
+            "bp": 124,
+            "label": "Peer #2170 (CVD-)"
+          },
+          {
+            "id": "new_peer_2369",
+            "real_id": 2369,
+            "x": 178.86,
+            "y": -50.37,
+            "cvd": 0,
+            "age": 56,
+            "bp": 127,
+            "label": "Peer #2369 (CVD-)"
+          },
+          {
+            "id": "new_peer_2618",
+            "real_id": 2618,
+            "x": 204.34,
+            "y": -22.55,
+            "cvd": 0,
+            "age": 58,
+            "bp": 130,
+            "label": "Peer #2618 (CVD-)"
+          }
+        ],
+        "intermediate_nodes": [
+          {
+            "id": "mid_1_336",
+            "x": -50,
+            "y": 45,
+            "label": "Dr. Outreach Outpatient",
+            "type": "clinic"
+          },
+          {
+            "id": "mid_2_336",
+            "x": -10,
+            "y": -35,
+            "label": "Cardiac Rehab Unit",
+            "type": "rehab"
+          },
+          {
+            "id": "mid_3_336",
+            "x": 45,
+            "y": 30,
+            "label": "Community Wellness Cohort",
+            "type": "lifestyle"
+          }
+        ]
+      },
+      "macro_trajectory": [
+        {
+          "name": "Severe Hypertensive Ward",
+          "coords": [
+            -120,
+            -70
+          ],
+          "status": "Baseline Danger"
+        },
+        {
+          "name": "Transitional Treatment Corridor",
+          "coords": [
+            0,
+            0
+          ],
+          "status": "Under Active Medication"
+        },
+        {
+          "name": "Healthy Reference Cohort",
+          "coords": [
+            120,
+            70
+          ],
+          "status": "Target Destination"
+        }
+      ]
+    },
+    {
+      "id": 556,
+      "name": "Anil M.",
+      "age": 52,
+      "gender": "Male",
+      "occupation": "Corporate Technology Executive",
+      "chief_complaint": "Palpitations during work meetings, insomnia, chest tightness under psychological pressure.",
+      "vital_signs": "Resting Heart Rate 114 bpm (Severe Sinus Tachycardia), BP 168/102 mmHg, BMI 33.8 kg/m\u00b2.",
+      "lab_biomarkers": "Cholesterol 261 mg/dL, Triglycerides 253 mg/dL, Stress Index 8.5/10.",
+      "lifestyle": "Works 70 hrs/week, zero physical activity, poor sleep (<5 hrs/night), non-smoker.",
+      "peer_danger_context": "Anil's hyper-adrenergic state embeds him among patients with premature coronary artery disease. 85% of his peers experienced cardiac events before age 55.",
+      "prescription": [
+        {
+          "step": "Step 1",
+          "category": "Autonomic & Vascular",
+          "action": "Cardioselective Beta-Blocker (Bisoprolol 5mg) + Statin therapy",
+          "impact": "Resting HR normalizes from 114 to 78 bpm, BP lowers to 132 mmHg"
+        },
+        {
+          "step": "Step 2",
+          "category": "Stress & Sleep Protocol",
+          "action": "Cognitive behavioral therapy for insomnia & guided meditation",
+          "impact": "Stress Index falls from 8.5 to 3.0, cortisol stabilization"
+        },
+        {
+          "step": "Step 3",
+          "category": "Active Commuting",
+          "action": "Cycling / Brisk Walking 4.5 hrs/week",
+          "impact": "BMI drops to 27.8, triglycerides normalize to 160 mg/dL"
+        }
+      ],
+      "orig_risk": 99.9,
+      "cf_risk": 0.7,
+      "risk_reduction": 99.2,
+      "cpm_score": 0.8448,
+      "turnover": 1.0,
+      "risk_shift": 0.7167,
+      "prevalence_orig": 85.0,
+      "prevalence_new": 13.3,
+      "d_norm": 0.7905,
+      "emb_displacement": 12.97,
+      "features": {
+        "Blood_Pressure": {
+          "orig": 168.3,
+          "cf": 145.18,
+          "delta": -23.12,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 261.0,
+          "cf": 213.47,
+          "delta": -47.52,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 113.9,
+          "cf": 100.6,
+          "delta": -13.3,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 33.8,
+          "cf": 27.8,
+          "delta": -6.0,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 2.4,
+          "cf": 4.9,
+          "delta": 2.5,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 2.15,
+          "cf": 2.15,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 93.1,
+          "cf": 74.1,
+          "delta": -19.0,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 253.1,
+          "cf": 190.55,
+          "delta": -62.55,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 3.8,
+          "cf": 1.3,
+          "delta": -2.5,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 1.0,
+          "cf": 0.75,
+          "delta": -0.25,
+          "weight": 1.8
+        }
+      },
+      "local_graph": {
+        "start_coords": [
+          -120,
+          -10
+        ],
+        "end_coords": [
+          120,
+          15
+        ],
+        "orig_neighbors": [
+          {
+            "id": "orig_peer_311",
+            "real_id": 311,
+            "x": -32.3,
+            "y": -10.0,
+            "cvd": 1,
+            "age": 77,
+            "bp": 163,
+            "label": "Peer #311 (CVD+)"
+          },
+          {
+            "id": "orig_peer_362",
+            "real_id": 362,
+            "x": -50.66,
+            "y": 20.87,
+            "cvd": 1,
+            "age": 78,
+            "bp": 168,
+            "label": "Peer #362 (CVD+)"
+          },
+          {
+            "id": "orig_peer_414",
+            "real_id": 414,
+            "x": -64.8,
+            "y": 51.3,
+            "cvd": 1,
+            "age": 79,
+            "bp": 169,
+            "label": "Peer #414 (CVD+)"
+          },
+          {
+            "id": "orig_peer_592",
+            "real_id": 592,
+            "x": -92.96,
+            "y": 73.23,
+            "cvd": 1,
+            "age": 78,
+            "bp": 177,
+            "label": "Peer #592 (CVD+)"
+          },
+          {
+            "id": "orig_peer_594",
+            "real_id": 594,
+            "x": -128.89,
+            "y": 74.6,
+            "cvd": 1,
+            "age": 77,
+            "bp": 174,
+            "label": "Peer #594 (CVD+)"
+          },
+          {
+            "id": "orig_peer_720",
+            "real_id": 720,
+            "x": -166.06,
+            "y": 69.79,
+            "cvd": 1,
+            "age": 76,
+            "bp": 167,
+            "label": "Peer #720 (CVD+)"
+          },
+          {
+            "id": "orig_peer_953",
+            "real_id": 953,
+            "x": -191.33,
+            "y": 41.83,
+            "cvd": 1,
+            "age": 78,
+            "bp": 167,
+            "label": "Peer #953 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1133",
+            "real_id": 1133,
+            "x": -196.55,
+            "y": 6.27,
+            "cvd": 1,
+            "age": 69,
+            "bp": 150,
+            "label": "Peer #1133 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1188",
+            "real_id": 1188,
+            "x": -194.74,
+            "y": -25.89,
+            "cvd": 1,
+            "age": 71,
+            "bp": 155,
+            "label": "Peer #1188 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1274",
+            "real_id": 1274,
+            "x": -191.07,
+            "y": -61.64,
+            "cvd": 1,
+            "age": 73,
+            "bp": 160,
+            "label": "Peer #1274 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1587",
+            "real_id": 1587,
+            "x": -157.77,
+            "y": -75.41,
+            "cvd": 1,
+            "age": 55,
+            "bp": 165,
+            "label": "Peer #1587 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1861",
+            "real_id": 1861,
+            "x": -129.06,
+            "y": -96.24,
+            "cvd": 1,
+            "age": 57,
+            "bp": 170,
+            "label": "Peer #1861 (CVD+)"
+          },
+          {
+            "id": "orig_peer_2071",
+            "real_id": 2071,
+            "x": -91.01,
+            "y": -99.21,
+            "cvd": 1,
+            "age": 59,
+            "bp": 175,
+            "label": "Peer #2071 (CVD+)"
+          },
+          {
+            "id": "orig_peer_2230",
+            "real_id": 2230,
+            "x": -62.11,
+            "y": -74.29,
+            "cvd": 1,
+            "age": 61,
+            "bp": 180,
+            "label": "Peer #2230 (CVD+)"
+          },
+          {
+            "id": "orig_peer_2425",
+            "real_id": 2425,
+            "x": -44.39,
+            "y": -43.66,
+            "cvd": 1,
+            "age": 63,
+            "bp": 150,
+            "label": "Peer #2425 (CVD+)"
+          }
+        ],
+        "new_neighbors": [
+          {
+            "id": "new_peer_39",
+            "real_id": 39,
+            "x": 212.87,
+            "y": 15.0,
+            "cvd": 0,
+            "age": 66,
+            "bp": 143,
+            "label": "Peer #39 (CVD-)"
+          },
+          {
+            "id": "new_peer_277",
+            "real_id": 277,
+            "x": 201.46,
+            "y": 51.27,
+            "cvd": 0,
+            "age": 59,
+            "bp": 138,
+            "label": "Peer #277 (CVD-)"
+          },
+          {
+            "id": "new_peer_358",
+            "real_id": 358,
+            "x": 180.83,
+            "y": 82.56,
+            "cvd": 0,
+            "age": 77,
+            "bp": 157,
+            "label": "Peer #358 (CVD-)"
+          },
+          {
+            "id": "new_peer_543",
+            "real_id": 543,
+            "x": 150.54,
+            "y": 108.99,
+            "cvd": 0,
+            "age": 64,
+            "bp": 143,
+            "label": "Peer #543 (CVD-)"
+          },
+          {
+            "id": "new_peer_605",
+            "real_id": 605,
+            "x": 110.83,
+            "y": 102.24,
+            "cvd": 0,
+            "age": 78,
+            "bp": 144,
+            "label": "Peer #605 (CVD-)"
+          },
+          {
+            "id": "new_peer_621",
+            "real_id": 621,
+            "x": 70.39,
+            "y": 100.93,
+            "cvd": 0,
+            "age": 65,
+            "bp": 142,
+            "label": "Peer #621 (CVD-)"
+          },
+          {
+            "id": "new_peer_1043",
+            "real_id": 1043,
+            "x": 40.63,
+            "y": 72.67,
+            "cvd": 0,
+            "age": 60,
+            "bp": 121,
+            "label": "Peer #1043 (CVD-)"
+          },
+          {
+            "id": "new_peer_1209",
+            "real_id": 1209,
+            "x": 37.92,
+            "y": 32.45,
+            "cvd": 0,
+            "age": 62,
+            "bp": 124,
+            "label": "Peer #1209 (CVD-)"
+          },
+          {
+            "id": "new_peer_1287",
+            "real_id": 1287,
+            "x": 40.39,
+            "y": -1.92,
+            "cvd": 0,
+            "age": 64,
+            "bp": 127,
+            "label": "Peer #1287 (CVD-)"
+          },
+          {
+            "id": "new_peer_1304",
+            "real_id": 1304,
+            "x": 53.65,
+            "y": -33.21,
+            "cvd": 0,
+            "age": 48,
+            "bp": 130,
+            "label": "Peer #1304 (CVD-)"
+          },
+          {
+            "id": "new_peer_1355",
+            "real_id": 1355,
+            "x": 79.82,
+            "y": -54.6,
+            "cvd": 0,
+            "age": 50,
+            "bp": 118,
+            "label": "Peer #1355 (CVD-)"
+          },
+          {
+            "id": "new_peer_2264",
+            "real_id": 2264,
+            "x": 111.44,
+            "y": -66.44,
+            "cvd": 0,
+            "age": 52,
+            "bp": 121,
+            "label": "Peer #2264 (CVD-)"
+          },
+          {
+            "id": "new_peer_2369",
+            "real_id": 2369,
+            "x": 148.94,
+            "y": -74.08,
+            "cvd": 0,
+            "age": 54,
+            "bp": 124,
+            "label": "Peer #2369 (CVD-)"
+          },
+          {
+            "id": "new_peer_2598",
+            "real_id": 2598,
+            "x": 174.48,
+            "y": -45.51,
+            "cvd": 0,
+            "age": 56,
+            "bp": 127,
+            "label": "Peer #2598 (CVD-)"
+          },
+          {
+            "id": "new_peer_2618",
+            "real_id": 2618,
+            "x": 198.91,
+            "y": -20.13,
+            "cvd": 0,
+            "age": 58,
+            "bp": 130,
+            "label": "Peer #2618 (CVD-)"
+          }
+        ],
+        "intermediate_nodes": [
+          {
+            "id": "mid_1_556",
+            "x": -50,
+            "y": 45,
+            "label": "Dr. Outreach Outpatient",
+            "type": "clinic"
+          },
+          {
+            "id": "mid_2_556",
+            "x": -10,
+            "y": -35,
+            "label": "Cardiac Rehab Unit",
+            "type": "rehab"
+          },
+          {
+            "id": "mid_3_556",
+            "x": 45,
+            "y": 30,
+            "label": "Community Wellness Cohort",
+            "type": "lifestyle"
+          }
+        ]
+      },
+      "macro_trajectory": [
+        {
+          "name": "Severe Hypertensive Ward",
+          "coords": [
+            -120,
+            -70
+          ],
+          "status": "Baseline Danger"
+        },
+        {
+          "name": "Transitional Treatment Corridor",
+          "coords": [
+            0,
+            0
+          ],
+          "status": "Under Active Medication"
+        },
+        {
+          "name": "Healthy Reference Cohort",
+          "coords": [
+            120,
+            70
+          ],
+          "status": "Target Destination"
+        }
+      ]
+    },
+    {
+      "id": 428,
+      "name": "George T.",
+      "age": 72,
+      "gender": "Male",
+      "occupation": "Retired Civil Engineer",
+      "chief_complaint": "Mild bilateral calf claudication after walking 200 meters, general fatigue.",
+      "vital_signs": "Systolic BP 157 mmHg (Isolated Systolic HTN of the Elderly), Resting HR 76 bpm, BMI 31.7 kg/m\u00b2.",
+      "lab_biomarkers": "Total Cholesterol 291 mg/dL, Triglycerides 259 mg/dL, Glucose 127 mg/dL.",
+      "lifestyle": "Non-smoker, walks 1.5 hrs/week, high sodium diet.",
+      "peer_danger_context": "At age 72, age is an immutable risk factor. 90% of his matching elderly peers have carotid or coronary calcifications.",
+      "prescription": [
+        {
+          "step": "Step 1",
+          "category": "Arterial Compliance",
+          "action": "Low-dose thiazide diuretic (Chlorthalidone 12.5mg) + Statin",
+          "impact": "Systolic BP drops from 157 to 132 mmHg without orthostatic hypotension"
+        },
+        {
+          "step": "Step 2",
+          "category": "Lipid Normalization",
+          "action": "Ezetimibe 10mg + Rosuvastatin 10mg",
+          "impact": "Cholesterol drops to 210 mg/dL, Triglycerides drop to 175 mg/dL"
+        },
+        {
+          "step": "Step 3",
+          "category": "Walking Rehabilitation",
+          "action": "Structured interval walking 3.5 hrs/week",
+          "impact": "Improves peripheral circulation, BMI drops to 28.0"
+        }
+      ],
+      "orig_risk": 99.9,
+      "cf_risk": 18.0,
+      "risk_reduction": 81.9,
+      "cpm_score": 0.4662,
+      "turnover": 1.0,
+      "risk_shift": 0.0431,
+      "prevalence_orig": 86.7,
+      "prevalence_new": 82.4,
+      "d_norm": 0.2445,
+      "emb_displacement": 5.05,
+      "features": {
+        "Blood_Pressure": {
+          "orig": 156.8,
+          "cf": 138.3,
+          "delta": -18.5,
+          "weight": 1.8
+        },
+        "Cholesterol": {
+          "orig": 291.5,
+          "cf": 253.48,
+          "delta": -38.02,
+          "weight": 2.0
+        },
+        "Heart_Rate": {
+          "orig": 135.3,
+          "cf": 115.42,
+          "delta": -19.88,
+          "weight": 1.0
+        },
+        "BMI": {
+          "orig": 31.7,
+          "cf": 26.9,
+          "delta": -4.8,
+          "weight": 1.3
+        },
+        "Physical_Activity_HoursPerWeek": {
+          "orig": 4.8,
+          "cf": 6.8,
+          "delta": 2.0,
+          "weight": 1.0
+        },
+        "ECG_Score": {
+          "orig": 0.83,
+          "cf": 0.83,
+          "delta": 0.0,
+          "weight": 1.4
+        },
+        "Glucose": {
+          "orig": 127.2,
+          "cf": 112.0,
+          "delta": -15.2,
+          "weight": 1.7
+        },
+        "Triglycerides": {
+          "orig": 259.3,
+          "cf": 209.26,
+          "delta": -50.04,
+          "weight": 1.5
+        },
+        "Stress_Index": {
+          "orig": 4.5,
+          "cf": 2.5,
+          "delta": -2.0,
+          "weight": 1.0
+        },
+        "Smoking": {
+          "orig": 0.0,
+          "cf": 0.0,
+          "delta": 0.0,
+          "weight": 1.6
+        },
+        "Diabetes": {
+          "orig": 1.0,
+          "cf": 0.8,
+          "delta": -0.2,
+          "weight": 1.8
+        }
+      },
+      "local_graph": {
+        "start_coords": [
+          -120,
+          -10
+        ],
+        "end_coords": [
+          120,
+          15
+        ],
+        "orig_neighbors": [
+          {
+            "id": "orig_peer_90",
+            "real_id": 90,
+            "x": -28.1,
+            "y": -10.0,
+            "cvd": 1,
+            "age": 76,
+            "bp": 144,
+            "label": "Peer #90 (CVD+)"
+          },
+          {
+            "id": "orig_peer_336",
+            "real_id": 336,
+            "x": -51.06,
+            "y": 20.69,
+            "cvd": 1,
+            "age": 77,
+            "bp": 164,
+            "label": "Peer #336 (CVD+)"
+          },
+          {
+            "id": "orig_peer_825",
+            "real_id": 825,
+            "x": -58.92,
+            "y": 57.84,
+            "cvd": 1,
+            "age": 75,
+            "bp": 157,
+            "label": "Peer #825 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1110",
+            "real_id": 1110,
+            "x": -95.08,
+            "y": 66.69,
+            "cvd": 1,
+            "age": 61,
+            "bp": 165,
+            "label": "Peer #1110 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1662",
+            "real_id": 1662,
+            "x": -128.09,
+            "y": 66.94,
+            "cvd": 1,
+            "age": 63,
+            "bp": 170,
+            "label": "Peer #1662 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1724",
+            "real_id": 1724,
+            "x": -164.47,
+            "y": 67.02,
+            "cvd": 1,
+            "age": 65,
+            "bp": 175,
+            "label": "Peer #1724 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1731",
+            "real_id": 1731,
+            "x": -190.85,
+            "y": 41.48,
+            "cvd": 1,
+            "age": 67,
+            "bp": 180,
+            "label": "Peer #1731 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1885",
+            "real_id": 1885,
+            "x": -210.53,
+            "y": 9.24,
+            "cvd": 1,
+            "age": 69,
+            "bp": 150,
+            "label": "Peer #1885 (CVD+)"
+          },
+          {
+            "id": "orig_peer_1914",
+            "real_id": 1914,
+            "x": -207.74,
+            "y": -28.65,
+            "cvd": 1,
+            "age": 71,
+            "bp": 155,
+            "label": "Peer #1914 (CVD+)"
+          },
+          {
+            "id": "orig_peer_2317",
+            "real_id": 2317,
+            "x": -193.68,
+            "y": -63.53,
+            "cvd": 1,
+            "age": 73,
+            "bp": 160,
+            "label": "Peer #2317 (CVD+)"
+          },
+          {
+            "id": "orig_peer_2527",
+            "real_id": 2527,
+            "x": -160.32,
+            "y": -79.84,
+            "cvd": 1,
+            "age": 55,
+            "bp": 165,
+            "label": "Peer #2527 (CVD+)"
+          },
+          {
+            "id": "orig_peer_2713",
+            "real_id": 2713,
+            "x": -128.21,
+            "y": -88.12,
+            "cvd": 1,
+            "age": 57,
+            "bp": 170,
+            "label": "Peer #2713 (CVD+)"
+          },
+          {
+            "id": "orig_peer_2919",
+            "real_id": 2919,
+            "x": -92.18,
+            "y": -95.61,
+            "cvd": 1,
+            "age": 59,
+            "bp": 175,
+            "label": "Peer #2919 (CVD+)"
+          },
+          {
+            "id": "orig_peer_2960",
+            "real_id": 2960,
+            "x": -59.02,
+            "y": -77.73,
+            "cvd": 1,
+            "age": 61,
+            "bp": 180,
+            "label": "Peer #2960 (CVD+)"
+          },
+          {
+            "id": "orig_peer_2990",
+            "real_id": 2990,
+            "x": -33.39,
+            "y": -48.56,
+            "cvd": 1,
+            "age": 63,
+            "bp": 150,
+            "label": "Peer #2990 (CVD+)"
+          }
+        ],
+        "new_neighbors": [
+          {
+            "id": "new_peer_109",
+            "real_id": 109,
+            "x": 208.25,
+            "y": 15.0,
+            "cvd": 1,
+            "age": 80,
+            "bp": 158,
+            "label": "Peer #109 (CVD+)"
+          },
+          {
+            "id": "new_peer_166",
+            "real_id": 166,
+            "x": 199.88,
+            "y": 50.57,
+            "cvd": 1,
+            "age": 72,
+            "bp": 146,
+            "label": "Peer #166 (CVD+)"
+          },
+          {
+            "id": "new_peer_345",
+            "real_id": 345,
+            "x": 183.92,
+            "y": 85.99,
+            "cvd": 1,
+            "age": 74,
+            "bp": 152,
+            "label": "Peer #345 (CVD+)"
+          },
+          {
+            "id": "new_peer_408",
+            "real_id": 408,
+            "x": 146.83,
+            "y": 97.57,
+            "cvd": 1,
+            "age": 77,
+            "bp": 153,
+            "label": "Peer #408 (CVD+)"
+          },
+          {
+            "id": "new_peer_478",
+            "real_id": 478,
+            "x": 109.69,
+            "y": 113.07,
+            "cvd": 1,
+            "age": 76,
+            "bp": 142,
+            "label": "Peer #478 (CVD+)"
+          },
+          {
+            "id": "new_peer_684",
+            "real_id": 684,
+            "x": 71.42,
+            "y": 99.15,
+            "cvd": 1,
+            "age": 74,
+            "bp": 148,
+            "label": "Peer #684 (CVD+)"
+          },
+          {
+            "id": "new_peer_942",
+            "real_id": 942,
+            "x": 48.34,
+            "y": 67.07,
+            "cvd": 1,
+            "age": 76,
+            "bp": 154,
+            "label": "Peer #942 (CVD+)"
+          },
+          {
+            "id": "new_peer_1433",
+            "real_id": 1433,
+            "x": 27.06,
+            "y": 34.76,
+            "cvd": 0,
+            "age": 62,
+            "bp": 124,
+            "label": "Peer #1433 (CVD-)"
+          },
+          {
+            "id": "new_peer_1660",
+            "real_id": 1660,
+            "x": 26.99,
+            "y": -4.77,
+            "cvd": 0,
+            "age": 64,
+            "bp": 127,
+            "label": "Peer #1660 (CVD-)"
+          },
+          {
+            "id": "new_peer_1990",
+            "real_id": 1990,
+            "x": 53.61,
+            "y": -33.24,
+            "cvd": 0,
+            "age": 48,
+            "bp": 130,
+            "label": "Peer #1990 (CVD-)"
+          },
+          {
+            "id": "new_peer_2002",
+            "real_id": 2002,
+            "x": 70.97,
+            "y": -69.91,
+            "cvd": 0,
+            "age": 50,
+            "bp": 118,
+            "label": "Peer #2002 (CVD-)"
+          },
+          {
+            "id": "new_peer_2157",
+            "real_id": 2157,
+            "x": 110.58,
+            "y": -74.61,
+            "cvd": 0,
+            "age": 52,
+            "bp": 121,
+            "label": "Peer #2157 (CVD-)"
+          },
+          {
+            "id": "new_peer_2273",
+            "real_id": 2273,
+            "x": 149.83,
+            "y": -76.8,
+            "cvd": 0,
+            "age": 54,
+            "bp": 124,
+            "label": "Peer #2273 (CVD-)"
+          },
+          {
+            "id": "new_peer_2373",
+            "real_id": 2373,
+            "x": 177.81,
+            "y": -49.21,
+            "cvd": 0,
+            "age": 56,
+            "bp": 127,
+            "label": "Peer #2373 (CVD-)"
+          },
+          {
+            "id": "new_peer_2406",
+            "real_id": 2406,
+            "x": 209.45,
+            "y": -24.82,
+            "cvd": 0,
+            "age": 58,
+            "bp": 130,
+            "label": "Peer #2406 (CVD-)"
+          }
+        ],
+        "intermediate_nodes": [
+          {
+            "id": "mid_1_428",
+            "x": -50,
+            "y": 45,
+            "label": "Dr. Outreach Outpatient",
+            "type": "clinic"
+          },
+          {
+            "id": "mid_2_428",
+            "x": -10,
+            "y": -35,
+            "label": "Cardiac Rehab Unit",
+            "type": "rehab"
+          },
+          {
+            "id": "mid_3_428",
+            "x": 45,
+            "y": 30,
+            "label": "Community Wellness Cohort",
+            "type": "lifestyle"
+          }
+        ]
+      },
+      "macro_trajectory": [
+        {
+          "name": "Severe Hypertensive Ward",
+          "coords": [
+            -120,
+            -70
+          ],
+          "status": "Baseline Danger"
+        },
+        {
+          "name": "Transitional Treatment Corridor",
+          "coords": [
+            0,
+            0
+          ],
+          "status": "Under Active Medication"
+        },
+        {
+          "name": "Healthy Reference Cohort",
+          "coords": [
+            120,
+            70
+          ],
+          "status": "Target Destination"
+        }
+      ]
+    }
+  ]
+}
